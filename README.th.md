@@ -63,7 +63,7 @@ Windows ใช้ `py -3` แทน `python3` ได้ หรือเปิด
 
 ยังไม่ได้รันสกิลหรือเครื่องมือต้นทางจริง ดู [รายงาน coverage](docs/review-status.md) และ [วิธีคัดและตรวจ](docs/methodology.md) ได้ ทุก entry มีลิงก์ที่ตรึง commit และบันทึกระดับที่ตรวจไว้
 
-CI ตรวจ catalog และทดสอบ CLI ทุกครั้งที่ push หรือเปิด pull request ส่วนคำสั่ง `check` รันบนเครื่องแบบออฟไลน์ได้
+ตั้ง workflow ให้ตรวจ catalog และ CLI เมื่อ push หรือเปิด pull request แล้ว ดูสถานะการรันจริงได้ใน Actions รอบนี้ตรวจในสภาพแวดล้อม local ผ่าน catalog checks และ 9 tests ส่วนคำสั่ง `check` รันแบบออฟไลน์ได้
 
 ```bash
 python3 scripts/arsenal.py search "MCP" --review entry-reviewed

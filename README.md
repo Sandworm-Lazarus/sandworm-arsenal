@@ -2,7 +2,7 @@
 
 <p align="center"><b>160 skill entries · 29 skill collections · 17 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
 
-<p align="center"><a href="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml"><img src="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml/badge.svg" alt="Catalog validation"></a></p>
+<p align="center"><a href="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml">Validation workflow</a> · <a href="docs/review-status.md">Review coverage</a> · MIT for original material</p>
 
 <p align="center"><a href="README.th.md">ภาษาไทย</a> · <a href="CATALOG.md">Browse the arsenal</a> · <a href="docs/starter-packs.md">Starter packs</a> · <a href="SOURCES.md">Sources &amp; licenses</a></p>
 
@@ -90,7 +90,7 @@ python3 scripts/arsenal.py show 1
 python3 scripts/arsenal.py stats
 ```
 
-CI runs offline catalog checks and CLI regression tests on pushes and pull requests. It checks this repository's data and behavior; it does not execute linked packages.
+The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 9 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
 
 ## Contribute and reuse
 
