@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Skill catalog](CATALOG.md) · [Reuse notes](docs/attribution.md)
 
-Snapshot: **2026-11-11**. The 90 sources include skill collections, tools and frameworks. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.
+Snapshot: **2026-11-11**. The 95 sources include skill collections, tools and frameworks. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.
 
 Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.
 
@@ -98,6 +98,11 @@ Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.
 | [vibrantlabsai/ragas](https://github.com/vibrantlabsai/ragas) · [298b6827](https://github.com/vibrantlabsai/ragas/tree/298b68274234c060deacab3cf5fb52aa3a20e885) | [Apache-2.0](https://github.com/vibrantlabsai/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/LICENSE) | Synthetic tests และ judge scores ต้องตรวจ bias/coverage ก่อนตัดสินระบบจริง |
 | [QwenAudio/CosyVoice](https://github.com/QwenAudio/CosyVoice) · [074ca6dc](https://github.com/QwenAudio/CosyVoice/tree/074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc) | [Apache-2.0](https://github.com/QwenAudio/CosyVoice/blob/074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc/LICENSE) | ย้ายจาก FunAudioLLM ไป QwenAudio; รายชื่อภาษาใน README ที่อ่านไม่ได้ยืนยันภาษาไทย |
 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) · [32fa6f62](https://github.com/firecrawl/firecrawl/tree/32fa6f6273daecc9675d41dc2dab44c61e8cc500) | [AGPL-3.0](https://github.com/firecrawl/firecrawl/blob/32fa6f6273daecc9675d41dc2dab44c61e8cc500/LICENSE) | ใช้ canonical firecrawl/firecrawl; AGPL source และ hosted features/terms ต้องตรวจแยก |
+| [modelcontextprotocol/inspector](https://github.com/modelcontextprotocol/inspector) · [4d3464cb](https://github.com/modelcontextprotocol/inspector/tree/4d3464cb3a6dde609d7b5ac24c440b947eb40f23) | [Apache-2.0 transition; retained MIT contributions; docs CC-BY-4.0](https://github.com/modelcontextprotocol/inspector/blob/4d3464cb3a6dde609d7b5ac24c440b947eb40f23/LICENSE) | เครื่องมืออาจเก็บ OAuth/env secrets; ตรวจ keychain หรือ encrypted storage เมื่อใช้ headless/VPS |
+| [mastra-ai/mastra](https://github.com/mastra-ai/mastra) · [59a60e42](https://github.com/mastra-ai/mastra/tree/59a60e42d5985980d1a36cf0bcddeead09283703) | [Apache-2.0 outside ee directories; separate enterprise terms](https://github.com/mastra-ai/mastra/blob/59a60e42d5985980d1a36cf0bcddeead09283703/LICENSE.md) | Apache core แยก ee directories; ทดลอง suspend/resume และ retry ด้วย task สังเคราะห์ |
+| [vercel/ai](https://github.com/vercel/ai) · [70e45d58](https://github.com/vercel/ai/tree/70e45d5878494be4b66e325187f865951025059e) | [Apache-2.0](https://github.com/vercel/ai/blob/70e45d5878494be4b66e325187f865951025059e/LICENSE) | String model ID อาจเลือก Vercel AI Gateway; adapter โดยตรงเป็นอีกเส้นทาง ต้องบันทึก provider/billing route |
+| [data-privacy-stack/presidio](https://github.com/data-privacy-stack/presidio) · [1d700593](https://github.com/data-privacy-stack/presidio/tree/1d7005932261a4b676e045d16fa2965dbc4b4ba2) | [MIT](https://github.com/data-privacy-stack/presidio/blob/1d7005932261a4b676e045d16fa2965dbc4b4ba2/LICENSE) | ใช้ canonical community repository; ทดสอบข้อมูลภาษาไทยและ false negatives จริง การตรวจอัตโนมัติไม่รับรองว่าพบ PII ครบ |
+| [usebruno/bruno](https://github.com/usebruno/bruno) · [60d7517d](https://github.com/usebruno/bruno/tree/60d7517d0545ef82c032c10dcbb6a3c815d246cf) | [MIT source; commercial editions/features separate](https://github.com/usebruno/bruno/blob/60d7517d0545ef82c032c10dcbb6a3c815d246cf/license.md) | Collection อยู่ local และใช้ Git ได้; HTTP requests ยังติดต่อ API เป้าหมาย และ paid editions มี feature scope แยก |
 
 ## Supporting files read in the initial focused review
 

@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/banner.svg" alt="Sandworm Arsenal — AI engineering, agent systems, and cybersecurity" width="100%"></p>
 
-<p align="center"><b>160 skill entries · 29 skill collections · 61 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
+<p align="center"><b>160 skill entries · 29 skill collections · 66 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
 
 <p align="center"><a href="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml">Validation workflow</a> · <a href="docs/review-status.md">Review coverage</a> · MIT for original material</p>
 
@@ -12,17 +12,21 @@
 
 | Repository | Focus | Skills | Tools |
 | --- | --- | ---: | ---: |
-| [AI Toolbox](https://github.com/Sandworm-Lazarus/sandworm-ai-toolbox) | A directory of practical AI tools and frameworks, from personal agents and local inference to voice, documents, coding, and observability. | 0 | 44 |
-| [Agent Skills](https://github.com/Sandworm-Lazarus/sandworm-agent-skills) | Focused agent workflows for context, memory, tool design, orchestration, browser use, and voice interfaces. | 13 | 15 |
-| [Cyber Arsenal](https://github.com/Sandworm-Lazarus/sandworm-cyber-arsenal) | A focused security collection covering AppSec, agent and MCP security, reverse engineering, DFIR, detection, and supply-chain review. | 68 | 17 |
-| [LLM Lab](https://github.com/Sandworm-Lazarus/sandworm-llm-lab) | A practical LLM engineering lab: model serving, quantization, RAG, evaluation, training, and experiment observability. | 49 | 14 |
-| [Dev Playbooks](https://github.com/Sandworm-Lazarus/sandworm-dev-playbooks) | Developer workflows for debugging, cloud, frontend, coding agents, and evidence-backed reviews, with original playbooks and report templates. | 30 | 15 |
+| [AI Toolbox](https://github.com/Sandworm-Lazarus/sandworm-ai-toolbox) | A directory of practical AI tools and frameworks, from personal agents and local inference to voice, documents, coding, and observability. | 0 | 48 |
+| [Agent Skills](https://github.com/Sandworm-Lazarus/sandworm-agent-skills) | Focused agent workflows for context, memory, tool design, orchestration, browser use, and voice interfaces. | 13 | 18 |
+| [Cyber Arsenal](https://github.com/Sandworm-Lazarus/sandworm-cyber-arsenal) | A focused security collection covering AppSec, agent and MCP security, reverse engineering, DFIR, detection, and supply-chain review. | 68 | 19 |
+| [LLM Lab](https://github.com/Sandworm-Lazarus/sandworm-llm-lab) | A practical LLM engineering lab: model serving, quantization, RAG, evaluation, training, and experiment observability. | 49 | 15 |
+| [Dev Playbooks](https://github.com/Sandworm-Lazarus/sandworm-dev-playbooks) | Developer workflows for debugging, cloud, frontend, coding agents, and evidence-backed reviews, with original playbooks and report templates. | 30 | 17 |
 
 This repository is the collection hub. Skills have focused homes in the four subject collections; AI Toolbox is a cross-cutting directory. Tools can appear in multiple collections, so collection counts should not be added together.
 
 A personal collection of useful **AI and cybersecurity agent skills**, with Thai annotations, pinned source links, and practical workflows. Built for people who want to understand what a skill does before adding it to their tools.
 
 This repository contributes the curation, original summaries, three original playbooks, and a small offline catalog CLI. Linked skills belong to their respective authors. Upstream skill code is not bundled here.
+
+## Latest curation
+
+[Five practical additions](docs/curation-notes/2026-11-11-mcp-typescript.md): MCP Inspector, Mastra, Vercel AI SDK, Presidio and Bruno. Includes three bounded trial tasks and an original synthetic privacy fixture. [Maintenance standard](docs/maintenance.md).
 
 ## AI tools beyond skills
 
@@ -86,7 +90,7 @@ On Windows, use `py -3` if `python3` is unavailable. Prefer browsing? Open [CATA
 | --- | ---: | --- |
 | Entry-reviewed | 57 | Entry files and selected supporting files from the initial focused research |
 | Entry-overview | 103 | Pinned identity, frontmatter, and opening excerpts; full bundles remain to review |
-| Companion tools | 61 | README/source overviews and license evidence |
+| Companion tools | 66 | README/source overviews and license evidence |
 
 No upstream runtime tests are claimed. [Review coverage](docs/review-status.md) and [methodology](docs/methodology.md) explain the limits. Some packages need references, scripts, client-specific tools, or a complete plugin bundle.
 
@@ -94,7 +98,7 @@ No upstream runtime tests are claimed. [Review coverage](docs/review-status.md) 
 
 - Pick one of **[12 starter packs](docs/starter-packs.md)**, from an AI lab to game-server AppSec.
 - Use the **[decision guide](docs/decision-guide.md)** to choose a skill or executable tool for a task.
-- Explore **[61 companion tools](TOOLS.md)** for evaluation, SAST, SBOM, secrets, containers, and CI.
+- Explore **[66 companion tools](TOOLS.md)** for evaluation, SAST, SBOM, secrets, containers, and CI.
 - Start a report from the **[five original templates](templates/README.md)**.
 - Check **[watchlist notes](docs/watchlist.md)** for moved sources, license scopes, and platform-specific entries.
 - See **[changes](CHANGELOG.md)** for the current expansion.

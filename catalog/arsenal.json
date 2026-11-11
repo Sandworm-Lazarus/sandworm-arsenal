@@ -1,7 +1,7 @@
 {
   "as_of": "2026-11-11",
   "timezone": "Asia/Bangkok",
-  "scope": "160 pinned skill entries (57 entry-reviewed; 103 entry-overview) and 61 tools/frameworks from 90 source repositories. Tool review covers README overviews and license evidence only; no upstream runtime testing.",
+  "scope": "160 pinned skill entries (57 entry-reviewed; 103 entry-overview), 66 tools/frameworks and 95 source repositories. New tool additions have README/license overview only. No upstream runtime certification.",
   "sources": [
     {
       "repo": "trailofbits/skills",
@@ -1582,6 +1582,86 @@
       "category": "Document ingestion",
       "note": "ใช้ canonical firecrawl/firecrawl; AGPL source และ hosted features/terms ต้องตรวจแยก",
       "recommendation": "README overview; not runtime-tested"
+    },
+    {
+      "repo": "modelcontextprotocol/inspector",
+      "url": "https://github.com/modelcontextprotocol/inspector",
+      "commit": "4d3464cb3a6dde609d7b5ac24c440b947eb40f23",
+      "kind": "tool",
+      "archived": false,
+      "fork": false,
+      "license_url": "https://github.com/modelcontextprotocol/inspector/blob/4d3464cb3a6dde609d7b5ac24c440b947eb40f23/LICENSE",
+      "license_blob_sha": "4a93985763241755401a10678395303de4e720ba",
+      "readme_url": "https://github.com/modelcontextprotocol/inspector/blob/4d3464cb3a6dde609d7b5ac24c440b947eb40f23/README.md",
+      "readme_blob_sha": "7f5c529411172c33889e678496ed8bb1463c1a3a",
+      "license": "Apache-2.0 transition; retained MIT contributions; docs CC-BY-4.0",
+      "category": "MCP development",
+      "note": "เครื่องมืออาจเก็บ OAuth/env secrets; ตรวจ keychain หรือ encrypted storage เมื่อใช้ headless/VPS",
+      "recommendation": "README/license overview; not runtime-tested"
+    },
+    {
+      "repo": "mastra-ai/mastra",
+      "url": "https://github.com/mastra-ai/mastra",
+      "commit": "59a60e42d5985980d1a36cf0bcddeead09283703",
+      "kind": "tool",
+      "archived": false,
+      "fork": false,
+      "license_url": "https://github.com/mastra-ai/mastra/blob/59a60e42d5985980d1a36cf0bcddeead09283703/LICENSE.md",
+      "license_blob_sha": "e1b6e4b6455a882dbbf66ee0b13101ec584d5e63",
+      "readme_url": "https://github.com/mastra-ai/mastra/blob/59a60e42d5985980d1a36cf0bcddeead09283703/README.md",
+      "readme_blob_sha": "f6465bcaf53f737e3754c28660e142ca44e07c97",
+      "license": "Apache-2.0 outside ee directories; separate enterprise terms",
+      "category": "Agent frameworks",
+      "note": "Apache core แยก ee directories; ทดลอง suspend/resume และ retry ด้วย task สังเคราะห์",
+      "recommendation": "README/license overview; not runtime-tested"
+    },
+    {
+      "repo": "vercel/ai",
+      "url": "https://github.com/vercel/ai",
+      "commit": "70e45d5878494be4b66e325187f865951025059e",
+      "kind": "tool",
+      "archived": false,
+      "fork": false,
+      "license_url": "https://github.com/vercel/ai/blob/70e45d5878494be4b66e325187f865951025059e/LICENSE",
+      "license_blob_sha": "6c16c29f41168411dbf6e3ba3a063ce789c27334",
+      "readme_url": "https://github.com/vercel/ai/blob/70e45d5878494be4b66e325187f865951025059e/packages/ai/README.md",
+      "readme_blob_sha": "456d3853992ce379bda7e16d04612f0c506041b9",
+      "license": "Apache-2.0",
+      "category": "AI application SDKs",
+      "note": "String model ID อาจเลือก Vercel AI Gateway; adapter โดยตรงเป็นอีกเส้นทาง ต้องบันทึก provider/billing route",
+      "recommendation": "README/license overview; not runtime-tested"
+    },
+    {
+      "repo": "data-privacy-stack/presidio",
+      "url": "https://github.com/data-privacy-stack/presidio",
+      "commit": "1d7005932261a4b676e045d16fa2965dbc4b4ba2",
+      "kind": "tool",
+      "archived": false,
+      "fork": false,
+      "license_url": "https://github.com/data-privacy-stack/presidio/blob/1d7005932261a4b676e045d16fa2965dbc4b4ba2/LICENSE",
+      "license_blob_sha": "9afc65b563ea7064fb04f68e3bbe31a15080f666",
+      "readme_url": "https://github.com/data-privacy-stack/presidio/blob/1d7005932261a4b676e045d16fa2965dbc4b4ba2/README.MD",
+      "readme_blob_sha": "a877d23deed3d2245b8b4afda308deeb10f5b534",
+      "license": "MIT",
+      "category": "Privacy & data handling",
+      "note": "ใช้ canonical community repository; ทดสอบข้อมูลภาษาไทยและ false negatives จริง การตรวจอัตโนมัติไม่รับรองว่าพบ PII ครบ",
+      "recommendation": "README/license overview; not runtime-tested"
+    },
+    {
+      "repo": "usebruno/bruno",
+      "url": "https://github.com/usebruno/bruno",
+      "commit": "60d7517d0545ef82c032c10dcbb6a3c815d246cf",
+      "kind": "tool",
+      "archived": false,
+      "fork": false,
+      "license_url": "https://github.com/usebruno/bruno/blob/60d7517d0545ef82c032c10dcbb6a3c815d246cf/license.md",
+      "license_blob_sha": "f88e206bb5a65c8b70693152a14a678fba471707",
+      "readme_url": "https://github.com/usebruno/bruno/blob/60d7517d0545ef82c032c10dcbb6a3c815d246cf/readme.md",
+      "readme_blob_sha": "08263e4c05b622b99d83196ef128f5aa2e635abe",
+      "license": "MIT source; commercial editions/features separate",
+      "category": "API testing",
+      "note": "Collection อยู่ local และใช้ Git ได้; HTTP requests ยังติดต่อ API เป้าหมาย และ paid editions มี feature scope แยก",
+      "recommendation": "README/license overview; not runtime-tested"
     }
   ],
   "skills": [
@@ -5679,7 +5759,67 @@
       "runtime_tested": false,
       "review_level": "readme-overview",
       "reviewed_at": "2026-11-11"
+    },
+    {
+      "repo": "modelcontextprotocol/inspector",
+      "name": "MCP Inspector",
+      "group": "MCP development",
+      "purpose": "ตรวจและเรียก MCP servers ผ่าน web, CLI หรือ terminal interface",
+      "requires": "Node runtime ตาม engine ของ revision, MCP server/config และ connection credentials",
+      "note": "เครื่องมืออาจเก็บ OAuth/env secrets; ตรวจ keychain หรือ encrypted storage เมื่อใช้ headless/VPS",
+      "url": "https://github.com/modelcontextprotocol/inspector/tree/4d3464cb3a6dde609d7b5ac24c440b947eb40f23",
+      "runtime_tested": false,
+      "review_level": "readme-overview",
+      "reviewed_at": "2026-11-11"
+    },
+    {
+      "repo": "mastra-ai/mastra",
+      "name": "Mastra",
+      "group": "Agent frameworks",
+      "purpose": "สร้าง Agents, graph workflows, memory และ MCP integrations บน TypeScript",
+      "requires": "Node/TypeScript, provider credentials และ storage ตาม feature",
+      "note": "Apache core แยก ee directories; ทดลอง suspend/resume และ retry ด้วย task สังเคราะห์",
+      "url": "https://github.com/mastra-ai/mastra/tree/59a60e42d5985980d1a36cf0bcddeead09283703",
+      "runtime_tested": false,
+      "review_level": "readme-overview",
+      "reviewed_at": "2026-11-11"
+    },
+    {
+      "repo": "vercel/ai",
+      "name": "Vercel AI SDK",
+      "group": "AI application SDKs",
+      "purpose": "ต่อ text/streaming, structured outputs, tools และ UI สำหรับแอป TypeScript",
+      "requires": "Node 22+ ตาม README ที่อ่าน, provider adapter หรือ gateway และ UI integration ตามงาน",
+      "note": "String model ID อาจเลือก Vercel AI Gateway; adapter โดยตรงเป็นอีกเส้นทาง ต้องบันทึก provider/billing route",
+      "url": "https://github.com/vercel/ai/tree/70e45d5878494be4b66e325187f865951025059e",
+      "runtime_tested": false,
+      "review_level": "readme-overview",
+      "reviewed_at": "2026-11-11"
+    },
+    {
+      "repo": "data-privacy-stack/presidio",
+      "name": "Presidio",
+      "group": "Privacy & data handling",
+      "purpose": "ค้นและ de-identify ข้อมูล PII ใน text/images ก่อนนำไปใช้ต่อ",
+      "requires": "Python, NLP/recognizer dependencies และ anonymization policy ตามข้อมูล",
+      "note": "ใช้ canonical community repository; ทดสอบข้อมูลภาษาไทยและ false negatives จริง การตรวจอัตโนมัติไม่รับรองว่าพบ PII ครบ",
+      "url": "https://github.com/data-privacy-stack/presidio/tree/1d7005932261a4b676e045d16fa2965dbc4b4ba2",
+      "runtime_tested": false,
+      "review_level": "readme-overview",
+      "reviewed_at": "2026-11-11"
+    },
+    {
+      "repo": "usebruno/bruno",
+      "name": "Bruno",
+      "group": "API testing",
+      "purpose": "เก็บ API request collections เป็นไฟล์และรันทดสอบผ่าน desktop/CLI",
+      "requires": "Desktop app หรือ CLI, API test environment และ credentials ที่แยกจาก collection",
+      "note": "Collection อยู่ local และใช้ Git ได้; HTTP requests ยังติดต่อ API เป้าหมาย และ paid editions มี feature scope แยก",
+      "url": "https://github.com/usebruno/bruno/tree/60d7517d0545ef82c032c10dcbb6a3c815d246cf",
+      "runtime_tested": false,
+      "review_level": "readme-overview",
+      "reviewed_at": "2026-11-11"
     }
   ],
-  "snapshot": "2026-11-11-ai-toolbox"
+  "snapshot": "2026-11-11-mcp-typescript-privacy"
 }

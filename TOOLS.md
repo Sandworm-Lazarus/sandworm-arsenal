@@ -4,7 +4,7 @@
 
 These are executable tools and frameworks, counted separately from agent skills. Their README/source overviews were inspected; this repository has not installed or run them. Links point to the recorded revision.
 
-**61 tools and frameworks in 22 groups.** See the [AI toolbox guide](docs/ai-toolbox.md) for task-oriented combinations.
+**66 tools and frameworks in 26 groups.** See the [AI toolbox guide](docs/ai-toolbox.md) for task-oriented combinations.
 
 | Group | Tools |
 | --- | ---: |
@@ -16,7 +16,7 @@ These are executable tools and frameworks, counted separately from agent skills.
 | [CI security](#ci-security) | 1 |
 | [Code analysis](#code-analysis) | 2 |
 | [Personal agents](#personal-agents) | 2 |
-| [Agent frameworks](#agent-frameworks) | 4 |
+| [Agent frameworks](#agent-frameworks) | 5 |
 | [Visual workflows](#visual-workflows) | 3 |
 | [Local inference](#local-inference) | 4 |
 | [Chat workspaces](#chat-workspaces) | 2 |
@@ -30,6 +30,10 @@ These are executable tools and frameworks, counted separately from agent skills.
 | [Training & fine-tuning](#training-fine-tuning) | 2 |
 | [Observability](#observability) | 2 |
 | [Model gateways](#model-gateways) | 1 |
+| [MCP development](#mcp-development) | 1 |
+| [AI application SDKs](#ai-application-sdks) | 1 |
+| [Privacy & data handling](#privacy-data-handling) | 1 |
+| [API testing](#api-testing) | 1 |
 
 <a id="skill-review"></a>
 
@@ -118,6 +122,7 @@ These are executable tools and frameworks, counted separately from agent skills.
 | [Pydantic AI](https://github.com/pydantic/pydantic-ai/tree/f5c460d46ad9d03200371751d3d89f3ea58433de) | สร้าง typed Agents, tool calls และ structured outputs ใน Python | Python, Pydantic และ model/provider ที่รองรับ. Typed schema ไม่รับรองความถูกต้องเชิงเนื้อหา; แยก SDK จาก hosted Logfire/Gateway |
 | [Agno](https://github.com/agno-agi/agno/tree/0b88f303e1ebd58a92677652fdeaddd7e7618362) | สร้าง Agent teams/workflows และให้บริการผ่าน API/MCP ด้วย AgentOS | Python, storage/runtime และ model credentials ตามการ deploy. แยก framework, AgentOS และ platform/UI features ก่อนเลือก stack |
 | [CrewAI](https://github.com/crewAIInc/crewAI/tree/4254a835b1e5433d123e201928612bc692edbc3e) | จัด role-based agent collaboration และ event-driven Flows | Python และ model/tool integrations. แยก open framework จาก AMP/control-plane features; วัดประโยชน์ของหลาย Agent ด้วยงานจริง |
+| [Mastra](https://github.com/mastra-ai/mastra/tree/59a60e42d5985980d1a36cf0bcddeead09283703) | สร้าง Agents, graph workflows, memory และ MCP integrations บน TypeScript | Node/TypeScript, provider credentials และ storage ตาม feature. Apache core แยก ee directories; ทดลอง suspend/resume และ retry ด้วย task สังเคราะห์ |
 
 <a id="visual-workflows"></a>
 
@@ -245,3 +250,35 @@ These are executable tools and frameworks, counted separately from agent skills.
 | Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |
 | --- | --- | --- |
 | [LiteLLM](https://github.com/BerriAI/litellm/tree/3616014548d40020f508566620c5cd8745721f3c) | รวม model providers ผ่าน SDK/proxy พร้อม cost/routing controls | Provider credentials และ SDK/proxy runtime ตาม mode. MIT scope แยก enterprise directory; gateway ไม่เพิ่มสิทธิ์หรือโควตาจาก model provider |
+
+<a id="mcp-development"></a>
+
+## MCP development
+
+| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |
+| --- | --- | --- |
+| [MCP Inspector](https://github.com/modelcontextprotocol/inspector/tree/4d3464cb3a6dde609d7b5ac24c440b947eb40f23) | ตรวจและเรียก MCP servers ผ่าน web, CLI หรือ terminal interface | Node runtime ตาม engine ของ revision, MCP server/config และ connection credentials. เครื่องมืออาจเก็บ OAuth/env secrets; ตรวจ keychain หรือ encrypted storage เมื่อใช้ headless/VPS |
+
+<a id="ai-application-sdks"></a>
+
+## AI application SDKs
+
+| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |
+| --- | --- | --- |
+| [Vercel AI SDK](https://github.com/vercel/ai/tree/70e45d5878494be4b66e325187f865951025059e) | ต่อ text/streaming, structured outputs, tools และ UI สำหรับแอป TypeScript | Node 22+ ตาม README ที่อ่าน, provider adapter หรือ gateway และ UI integration ตามงาน. String model ID อาจเลือก Vercel AI Gateway; adapter โดยตรงเป็นอีกเส้นทาง ต้องบันทึก provider/billing route |
+
+<a id="privacy-data-handling"></a>
+
+## Privacy & data handling
+
+| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |
+| --- | --- | --- |
+| [Presidio](https://github.com/data-privacy-stack/presidio/tree/1d7005932261a4b676e045d16fa2965dbc4b4ba2) | ค้นและ de-identify ข้อมูล PII ใน text/images ก่อนนำไปใช้ต่อ | Python, NLP/recognizer dependencies และ anonymization policy ตามข้อมูล. ใช้ canonical community repository; ทดสอบข้อมูลภาษาไทยและ false negatives จริง การตรวจอัตโนมัติไม่รับรองว่าพบ PII ครบ |
+
+<a id="api-testing"></a>
+
+## API testing
+
+| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |
+| --- | --- | --- |
+| [Bruno](https://github.com/usebruno/bruno/tree/60d7517d0545ef82c032c10dcbb6a3c815d246cf) | เก็บ API request collections เป็นไฟล์และรันทดสอบผ่าน desktop/CLI | Desktop app หรือ CLI, API test environment และ credentials ที่แยกจาก collection. Collection อยู่ local และใช้ Git ได้; HTTP requests ยังติดต่อ API เป้าหมาย และ paid editions มี feature scope แยก |

@@ -2,15 +2,15 @@
 
 [Home](../README.md) · [Methodology](methodology.md)
 
-Snapshot: **2026-11-11** · `2026-11-11-ai-toolbox`
+Snapshot: **2026-11-11** · `2026-11-11-mcp-typescript-privacy`
 
 | Measure | Count |
 | --- | ---: |
 | Skill entries | 160 |
 | Skill collections | 29 |
-| Companion tools | 61 |
-| Tool categories | 22 |
-| Source repositories | 90 |
+| Companion tools | 66 |
+| Tool categories | 26 |
+| Source repositories | 95 |
 | Entry-reviewed | 57 |
 | Entry-overview | 103 |
 | Runtime-tested upstream skills | 0 |

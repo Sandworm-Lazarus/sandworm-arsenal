@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11 — Useful gaps: MCP, TypeScript and privacy
+
+- Added MCP Inspector, Mastra, Vercel AI SDK, Presidio and Bruno: 66 tools and 95 source repositories.
+- Added a focused research note, three trial tasks, synthetic privacy policy cases and a portable focused-collection generator.
+- Regenerated affected focused catalogs while retaining stable skill IDs and review labels.
+
 ## 2026-11-11 — Focused repositories
 
 - Created five subject repositories: AI Toolbox, Agent Skills, Cyber Arsenal, LLM Lab and Dev Playbooks.

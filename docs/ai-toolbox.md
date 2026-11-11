@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [All tools](../TOOLS.md) · [Source register](../SOURCES.md)
 
-This round adds **44 tools and frameworks**, bringing the register to **61 tools from 90 total source repositories**, alongside the existing 160 skill entries. Links below point to the inspected revisions. Research covers README overviews and license evidence; no upstream package was installed or executed.
+The initial toolbox round introduced **44 tools and frameworks**. The current register contains **66 tools from 95 total source repositories**, alongside 160 skill entries. Links below point to inspected revisions. Research covers README overviews and license evidence; no upstream package was installed or executed.
 
 ## Explore by capability
 
