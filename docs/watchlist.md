@@ -20,6 +20,13 @@ These are observations at the pinned research revisions, not judgments about fut
 | gitleaks/gitleaks | README says feature-complete, security patches only, and points to Betterleaks | Record lifecycle; inspect the successor separately before choosing it |
 | github/codeql | MIT applies to repository queries/libraries | Do not infer that the separately distributed CLI has identical terms |
 | Orchestra AI Research skills | Several entries contain numeric performance claims and older library examples | Summaries describe the workflow without inheriting those benchmark claims |
+| FlowiseAI/Flowise | GitHub metadata marked the repository archived in this research snapshot | Excluded from active toolbox additions |
+| letta-ai/letta | README identifies letta-ai/letta-code as current source; archive branch is the retired V1 server | Tool selection points to current Letta Code |
+| Firecrawl / CosyVoice | Older organization URLs redirect | Use firecrawl/firecrawl and QwenAudio/CosyVoice |
+| Dify / FastGPT / MinerU / Open WebUI | LICENSE texts contain project-specific additional terms | Preserve custom labels and link to actual terms |
+| n8n | Sustainable Use License and separate enterprise scope | Label as source-available/fair-code; do not assume MIT/Apache |
+| Arize Phoenix | Root license is Elastic License 2.0 | Record ELv2, separately from the vendor's product descriptions |
+| Unsloth / Langfuse / LiteLLM | Licensing varies across core, optional, or enterprise components | Inspect the files and deployment feature set before reuse |
 
 ## Before promoting an overview entry
 

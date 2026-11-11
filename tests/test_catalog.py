@@ -60,6 +60,17 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(result.returncode, 1)
         self.assertIn("No entry", result.stderr)
 
+    def test_tool_search_filters_group_and_handles_thai(self):
+        result = arsenal.search_tools(self.data, "เสียง", "voice & audio")
+        self.assertTrue(result)
+        self.assertTrue(all(t["group"] == "Voice & audio" for t in result))
+
+    def test_tools_cli_json_and_unknown_group(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), "tools", "", "--group", "Personal agents", "--json"], capture_output=True, text=True, check=True)
+        self.assertEqual({t["repo"] for t in json.loads(result.stdout)}, {"NousResearch/hermes-agent", "letta-ai/letta-code"})
+        bad = subprocess.run([sys.executable, str(SCRIPT), "tools", "--group", "does-not-exist"], capture_output=True, text=True)
+        self.assertEqual(bad.returncode, 1)
+
     def test_missing_and_escaping_local_links_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

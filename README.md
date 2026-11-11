@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/banner.svg" alt="Sandworm Arsenal — AI engineering, agent systems, and cybersecurity" width="100%"></p>
 
-<p align="center"><b>160 skill entries · 29 skill collections · 17 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
+<p align="center"><b>160 skill entries · 29 skill collections · 61 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
 
 <p align="center"><a href="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml">Validation workflow</a> · <a href="docs/review-status.md">Review coverage</a> · MIT for original material</p>
 
@@ -11,6 +11,10 @@
 A personal collection of useful **AI and cybersecurity agent skills**, with Thai annotations, pinned source links, and practical workflows. Built for people who want to understand what a skill does before adding it to their tools.
 
 This repository contributes the curation, original summaries, three original playbooks, and a small offline catalog CLI. Linked skills belong to their respective authors. Upstream skill code is not bundled here.
+
+## AI tools beyond skills
+
+Explore the **[AI toolbox guide](docs/ai-toolbox.md)**: 44 new projects covering personal agents, local inference, voice, browser automation, documents, memory, creative workflows, coding and model operations. The guide includes five original project directions and a comparison table.
 
 ## Choose your direction
 
@@ -70,7 +74,7 @@ On Windows, use `py -3` if `python3` is unavailable. Prefer browsing? Open [CATA
 | --- | ---: | --- |
 | Entry-reviewed | 57 | Entry files and selected supporting files from the initial focused research |
 | Entry-overview | 103 | Pinned identity, frontmatter, and opening excerpts; full bundles remain to review |
-| Companion tools | 17 | README/source overviews and license evidence |
+| Companion tools | 61 | README/source overviews and license evidence |
 
 No upstream runtime tests are claimed. [Review coverage](docs/review-status.md) and [methodology](docs/methodology.md) explain the limits. Some packages need references, scripts, client-specific tools, or a complete plugin bundle.
 
@@ -78,7 +82,7 @@ No upstream runtime tests are claimed. [Review coverage](docs/review-status.md) 
 
 - Pick one of **[12 starter packs](docs/starter-packs.md)**, from an AI lab to game-server AppSec.
 - Use the **[decision guide](docs/decision-guide.md)** to choose a skill or executable tool for a task.
-- Explore **[17 companion tools](TOOLS.md)** for evaluation, SAST, SBOM, secrets, containers, and CI.
+- Explore **[61 companion tools](TOOLS.md)** for evaluation, SAST, SBOM, secrets, containers, and CI.
 - Start a report from the **[five original templates](templates/README.md)**.
 - Check **[watchlist notes](docs/watchlist.md)** for moved sources, license scopes, and platform-specific entries.
 - See **[changes](CHANGELOG.md)** for the current expansion.
@@ -90,7 +94,7 @@ python3 scripts/arsenal.py show 1
 python3 scripts/arsenal.py stats
 ```
 
-The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 9 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
+The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 11 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
 
 ## Contribute and reuse
 

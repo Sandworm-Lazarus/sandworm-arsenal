@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11 — AI toolbox
+
+- Added 44 tools/frameworks, bringing the tool register to 61 and total source repositories to 90.
+- Added a capability guide, five original project proposals, current canonical source/lifecycle notes, and offline tool search.
+- Inspected README overviews and license evidence; no upstream execution or integration testing is claimed.
+
 ## 2026-11-11 — Arsenal expansion
 
 - Expanded from 57 to 160 selected skill entries across 29 skill collections.

@@ -2,14 +2,15 @@
 
 [Home](../README.md) · [Methodology](methodology.md)
 
-Snapshot: **2026-11-11** · `2026-11-11-expansion-1`
+Snapshot: **2026-11-11** · `2026-11-11-ai-toolbox`
 
 | Measure | Count |
 | --- | ---: |
 | Skill entries | 160 |
 | Skill collections | 29 |
-| Companion tools | 17 |
-| Source repositories | 46 |
+| Companion tools | 61 |
+| Tool categories | 22 |
+| Source repositories | 90 |
 | Entry-reviewed | 57 |
 | Entry-overview | 103 |
 | Runtime-tested upstream skills | 0 |

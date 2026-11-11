@@ -124,6 +124,14 @@ def search(data, query, category=None, review=None, repo=None):
                                     ("name", "repo", "purpose", "requires", "note")).casefold()]
 
 
+def search_tools(data, query="", group=None):
+    needle = query.casefold()
+    return [t for t in data["tools"]
+            if (group is None or t["group"].casefold() == group.casefold())
+            and needle in " ".join(t[k] for k in
+                                    ("name", "repo", "group", "purpose", "requires", "note")).casefold()]
+
+
 def cell(value):
     return str(value).replace("|", "\\|").replace("\n", " ")
 
@@ -142,7 +150,7 @@ def rendered_files(data):
             catalog.append(f"| **#{s['id']}** [{s['name']}]({s['url']}) · `{s['repo']}` | {cell(s['purpose'])} | {level} | {cell(s['requires'])}. {cell(s['note'])} |")
         catalog += [""]
     sources = ["# Source register", "", "[Home](README.md) · [Skill catalog](CATALOG.md) · [Reuse notes](docs/attribution.md)", "",
-               f"Snapshot: **{data['as_of']}**. The {len(data['sources'])} sources include skill collections and evaluation tools. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.", "",
+               f"Snapshot: **{data['as_of']}**. The {len(data['sources'])} sources include skill collections, tools and frameworks. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.", "",
                "Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.", "",
                "| Source / reviewed commit | License evidence | Editorial note |", "| --- | --- | --- |"]
     for s in data["sources"]:
@@ -157,8 +165,16 @@ def rendered_files(data):
         sources.append(f"- [{e['repo']} / {e['path']}]({e['url']})")
     tools = ["# Companion tools", "", "[Home](README.md) · [Skill catalog](CATALOG.md) · [Sources and licenses](SOURCES.md)", "",
              "These are executable tools and frameworks, counted separately from agent skills. Their README/source overviews were inspected; this repository has not installed or run them. Links point to the recorded revision.", ""]
-    for group in dict.fromkeys(t["group"] for t in data["tools"]):
-        tools += [f"## {group}", "", "| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |", "| --- | --- | --- |"]
+    groups = list(dict.fromkeys(t["group"] for t in data["tools"]))
+    tools += [f"**{len(data['tools'])} tools and frameworks in {len(groups)} groups.** See the [AI toolbox guide](docs/ai-toolbox.md) for task-oriented combinations.", "",
+              "| Group | Tools |", "| --- | ---: |"]
+    for group in groups:
+        anchor = re.sub(r"[^a-z0-9]+", "-", group.lower()).strip("-")
+        tools.append(f"| [{group}](#{anchor}) | {sum(t['group'] == group for t in data['tools'])} |")
+    tools += [""]
+    for group in groups:
+        anchor = re.sub(r"[^a-z0-9]+", "-", group.lower()).strip("-")
+        tools += [f'<a id="{anchor}"></a>', "", f"## {group}", "", "| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |", "| --- | --- | --- |"]
         for t in (t for t in data["tools"] if t["group"] == group):
             tools.append(f"| [{t['name']}]({t['url']}) | {cell(t['purpose'])} | {cell(t['requires'])}. {cell(t['note'])} |")
         tools += [""]
@@ -184,6 +200,7 @@ def stats(data):
     return {"Skill entries": len(data["skills"]),
             "Skill collections": sum(s["kind"] == "skill-collection" for s in data["sources"]),
             "Companion tools": len(data["tools"]),
+            "Tool categories": len({t["group"] for t in data["tools"]}),
             "Source repositories": len(data["sources"]),
             "Entry-reviewed": sum(s["review_level"] == "entry-reviewed" for s in data["skills"]),
             "Entry-overview": sum(s["review_level"] == "entry-overview" for s in data["skills"]),
@@ -232,6 +249,10 @@ def main():
     find.add_argument("--review", choices=("entry-reviewed", "entry-overview"))
     find.add_argument("--repo", help="Exact owner/repo filter")
     find.add_argument("--json", action="store_true", help="Emit structured matching entries")
+    tool_find = commands.add_parser("tools", help="Search companion tools and frameworks offline")
+    tool_find.add_argument("query", nargs="?", default="")
+    tool_find.add_argument("--group", help="Exact category name, case-insensitive")
+    tool_find.add_argument("--json", action="store_true")
     show = commands.add_parser("show", help="Show one entry by its stable numeric ID")
     show.add_argument("id", type=int)
     commands.add_parser("stats", help="Print catalog counts and review coverage as JSON")
@@ -256,6 +277,18 @@ def main():
             print(f"[{entry['id']:02d}] {entry['name']} ({entry['category']})")
             print(f"  {entry['purpose']}\n  {entry['url']}")
         print(f"{len(found)} match(es). Source review only; no runtime certification.")
+    elif args.command == "tools":
+        groups = {t["group"].casefold() for t in data["tools"]}
+        if args.group and args.group.casefold() not in groups:
+            print(f"Unknown tool group: {args.group}", file=sys.stderr)
+            return 1
+        found = search_tools(data, args.query, args.group)
+        if args.json:
+            print(json.dumps(found, ensure_ascii=False, indent=2))
+        else:
+            for tool in found:
+                print(f"{tool['name']} ({tool['group']})\n  {tool['purpose']}\n  {tool['url']}")
+            print(f"{len(found)} match(es). README overview only; no runtime certification.")
     elif args.command == "show":
         found = next((s for s in data["skills"] if s["id"] == args.id), None)
         if found is None:

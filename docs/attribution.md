@@ -28,3 +28,5 @@ Selected cases from the reviewed snapshot:
 | OpenAI plugins | Per-plugin/file scope; an Apache 2.0 license was inspected for build-chatgpt-app, not inferred for every plugin |
 
 For a portfolio adaptation, explain the specific improvement: a new fixture, a useful workflow, better evaluation, Thai documentation, or platform support. Keep that contribution distinct from the original author's work.
+
+The AI toolbox also includes projects with custom, source-available, copyleft, and component-specific terms. Dify, FastGPT, MinerU, Open WebUI, n8n, Phoenix, Unsloth, Langfuse and LiteLLM should be read through their individual source-register license links. A library license does not automatically cover model checkpoints, datasets, custom plugins, enterprise directories, or hosted services.

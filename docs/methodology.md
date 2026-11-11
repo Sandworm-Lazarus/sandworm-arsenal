@@ -6,13 +6,17 @@ Reviewed on 2026-11-11. The register covers 22 repositories: 19 skill sources an
 
 Each selected entry records a canonical repository, full commit SHA, file path, blob SHA, purpose, requirements, and a caution or use case. Repository metadata and entry contents were inspected through GitHub. The read-only research did not install skills, execute their helper code, start model jobs, or certify them for production.
 
-## How entries are selected
-
 ## Expansion snapshot
 
 The expansion adds 103 entry-overview inspections to the initial 57 entry-reviewed selections: 160 entries across 29 skill collections. Fourteen additional tools bring the companion-tool register to 17, for 46 source repositories in total. New entry overviews cover the recorded file identity, frontmatter, and opening excerpt; they do not claim a complete read of the entry, supporting files, or executable bundle. Source README/license overviews informed lifecycle and scope notes.
 
 The initial `read: true` field is retained only for the original entry-reviewed selections. New overviews use `read: false` plus an explicit `review_level`. All upstream runtime statuses remain false.
+
+## AI toolbox research
+
+The toolbox round adds 44 executable tools/frameworks after inspecting canonical GitHub metadata, immutable README overviews, and license evidence. The complete register now contains 61 tools and 29 skill collections, for 90 source repositories. The 160 skill-entry records retain their previous scope labels.
+
+Archived Flowise was excluded from active additions. Letta uses the current source named in its legacy README; moved Firecrawl/CosyVoice repositories use current canonical names. Custom and scoped licenses are recorded separately from GitHub's detected license badge. The project combinations in the toolbox guide are original proposals, not tested integrations.
 
 ## Selection criteria
 
