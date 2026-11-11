@@ -20,7 +20,19 @@ Repo นี้เป็นหน้ารวม คลังสกิลแบ�
 
 คลังสกิล **AI และ Cybersecurity** ที่คัดไว้ใช้เรียนรู้และต่อยอด มีคำอธิบายภาษาไทย ลิงก์ระบุ commit และหมายเหตุเรื่องเครื่องมือที่ต้องใช้ เพื่อให้เลือกได้ว่าสกิลไหนตรงกับงานของเรา
 
-ผลงานของคลังนี้คือการคัดสรร สรุปข้อมูล จัดชุดเริ่มต้น เขียน playbook 3 ชุด และทำเครื่องมือค้นหารายการแบบออฟไลน์ สกิลที่ลิงก์ออกไปยังเป็นผลงานของผู้เขียนต้นทาง และไม่ได้คัดลอกโค้ดทั้งแพ็กมารวมไว้ที่นี่
+ผลงานของคลังนี้คือการคัดสรร สรุปข้อมูล จัดชุดเริ่มต้น เขียน playbook 3 ชุด ทำเครื่องมือค้นหารายการแบบออฟไลน์ และพัฒนา Privacy Guard ของเรา สกิลที่ลิงก์ออกไปยังเป็นผลงานของผู้เขียนต้นทาง และไม่ได้คัดลอกโค้ดทั้งแพ็กมารวมไว้ที่นี่
+
+## เครื่องมือของเรา: Privacy Guard
+
+ปิดบังอีเมลและฟิลด์ JSON ที่กำหนดก่อนนำข้อมูลไปเตรียมบริบทให้ Agent หรือบันทึก log ใช้ Python 3.9+ standard library ทำงานออฟไลน์ มีขีดจำกัดขนาดและความลึกของ input และข้อความผิดพลาดที่ไม่พิมพ์ข้อมูลต้นฉบับ
+
+```bash
+python3 scripts/privacy_guard.py json --sensitive-field customer_name < examples/privacy-input.json
+python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json
+python3 -m unittest discover -s tests -v
+```
+
+อ่าน [วิธีใช้และขอบเขต](docs/privacy-guard.md), [ผลตรวจข้อมูลจำลอง](examples/privacy-guard-results.json) และ [บันทึกการพัฒนา](docs/development-notes/2026-11-11-original-tools.md) เครื่องมือนี้ใช้กฎปิดบังอีเมลและฟิลด์ที่ระบุ ข้อมูลอ่อนไหวประเภทอื่นต้องกำหนดฟิลด์หรือประเมินตัวตรวจแยกเพิ่มเติม
 
 ## รอบคัดล่าสุด
 
@@ -83,7 +95,7 @@ Windows ใช้ `py -3` แทน `python3` ได้ หรือเปิด
 
 ยังไม่ได้รันสกิลหรือเครื่องมือต้นทางจริง ดู [รายงาน coverage](docs/review-status.md) และ [วิธีคัดและตรวจ](docs/methodology.md) ได้ ทุก entry มีลิงก์ที่ตรึง commit และบันทึกระดับที่ตรวจไว้
 
-ตั้ง workflow ให้ตรวจ catalog และ CLI เมื่อ push หรือเปิด pull request แล้ว ดูสถานะการรันจริงได้ใน Actions รอบนี้ตรวจในสภาพแวดล้อม local ผ่าน catalog checks และ 12 tests ส่วนคำสั่ง `check` รันแบบออฟไลน์ได้
+ตั้ง workflow ให้ตรวจเมื่อ push หรือเปิด pull request แล้ว ดูสถานะการรันจริงได้ใน Actions การตรวจ local ครอบคลุม catalog, การปฏิเสธข้อมูลผิดรูป, การสร้างคลังย่อยแบบ deterministic และ Privacy Guard ของเรา รายงาน fixture ระบุ SHA-256 ของโค้ดและชุดข้อมูล คำสั่งเหล่านี้ไม่รันแพ็กเกจต้นทางที่ลิงก์ไว้
 
 ```bash
 python3 scripts/arsenal.py search "MCP" --review entry-reviewed

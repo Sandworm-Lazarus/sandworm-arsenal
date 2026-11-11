@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-11 — Original Privacy Guard and maintenance safeguards
+
+- Developed an original offline email/JSON-field masking utility with input budgets, deterministic output, and sanitized failures.
+- Turned synthetic privacy policy cases into executable fixtures with a reproducible report and content hashes; added unit and CLI regression checks.
+- Hardened catalog shape/type validation so malformed records are rejected before search or rendering.
+- Derived focused snapshot identity from the hub and added deterministic generation, partition and provenance regression checks.
+- Added focused repository validation workflows and distributed the original utility to Cyber Arsenal and Dev Playbooks.
+- Retained 160 linked skill entries and 66 upstream tools; original utility tests do not change their untested runtime status.
+
 ## 2026-11-11 — Useful gaps: MCP, TypeScript and privacy
 
 - Added MCP Inspector, Mastra, Vercel AI SDK, Presidio and Bruno: 66 tools and 95 source repositories.

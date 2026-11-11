@@ -22,7 +22,19 @@ This repository is the collection hub. Skills have focused homes in the four sub
 
 A personal collection of useful **AI and cybersecurity agent skills**, with Thai annotations, pinned source links, and practical workflows. Built for people who want to understand what a skill does before adding it to their tools.
 
-This repository contributes the curation, original summaries, three original playbooks, and a small offline catalog CLI. Linked skills belong to their respective authors. Upstream skill code is not bundled here.
+This repository contributes the curation, original summaries, three original playbooks, an offline catalog CLI, and the original Privacy Guard utility. Linked skills belong to their respective authors. Upstream skill code is not bundled here.
+
+## Original tool: Privacy Guard
+
+Mask email addresses and selected JSON fields before preparing agent context or application logs. The utility runs offline with Python 3.9+ and the standard library. It applies an explicit preprocessing policy with input limits and sanitized errors.
+
+```bash
+python3 scripts/privacy_guard.py json --sensitive-field customer_name < examples/privacy-input.json
+python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json
+python3 -m unittest discover -s tests -v
+```
+
+See the [utility guide](docs/privacy-guard.md), [synthetic fixture results](examples/privacy-guard-results.json), and [development case study](docs/development-notes/2026-11-11-original-tools.md). This is a bounded email/field masking tool; other sensitive data requires an explicit field policy or a separately evaluated detector.
 
 ## Latest curation
 
@@ -110,7 +122,7 @@ python3 scripts/arsenal.py show 1
 python3 scripts/arsenal.py stats
 ```
 
-The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 12 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
+The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local checks cover catalog consistency, malformed input handling, deterministic collection generation, and the original Privacy Guard. The synthetic fixture report records script and fixture SHA-256 hashes. These checks do not execute linked upstream packages.
 
 ## Contribute and reuse
 

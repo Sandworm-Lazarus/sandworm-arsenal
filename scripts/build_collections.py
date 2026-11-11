@@ -12,6 +12,60 @@ parser.add_argument('--output-root', type=Path, default=HUB.parent/'generated-co
 args=parser.parse_args()
 OUT=args.output_root.resolve()
 data=json.loads((HUB/'catalog/arsenal.json').read_text())
+checkout_revision='11d5960a326750d5838078e36cf38b85af677262'
+privacy_collections={'sandworm-cyber-arsenal','sandworm-dev-playbooks'}
+privacy_files=('scripts/privacy_guard.py','tests/test_privacy_guard.py','docs/privacy-guard.md','examples/privacy-fixtures.json')
+privacy_report_files=('scripts/check_privacy_fixtures.py','examples/privacy-guard-results.json')
+privacy_extra_files=('examples/privacy-input.json','docs/development-notes/2026-11-11-original-tools.md')
+
+def optional_bundle(paths, trigger_paths=None):
+    """Allow an absent bundle during assembly, but never publish a partial one."""
+    present=[(HUB/path).is_file() for path in paths]
+    triggered=any((HUB/path).exists() for path in (trigger_paths or paths))
+    if triggered and not all(present):
+        missing=', '.join(path for path,exists in zip(paths,present) if not exists)
+        raise SystemExit(f'Incomplete optional bundle; missing: {missing}')
+    return all(present)
+
+has_privacy_guard=optional_bundle(privacy_files,privacy_files[:3])
+has_privacy_report=optional_bundle(privacy_report_files)
+if has_privacy_report and not has_privacy_guard:
+    raise SystemExit('The privacy fixture report requires the complete privacy guard bundle.')
+
+def validation_workflow(include_privacy=False, include_report=False):
+    workflow=f'''name: Validate collection
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out collection
+        uses: actions/checkout@{checkout_revision} # v4, reviewed 2026-11-11
+        with:
+          persist-credentials: false
+      - name: Validate catalog and generated documents
+        run: python3 scripts/arsenal.py check
+'''
+    if include_privacy:
+        workflow+='''      - name: Run original privacy guard tests
+        run: python3 -m unittest discover -s tests -p 'test_privacy_guard.py' -v
+'''
+    if include_report:
+        workflow+='''      - name: Verify synthetic privacy fixture report
+        run: python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json
+'''
+    return workflow
+
 toolbox_groups={'Personal agents','Agent frameworks','Visual workflows','Local inference','Chat workspaces','Agent memory','Browser automation','Document ingestion','RAG & vector search','Voice & audio','Image workflows','Coding agents','Training & fine-tuning','Observability','Model gateways','MCP development','AI application SDKs','Privacy & data handling'}
 new_evals={'confident-ai/deepeval','vibrantlabsai/ragas'}
 security_groups={'Skill review','Secrets','Containers / IaC','Supply chain','CI security','Code analysis','MCP development','Privacy & data handling'}
@@ -47,7 +101,15 @@ script=script.replace('See the [AI toolbox guide](docs/ai-toolbox.md) for task-o
 summary=[]
 for spec in specs:
     root=OUT/spec['name']
-    for d in ('assets','catalog','scripts','docs'):(root/d).mkdir(parents=True,exist_ok=True)
+    for d in ('assets','catalog','scripts','docs','.github/workflows'):(root/d).mkdir(parents=True,exist_ok=True)
+    include_privacy=has_privacy_guard and spec['name'] in privacy_collections
+    include_report=has_privacy_report and include_privacy
+    privacy_extras=tuple(path for path in privacy_extra_files if include_privacy and (HUB/path).is_file())
+    for filename in (privacy_files if include_privacy else ())+(privacy_report_files if include_report else ())+privacy_extras:
+        destination=root/filename
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(HUB/filename,destination)
+    (root/'.github/workflows/validate.yml').write_text(validation_workflow(include_privacy,include_report))
     subset=copy.deepcopy(data)
     subset['skills']=[s for s in subset['skills'] if s['category'] in spec['categories']]
     if spec.get('groups') is None:
@@ -57,7 +119,7 @@ for spec in specs:
     repos={s['repo'] for s in subset['skills']}|{t['repo'] for t in subset['tools']}
     subset['sources']=[s for s in subset['sources'] if s['repo'] in repos]
     subset['evidence']=[e for e in subset['evidence'] if e['repo'] in repos]
-    subset['snapshot']='2026-11-11-'+spec['name']
+    subset['snapshot']=data['snapshot']+'-'+spec['name']
     subset['scope']=f"Focused collection: {len(subset['skills'])} skill entries and {len(subset['tools'])} tools. Original review levels retained. No upstream runtime testing."
     subset['collection']={'name':spec['name'],'hub':'https://github.com/Sandworm-Lazarus/sandworm-arsenal','source_snapshot':data['snapshot']}
     (root/'catalog/arsenal.json').write_text(json.dumps(subset,ensure_ascii=False,indent=2)+'\n')
@@ -132,6 +194,23 @@ Original summaries, artwork, CLI and guides are [MIT licensed](LICENSE). Linked 
     if spec['name']=='sandworm-dev-playbooks':
         for folder in ('playbooks','templates'):shutil.copytree(HUB/folder,root/folder,dirs_exist_ok=True)
         readme+='\n## Original working materials\n\n- [Three original playbooks](playbooks/review-agent-extension.md) for extension review, evidence-backed diffs and model comparison.\n- [Five report templates](templates/README.md) for findings, threat models, model evals, extension reviews and detection rules.\n'
+    if include_privacy:
+        readme+='''
+## Original utility: privacy guard
+
+Use the local Python [privacy guard](docs/privacy-guard.md) to apply explicit field policies and text masking to synthetic text or JSON. It uses the standard library and makes no network requests. Read the documented coverage and limits before using its output.
+
+```bash
+printf '%s\\n' '{"customer_name":"Synthetic Person","message":"Email nina@example.invalid"}' | python3 scripts/privacy_guard.py json --sensitive-field customer_name
+python3 -m unittest discover -s tests -p 'test_privacy_guard.py' -v
+```
+
+The [synthetic privacy fixtures](examples/privacy-fixtures.json) describe acceptance cases; they are not a Presidio or general PII-detection benchmark.
+'''
+        if 'docs/development-notes/2026-11-11-original-tools.md' in privacy_extras:
+            readme+='\nRead the [original-tool development case study](docs/development-notes/2026-11-11-original-tools.md) for implementation decisions and verification evidence.\n'
+        if include_report:
+            readme+='\nReproduce the committed fixture report with `python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json`.\n'
     if not has_skills:
         readme=readme.replace('Entry and Overview labels retain the inspection scope from the original research. Tool records are README overviews.', 'Tool records retain the README and license-overview scope from the original research.')
     (root/'README.md').write_text(readme)
@@ -161,6 +240,21 @@ Entry หมายถึงเคยอ่านไฟล์ entry ในงา�
 '''
     if not has_skills:
         thai=thai.replace(f"คลังนี้มีสกิล 0 entries และเครื่องมือ {len(subset['tools'])} ตัว", f"คลังนี้รวมเครื่องมือ AI {len(subset['tools'])} ตัว")
+    if include_privacy:
+        thai+='''
+## เครื่องมือที่พัฒนาเอง: privacy guard
+
+ใช้ [privacy guard](docs/privacy-guard.md) เพื่อใช้นโยบายปิดบัง field ที่ระบุและข้อความสังเคราะห์แบบ local ด้วย Python standard library โดยไม่มี network requests อ่านขอบเขตและข้อจำกัดในคู่มือก่อนนำผลไปใช้
+
+```bash
+printf '%s\\n' '{"customer_name":"Synthetic Person","message":"Email nina@example.invalid"}' | python3 scripts/privacy_guard.py json --sensitive-field customer_name
+python3 -m unittest discover -s tests -p 'test_privacy_guard.py' -v
+```
+
+[ชุดข้อมูลสังเคราะห์](examples/privacy-fixtures.json) เป็นกรณีทดสอบตามนโยบาย ไม่ใช่ผล benchmark ของ Presidio หรือการรับรองว่าค้นพบ PII ครบ
+'''
+        if 'docs/development-notes/2026-11-11-original-tools.md' in privacy_extras:
+            thai+='\nอ่าน [กรณีศึกษาการพัฒนาเครื่องมือของเรา](docs/development-notes/2026-11-11-original-tools.md) สำหรับเหตุผลการออกแบบและหลักฐานการตรวจสอบ\n'
     (root/'README.th.md').write_text(thai)
     start=[f"# Start here: {spec['title']}",'','[Home](../README.md) · [Tools](../TOOLS.md) · [Sources](../SOURCES.md)','','Select a task, inspect the complete pinned package, then try a bounded synthetic fixture. These are reading paths and prototype ideas, not tested integrations.','']
     for label,groups in spec['paths']:
@@ -175,11 +269,15 @@ Entry หมายถึงเคยอ่านไฟล์ entry ในงา�
         for cat in spec['categories']:
             for s in [s for s in subset['skills'] if s['category']==cat][:3]:
                 start.append(f"| [{s['name']}]({s['url']}) | {s['purpose']} | {s['review_level']} |")
-    if spec['name'] in ('sandworm-cyber-arsenal','sandworm-dev-playbooks'):
+    if spec['name'] in privacy_collections:
         (root/'examples').mkdir(exist_ok=True)
         shutil.copyfile(HUB/'examples/privacy-fixtures.json',root/'examples/privacy-fixtures.json')
-        start += ['', '## Synthetic privacy trial', '',
-                  'Use the original [privacy policy fixtures](../examples/privacy-fixtures.json) to define expected masking behavior in a prototype. Include Thai text, explicit sensitive fields, benign version numbers, already masked values and empty input. These are proposed acceptance criteria; configure your own adapter and recognizers and record observed results before claiming support.', '']
+        if include_privacy:
+            start += ['', '## Original privacy guard', '',
+                      'Run the original [local privacy utility](privacy-guard.md) against the [synthetic policy fixtures](../examples/privacy-fixtures.json). Record its documented field policy, input budgets and masking limits. These cases do not establish general PII-detection coverage or Presidio behavior.', '']
+        else:
+            start += ['', '## Synthetic privacy trial', '',
+                      'Use the original [privacy policy fixtures](../examples/privacy-fixtures.json) to define expected masking behavior in a prototype. Include Thai text, explicit sensitive fields, benign version numbers, already masked values and empty input. These are proposed acceptance criteria; configure your own adapter and recognizers and record observed results before claiming support.', '']
     (root/'docs/start-here.md').write_text('\n'.join(start)+'\n')
     (root/'docs/methodology.md').write_text(f'''# Methodology
 

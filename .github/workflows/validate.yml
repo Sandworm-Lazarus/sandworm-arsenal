@@ -20,5 +20,9 @@ jobs:
           persist-credentials: false
       - name: Validate catalog and generated documents
         run: python3 scripts/arsenal.py check
-      - name: Run CLI regression tests
+      - name: Run catalog, generator and original utility regression tests
         run: python3 -m unittest discover -s tests -v
+      - name: Generate and validate all focused collections
+        run: python3 scripts/build_collections.py --output-root "${RUNNER_TEMP}/focused-collections"
+      - name: Verify synthetic privacy fixture report
+        run: python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json

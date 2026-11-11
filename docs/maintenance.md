@@ -30,3 +30,20 @@ Generate into a separate directory, review differences against each repository's
 5. Compare published file identities and report the observed validation scope.
 
 An upstream tool being listed does not imply it was installed or tested. Hosted CI status and local checks are separate evidence. Keep credentials and private logs out of catalog records and fixtures.
+
+## Original tools and fixture evidence
+
+Privacy Guard is original repository code with a bounded email/JSON-field masking policy. Its synthetic fixtures, unit tests and CLI checks are separate from upstream catalog review labels.
+
+```bash
+python3 scripts/check_privacy_fixtures.py --check-report examples/privacy-guard-results.json
+python3 -m unittest discover -s tests -v
+```
+
+After changing the guard or its fixtures, regenerate the recorded result and review it before publication:
+
+```bash
+python3 scripts/check_privacy_fixtures.py --write-report examples/privacy-guard-results.json
+```
+
+The report contains fixture IDs, outcomes, and source/fixture hashes; it excludes raw input and transformed payloads. A passing synthetic report establishes only the documented policy on those cases. It does not establish universal PII coverage, upstream Presidio behavior, or safe handling of untested formats.
