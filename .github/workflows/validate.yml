@@ -22,6 +22,8 @@ jobs:
         run: python3 scripts/arsenal.py check
       - name: Run catalog, generator and original utility regression tests
         run: python3 -m unittest discover -s tests -v
+      - name: Test each original standalone project
+        run: python3 scripts/check_originals.py
       - name: Generate and validate all focused collections
         run: python3 scripts/build_collections.py --output-root "${RUNNER_TEMP}/focused-collections"
       - name: Verify synthetic privacy fixture report

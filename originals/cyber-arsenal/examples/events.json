@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "description": "Fabricated events; no real users, systems or attack execution.",
+  "events": [
+    {"event_id":"e01","timestamp":"2026-11-11T10:00:00Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-1"},
+    {"event_id":"e02","timestamp":"2026-11-11T10:00:05Z","actor":"fixture-a","action":"object_access","outcome":"allowed","object_id":"own-item"},
+    {"event_id":"e03","timestamp":"2026-11-11T10:00:10Z","actor":"fixture-b","action":"object_access","outcome":"denied","object_id":"item-2"},
+    {"event_id":"e04","timestamp":"2026-11-11T10:00:30Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-2"},
+    {"event_id":"r01","timestamp":"2026-11-11T10:00:40Z","actor":"fixture-c","action":"replay_check","outcome":"denied","request_id":"request-x"},
+    {"event_id":"r02","timestamp":"2026-11-11T10:00:45Z","actor":"fixture-c","action":"replay_check","outcome":"allowed","request_id":"request-x"},
+    {"event_id":"e05","timestamp":"2026-11-11T10:01:00Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-3"},
+    {"event_id":"r03","timestamp":"2026-11-11T10:01:10Z","actor":"fixture-c","action":"replay_check","outcome":"denied","request_id":"request-x"},
+    {"event_id":"r04","timestamp":"2026-11-11T10:01:40Z","actor":"fixture-c","action":"replay_check","outcome":"denied","request_id":"request-x"},
+    {"event_id":"e06","timestamp":"2026-11-11T10:02:01Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-4"},
+    {"event_id":"e07","timestamp":"2026-11-11T10:02:30Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-5"},
+    {"event_id":"e08","timestamp":"2026-11-11T10:03:01Z","actor":"fixture-a","action":"object_access","outcome":"denied","object_id":"item-6"},
+    {"event_id":"r05","timestamp":"2026-11-11T10:03:02Z","actor":"fixture-c","action":"replay_check","outcome":"denied","request_id":"request-y"},
+    {"event_id":"r06","timestamp":"2026-11-11T10:03:03Z","actor":"fixture-c","action":"replay_check","outcome":"denied","request_id":"request-z"}
+  ]
+}

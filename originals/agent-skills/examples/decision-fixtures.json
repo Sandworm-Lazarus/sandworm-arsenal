@@ -1,0 +1,18 @@
+{
+  "description": "Synthetic expected decisions for the original offline evaluator; no identities are authenticated and no tools are executed.",
+  "policy_file": "policy.json",
+  "now": "2030-01-01T00:00:00Z",
+  "cases": [
+    {"id":"allow-status","request":{"principal":"operator.demo","action":"server.status","resource":"game.demo"},"expected_decision":{"allowed":true,"reason":"ALLOW"}},
+    {"id":"allow-before-expiry","request":{"principal":"operator.demo","action":"config.write","resource":"game.demo"},"expected_decision":{"allowed":true,"reason":"ALLOW"}},
+    {"id":"cross-user","request":{"principal":"guest.demo","action":"server.status","resource":"game.demo"},"expected_decision":{"allowed":false,"reason":"NO_PRINCIPAL_GRANT"}},
+    {"id":"wrong-action","request":{"principal":"auditor.demo","action":"config.write","resource":"game.demo"},"expected_decision":{"allowed":false,"reason":"ACTION_DENIED"}},
+    {"id":"cross-resource","request":{"principal":"operator.demo","action":"server.status","resource":"game.other"},"expected_decision":{"allowed":false,"reason":"RESOURCE_DENIED"}},
+    {"id":"no-prefix-inheritance","request":{"principal":"operator.demo","action":"logs.read","resource":"game.demo/child"},"expected_decision":{"allowed":false,"reason":"RESOURCE_DENIED"}},
+    {"id":"expiry-boundary","now":"2030-01-01T01:00:00Z","request":{"principal":"operator.demo","action":"config.write","resource":"game.demo"},"expected_decision":{"allowed":false,"reason":"GRANT_EXPIRED"}},
+    {"id":"expired-grant","now":"2030-01-02T00:00:00Z","request":{"principal":"operator.demo","action":"config.write","resource":"game.demo"},"expected_decision":{"allowed":false,"reason":"GRANT_EXPIRED"}},
+    {"id":"extra-context-rejected","request":{"principal":"operator.demo","action":"server.status","resource":"game.demo","approved":true},"expected_decision":{"allowed":false,"reason":"INVALID_REQUEST"}},
+    {"id":"duplicate-policy-key","policy_text":"{\"version\":1,\"version\":1,\"grants\":[]}","request":{"principal":"operator.demo","action":"server.status","resource":"game.demo"},"expected_decision":{"allowed":false,"reason":"INVALID_JSON"}},
+    {"id":"duplicate-request-key","request_text":"{\"principal\":\"guest.demo\",\"principal\":\"operator.demo\",\"action\":\"server.status\",\"resource\":\"game.demo\"}","expected_decision":{"allowed":false,"reason":"INVALID_JSON"}}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "author": "Sandworm-Lazarus",
+  "license": "MIT",
+  "projects": [
+    {"collection":"sandworm-ai-toolbox","slug":"ai-toolbox","title":"AI Workload Budget Calculator","thai":"คำนวณต้นทุน API จาก workload และราคาที่ผู้ใช้ระบุ","script":"scripts/ai_budget.py","quickstart":"python3 scripts/ai_budget.py examples/workload.json"},
+    {"collection":"sandworm-agent-skills","slug":"agent-skills","title":"Tool Policy Gate","thai":"ตรวจสิทธิ์ principal/action/resource ตาม allowlist และเวลาหมดอายุ","script":"scripts/tool_policy.py","quickstart":"python3 scripts/tool_policy.py --policy examples/policy.json --request examples/request-allow.json --now 2030-01-01T00:00:00Z"},
+    {"collection":"sandworm-cyber-arsenal","slug":"cyber-arsenal","title":"Detection Lab","thai":"ตรวจพฤติกรรมซ้ำจาก event จำลอง พร้อมเทียบ expected alerts","script":"scripts/detection_lab.py","quickstart":"python3 scripts/detection_lab.py --input examples/events.json --expect examples/expected-alerts.json"},
+    {"collection":"sandworm-llm-lab","slug":"llm-lab","title":"Recorded Answer Evaluator","thai":"วัด exact answer, citations และ abstention จากคำตอบที่บันทึกไว้","script":"scripts/eval_results.py","quickstart":"python3 scripts/eval_results.py --input examples/eval-cases.json"},
+    {"collection":"sandworm-dev-playbooks","slug":"dev-playbooks","title":"Evidence Manifest Checker","thai":"ตรวจ artifact hash และ metadata ผลรันโดยไม่ execute คำสั่งใน manifest","script":"scripts/evidence_check.py","quickstart":"python3 scripts/evidence_check.py --manifest examples/evidence-manifest.json --root ."}
+  ]
+}

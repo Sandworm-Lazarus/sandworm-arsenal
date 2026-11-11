@@ -1,0 +1,17 @@
+[
+  {
+    "rule":"denied_object_access_burst","group":{"actor":"fixture-a"},"count":3,
+    "first_seen":"2026-11-11T10:00:00Z","last_seen":"2026-11-11T10:01:00Z",
+    "event_ids":["e01","e04","e05"],"object_ids":["item-1","item-2","item-3"]
+  },
+  {
+    "rule":"rejected_replay_burst","group":{"actor":"fixture-c","request_id":"request-x"},"count":3,
+    "first_seen":"2026-11-11T10:00:40Z","last_seen":"2026-11-11T10:01:40Z",
+    "event_ids":["r01","r03","r04"]
+  },
+  {
+    "rule":"denied_object_access_burst","group":{"actor":"fixture-a"},"count":3,
+    "first_seen":"2026-11-11T10:02:01Z","last_seen":"2026-11-11T10:03:01Z",
+    "event_ids":["e06","e07","e08"],"object_ids":["item-4","item-5","item-6"]
+  }
+]

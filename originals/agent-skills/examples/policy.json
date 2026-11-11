@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "grants": [
+    {"principal": "operator.demo", "actions": ["server.status", "logs.read"], "resources": ["game.demo"]},
+    {"principal": "operator.demo", "actions": ["config.write"], "resources": ["game.demo"], "expires_at": "2030-01-01T01:00:00Z"},
+    {"principal": "auditor.demo", "actions": ["logs.read"], "resources": ["game.demo"]}
+  ]
+}

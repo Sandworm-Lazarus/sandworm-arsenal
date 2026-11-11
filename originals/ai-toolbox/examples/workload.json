@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "price_basis": "synthetic-example",
+  "input_tokens_per_request": 1000,
+  "output_tokens_per_request": 500,
+  "requests_per_day": 100,
+  "days": 30,
+  "input_usd_per_million_tokens": "2.00",
+  "output_usd_per_million_tokens": "8.00",
+  "monthly_budget_usd": "12.00"
+}

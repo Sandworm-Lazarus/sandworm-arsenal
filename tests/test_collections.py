@@ -187,6 +187,31 @@ class CollectionGenerationTests(unittest.TestCase):
                 self.assertIn(removed, result.stderr)
                 self.assertFalse(output.exists())
 
+    def test_each_original_project_is_packaged_with_standalone_tests_and_guide(self):
+        hub = self.root / "with-originals"
+        shutil.copytree(self.hub, hub)
+        shutil.copytree(HUB / "originals", hub / "originals",
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+        output = self.root / "original-output"
+        result = generate(hub, output)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        register = json.loads((hub / "originals/manifest.json").read_text(encoding="utf-8"))
+        for project in register["projects"]:
+            with self.subTest(collection=project["collection"]):
+                root = output / project["collection"]
+                source = hub / "originals" / project["slug"]
+                for folder in ("scripts", "tests", "examples", "docs"):
+                    for file in (source / folder).rglob("*"):
+                        if file.is_file():
+                            self.assertEqual(file.read_bytes(), (root / file.relative_to(source)).read_bytes())
+                self.assertTrue((root / "ORIGINAL_WORK.md").is_file())
+                readme = (root / "README.md").read_text(encoding="utf-8")
+                self.assertIn(project["title"], readme)
+                self.assertIn(project["quickstart"], readme)
+                workflow = (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
+                self.assertIn("python3 -m unittest discover -s tests -v", workflow)
+                self.assertFalse(any("__pycache__" in p.parts for p in root.rglob("*")))
+
     def test_absent_optional_utility_retains_catalog_only_generation(self):
         hub = self.root / "without-utility"
         shutil.copytree(self.hub, hub)

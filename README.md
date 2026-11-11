@@ -26,6 +26,12 @@ This repository contributes the curation, original summaries, three original pla
 
 ## Original tool: Privacy Guard
 
+Each focused repository also includes its own authored utility: an AI workload budget calculator, a tool policy gate, a synthetic detection lab, a recorded-answer evaluator, or an evidence manifest checker. See [original work and attribution](ORIGINAL_WORK.md) and the [project register](originals/manifest.json).
+
+```bash
+python3 scripts/check_originals.py
+```
+
 Mask email addresses and selected JSON fields before preparing agent context or application logs. The utility runs offline with Python 3.9+ and the standard library. It applies an explicit preprocessing policy with input limits and sanitized errors.
 
 ```bash

@@ -1,0 +1,31 @@
+{
+  "cost_usd": {
+    "daily_exact": "0.6",
+    "daily_rounded_cents": "0.60",
+    "input_per_request_exact": "0.002",
+    "output_per_request_exact": "0.004",
+    "per_request_exact": "0.006",
+    "period_exact": "18",
+    "period_rounded_cents": "18.00"
+  },
+  "currency": "USD",
+  "monthly_budget": {
+    "amount_usd": "12",
+    "maximum_whole_requests": "2000",
+    "modeled_period_within_budget": false,
+    "request_limit": "finite"
+  },
+  "price_basis": "synthetic-example",
+  "prices_usd_per_million_tokens": {
+    "input": "2",
+    "output": "8"
+  },
+  "schema_version": 1,
+  "workload": {
+    "days": 30,
+    "input_tokens_per_request": 1000,
+    "output_tokens_per_request": 500,
+    "requests_per_day": 100,
+    "total_requests": 3000
+  }
+}

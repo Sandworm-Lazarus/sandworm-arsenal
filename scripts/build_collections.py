@@ -32,7 +32,39 @@ has_privacy_report=optional_bundle(privacy_report_files)
 if has_privacy_report and not has_privacy_guard:
     raise SystemExit('The privacy fixture report requires the complete privacy guard bundle.')
 
-def validation_workflow(include_privacy=False, include_report=False):
+original_projects={}
+original_register=HUB/'originals/manifest.json'
+if original_register.is_file():
+    register=json.loads(original_register.read_text(encoding='utf-8'))
+    expected={'ai-toolbox','agent-skills','cyber-arsenal','llm-lab','dev-playbooks'}
+    projects=register.get('projects',[])
+    if register.get('schema_version')!=1 or len(projects)!=5 or {p.get('slug') for p in projects}!=expected:
+        raise SystemExit('Invalid original project register.')
+    for project in projects:
+        slug=project['slug']
+        base=HUB/'originals'/slug
+        entry=Path(project.get('script',''))
+        if (project.get('collection')!='sandworm-'+slug or entry.is_absolute() or '..' in entry.parts
+            or not (base/entry).is_file() or not (base/'docs/original-tool.md').is_file()
+            or not list((base/'tests').glob('test_*.py'))):
+            raise SystemExit('Incomplete original project: '+slug)
+        original_projects[project['collection']]=project
+
+def original_section(project,thai=False):
+    title='เครื่องมือที่พัฒนาเอง' if thai else 'Original tool'
+    about=project['thai'] if thai else 'Authored implementation, documented inputs and synthetic regression fixtures.'
+    return f'''## {title}: {project['title']}
+
+{about} [Guide](docs/original-tool.md) · [Original work](ORIGINAL_WORK.md).
+
+```bash
+{project['quickstart']}
+python3 -m unittest discover -s tests -v
+```
+
+'''
+
+def validation_workflow(include_privacy=False, include_report=False,include_original=False):
     workflow=f'''name: Validate collection
 
 on:
@@ -56,7 +88,11 @@ jobs:
       - name: Validate catalog and generated documents
         run: python3 scripts/arsenal.py check
 '''
-    if include_privacy:
+    if include_original:
+        workflow+='''      - name: Run original tool regression tests
+        run: python3 -m unittest discover -s tests -v
+'''
+    elif include_privacy:
         workflow+='''      - name: Run original privacy guard tests
         run: python3 -m unittest discover -s tests -p 'test_privacy_guard.py' -v
 '''
@@ -104,12 +140,32 @@ for spec in specs:
     for d in ('assets','catalog','scripts','docs','.github/workflows'):(root/d).mkdir(parents=True,exist_ok=True)
     include_privacy=has_privacy_guard and spec['name'] in privacy_collections
     include_report=has_privacy_report and include_privacy
+    original=original_projects.get(spec['name'])
+    if original:
+        original_base=HUB/'originals'/original['slug']
+        for folder in ('scripts','tests','examples','docs'):
+            for source in (original_base/folder).rglob('*'):
+                if not source.is_file() or '__pycache__' in source.parts or source.suffix=='.pyc':continue
+                if source.is_symlink():raise SystemExit('Original source symlink is unsupported.')
+                destination=root/source.relative_to(original_base)
+                destination.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copyfile(source,destination)
+        (root/'ORIGINAL_WORK.md').write_text(f'''# Original work
+
+## {original['title']}
+
+This repository includes an original implementation by Sandworm-Lazarus under the repository MIT license. See the [guide](docs/original-tool.md), [{original['script']}]({original['script']}) and [regression tests](tests/).
+
+The canonical source bundle is [maintained in the hub](https://github.com/Sandworm-Lazarus/sandworm-arsenal/tree/main/originals/{original['slug']}). Shared catalog/validation code and any bundled Privacy Guard are also original hub work.
+
+External catalog entries remain the work of their upstream authors under their own licenses. Local original-tool tests do not establish runtime validation of those entries. Adapted external work must retain applicable copyright/license notices and document its source revision and modifications.
+''',encoding='utf-8')
     privacy_extras=tuple(path for path in privacy_extra_files if include_privacy and (HUB/path).is_file())
     for filename in (privacy_files if include_privacy else ())+(privacy_report_files if include_report else ())+privacy_extras:
         destination=root/filename
         destination.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(HUB/filename,destination)
-    (root/'.github/workflows/validate.yml').write_text(validation_workflow(include_privacy,include_report))
+    (root/'.github/workflows/validate.yml').write_text(validation_workflow(include_privacy,include_report,bool(original)))
     subset=copy.deepcopy(data)
     subset['skills']=[s for s in subset['skills'] if s['category'] in spec['categories']]
     if spec.get('groups') is None:
@@ -163,6 +219,7 @@ for spec in specs:
         readme+='| Track | Entries |\n| --- | ---: |\n'
         for cat in spec['categories']:readme+=f"| {cat} | {sum(s['category']==cat for s in subset['skills'])} |\n"
         readme+='\n'
+    if original:readme=readme.replace('## What is inside',original_section(original)+'## What is inside')
     readme+='| Tool category | Projects |\n| --- | ---: |\n'
     for group in dict.fromkeys(t['group'] for t in subset['tools']):
         readme+=f"| {group} | {sum(t['group']==group for t in subset['tools'])} |\n"
@@ -238,6 +295,7 @@ Entry หมายถึงเคยอ่านไฟล์ entry ในงา�
 
 เครื่องมือบางตัวอยู่ได้มากกว่าหนึ่งคลังตามบริบทการใช้งาน จึงไม่ควรนำจำนวนจากทุก repo มาบวกเป็นจำนวนโครงการไม่ซ้ำ
 '''
+    if original:thai=thai.replace('## ค้นหาและตรวจข้อมูล',original_section(original,True)+'## ค้นหาและตรวจข้อมูล')
     if not has_skills:
         thai=thai.replace(f"คลังนี้มีสกิล 0 entries และเครื่องมือ {len(subset['tools'])} ตัว", f"คลังนี้รวมเครื่องมือ AI {len(subset['tools'])} ตัว")
     if include_privacy:

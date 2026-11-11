@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "description": "Intentionally invalid fabricated event: object_id is missing.",
+  "events": [
+    {"event_id":"missing-01","timestamp":"2026-11-11T10:00:00Z","actor":"fixture-missing","action":"object_access","outcome":"denied"}
+  ]
+}

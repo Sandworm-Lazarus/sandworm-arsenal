@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-11 — Original functionality for every focused collection
+
+- Added distinct authored offline utilities for API budgeting, tool policy decisions, synthetic detections, recorded-answer evaluation and evidence manifests.
+- Added standalone examples, expected behavior, regression tests and ownership notes to every focused collection.
+- Added a hub original-project register and isolated test runner; the generator packages each project's sources and tests into its focused home.
+- Preserved upstream catalog authorship, license scope and untested runtime labels.
+
 ## 2026-11-11 — Original Privacy Guard and maintenance safeguards
 
 - Developed an original offline email/JSON-field masking utility with input budgets, deterministic output, and sanitized failures.

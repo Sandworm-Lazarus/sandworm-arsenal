@@ -1,5 +1,9 @@
 # Collection maintenance
 
+Every focused repository must include useful original implementation, reproducible examples and meaningful tests. Follow [original work and attribution](../ORIGINAL_WORK.md). Keep upstream copyright and license scope intact when adapting external code; do not rebrand linked resources as authored implementations.
+
+Standalone original bundles live in `originals/` and are distributed to their focused homes. Run `python3 scripts/check_originals.py` before generation/publication, then run the tests from each generated repository to verify its standalone packaging.
+
 ## Curation standard
 
 Prefer a small useful improvement over catalog growth. For each candidate, identify a task it improves, a gap it fills, prerequisites, license scope, and a way to evaluate it. Correct moved sources and lifecycle notes before adding a redundant alternative.
