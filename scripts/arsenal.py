@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""Offline catalog search, documentation generation, and consistency checks."""
+
+import argparse
+import datetime
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "catalog" / "arsenal.json"
+SHA = re.compile(r"[0-9a-f]{40}\Z")
+CATEGORIES = (
+    "AI Engineering", "Agent / Context", "AI Security", "Cyber",
+    "Reverse / DFIR", "Engineering",
+)
+
+
+def read_catalog(path=DATA):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def validate_catalog(data):
+    errors = []
+    if data.get("schema_version") != 1:
+        errors.append("Unsupported schema_version")
+    try:
+        datetime.date.fromisoformat(data["as_of"])
+    except (KeyError, TypeError, ValueError):
+        errors.append("as_of must be an ISO date")
+    sources = {}
+    for source in data.get("sources", []):
+        repo = source.get("repo", "")
+        if not re.fullmatch(r"[\w.-]+/[\w.-]+", repo):
+            errors.append(f"Invalid repository: {repo}")
+        if repo in sources:
+            errors.append(f"Duplicate source: {repo}")
+        sources[repo] = source
+        if not SHA.fullmatch(source.get("commit", "")):
+            errors.append(f"Invalid source commit: {repo}")
+        if source.get("url") != f"https://github.com/{repo}":
+            errors.append(f"Source URL mismatch: {repo}")
+        if not source.get("license"):
+            errors.append(f"Missing license note: {repo}")
+    seen_ids, seen_entries = set(), set()
+    for entry in data.get("skills", []):
+        ident = entry.get("id")
+        if type(ident) is not int or ident < 1 or ident in seen_ids:
+            errors.append(f"Invalid or duplicate entry ID: {ident}")
+        seen_ids.add(ident)
+        repo, path = entry.get("repo", ""), entry.get("path", "")
+        key = (repo, path)
+        if key in seen_entries:
+            errors.append(f"Duplicate entry path: {key}")
+        seen_entries.add(key)
+        source = sources.get(repo)
+        if source is None:
+            errors.append(f"Unknown source: {repo}")
+        elif entry.get("commit") != source.get("commit"):
+            errors.append(f"Source/entry revision mismatch: {ident}")
+        for field in ("commit", "blob_sha"):
+            if not SHA.fullmatch(entry.get(field, "")):
+                errors.append(f"Invalid {field}: {ident}")
+        if not path.endswith("SKILL.md") or path.startswith("/") or ".." in Path(path).parts:
+            errors.append(f"Invalid entry path: {ident}")
+        expected = f"https://github.com/{repo}/blob/{entry.get('commit')}/{path}"
+        if entry.get("url") != expected:
+            errors.append(f"Pinned URL mismatch: {ident}")
+        for field in ("name", "purpose", "requires", "note"):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                errors.append(f"Missing {field}: {ident}")
+        if entry.get("category") not in CATEGORIES:
+            errors.append(f"Unknown category: {ident}")
+        if entry.get("read") is not True or entry.get("runtime_tested") is not False:
+            errors.append(f"Schema v1 only supports source-reviewed, untested entries: {ident}")
+    if not sources or not seen_entries:
+        errors.append("Catalog must contain sources and entries")
+    for evidence in data.get("evidence", []):
+        repo = evidence.get("repo")
+        source = sources.get(repo)
+        if source is None or not SHA.fullmatch(evidence.get("blob_sha", "")):
+            errors.append(f"Invalid supporting evidence: {repo}")
+            continue
+        expected = f"https://github.com/{repo}/blob/{source['commit']}/{evidence.get('path')}"
+        if evidence.get("url") != expected:
+            errors.append(f"Supporting evidence URL mismatch: {repo}")
+    return errors
+
+
+def search(data, query, category=None):
+    needle = query.casefold()
+    return [s for s in data["skills"]
+            if (category is None or s["category"] == category)
+            and needle in " ".join(str(s[k]) for k in
+                                    ("name", "repo", "purpose", "requires", "note")).casefold()]
+
+
+def cell(value):
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def rendered_files(data):
+    catalog = ["# Skill catalog", "", "[Home](README.md) · [ภาษาไทย](README.th.md) · [Sources](SOURCES.md)", "",
+               f"Snapshot: **{data['as_of']}** · **{len(data['skills'])} selected entries**.", "",
+               "Descriptions are Thai editorial summaries. Every entry links to the reviewed commit. All entries are source-reviewed and **not runtime-tested**. Requirements and cautions are part of the selection.", "",
+               "Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.", ""]
+    for category in CATEGORIES:
+        entries = [s for s in data["skills"] if s["category"] == category]
+        catalog += [f"## {category}", "", "| Skill / source | ใช้ทำอะไร | ต้องมี | หมายเหตุ |",
+                    "| --- | --- | --- | --- |"]
+        for s in entries:
+            catalog.append(f"| [{s['name']}]({s['url']}) · `{s['repo']}` | {cell(s['purpose'])} | {cell(s['requires'])} | {cell(s['note'])} |")
+        catalog += [""]
+    sources = ["# Source register", "", "[Home](README.md) · [Skill catalog](CATALOG.md) · [Reuse notes](docs/attribution.md)", "",
+               f"Snapshot: **{data['as_of']}**. The {len(data['sources'])} sources include skill collections and evaluation tools. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.", "",
+               "Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.", "",
+               "| Source / reviewed commit | License evidence | Editorial note |", "| --- | --- | --- |"]
+    for s in data["sources"]:
+        revision = f"{s['url']}/tree/{s['commit']}"
+        license_url = s.get("license_url")
+        license_text = cell(s["license"])
+        if license_url:
+            license_text = f"[{license_text}]({license_url})"
+        sources.append(f"| [{s['repo']}]({s['url']}) · [{s['commit'][:8]}]({revision}) | {license_text} | {cell(s['note'])} |")
+    sources += ["", "## Supporting files read", "", "These 12 supporting files are additional evidence, not 12 extra skills.", ""]
+    for e in data["evidence"]:
+        sources.append(f"- [{e['repo']} / {e['path']}]({e['url']})")
+    return {"CATALOG.md": "\n".join(catalog).rstrip() + "\n",
+            "SOURCES.md": "\n".join(sources).rstrip() + "\n"}
+
+
+def local_link_errors(root):
+    errors = []
+    for path in root.rglob("*.md"):
+        content = path.read_text(encoding="utf-8")
+        targets = re.findall(r"!?\[[^\]]*\]\(([^\s)]+)\)", content)
+        targets += re.findall(r'(?:href|src)="([^"]+)"', content)
+        for target in targets:
+            parsed = urlsplit(target)
+            if parsed.scheme or parsed.netloc or not parsed.path:
+                continue
+            resolved = (path.parent / unquote(parsed.path)).resolve()
+            if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
+                errors.append(f"Broken local file link: {path.relative_to(root)} -> {target}")
+    return errors
+
+
+def check(data, root=ROOT):
+    errors = validate_catalog(data)
+    if errors:
+        return errors
+    for name, expected in rendered_files(data).items():
+        path = root / name
+        if not path.exists() or path.read_text(encoding="utf-8") != expected:
+            errors.append(f"Generated file is stale: {name}; run render")
+    errors += local_link_errors(root)
+    try:
+        ET.parse(root / "assets" / "banner.svg")
+    except (OSError, ET.ParseError) as exc:
+        errors.append(f"Invalid banner SVG: {exc}")
+    return errors
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    find = commands.add_parser("search", help="Search names and Thai annotations offline")
+    find.add_argument("query")
+    find.add_argument("--category", choices=CATEGORIES)
+    commands.add_parser("check", help="Validate metadata and local documentation offline")
+    commands.add_parser("render", help="Regenerate catalog and source Markdown")
+    args = parser.parse_args()
+    try:
+        data = read_catalog()
+        errors = validate_catalog(data)
+    except (OSError, ValueError, TypeError, AttributeError) as exc:
+        print(f"Cannot read catalog: {exc}", file=sys.stderr)
+        return 1
+    if errors:
+        print("\n".join(errors), file=sys.stderr)
+        return 1
+    if args.command == "search":
+        found = search(data, args.query, args.category)
+        for entry in found:
+            print(f"[{entry['id']:02d}] {entry['name']} ({entry['category']})")
+            print(f"  {entry['purpose']}\n  {entry['url']}")
+        print(f"{len(found)} match(es). Source review only; no runtime certification.")
+    elif args.command == "render":
+        for name, content in rendered_files(data).items():
+            (ROOT / name).write_text(content, encoding="utf-8")
+            print(f"Wrote {name}")
+    else:
+        errors = check(data)
+        if errors:
+            print("\n".join(errors), file=sys.stderr)
+            return 1
+        print(f"PASS: {len(data['skills'])} entries, {len(data['sources'])} sources; metadata and local files consistent.")
+        print("Offline check only. Upstream execution and availability were not tested.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
