@@ -15,7 +15,7 @@ DATA = ROOT / "catalog" / "arsenal.json"
 SHA = re.compile(r"[0-9a-f]{40}\Z")
 CATEGORIES = (
     "AI Engineering", "Agent / Context", "AI Security", "Cyber",
-    "Reverse / DFIR", "Engineering",
+    "Reverse / DFIR", "Engineering", "Cloud / DevOps", "Web / Frontend",
 )
 
 
@@ -25,7 +25,7 @@ def read_catalog(path=DATA):
 
 def validate_catalog(data):
     errors = []
-    if data.get("schema_version") != 1:
+    if data.get("schema_version") != 2:
         errors.append("Unsupported schema_version")
     try:
         datetime.date.fromisoformat(data["as_of"])
@@ -45,6 +45,8 @@ def validate_catalog(data):
             errors.append(f"Source URL mismatch: {repo}")
         if not source.get("license"):
             errors.append(f"Missing license note: {repo}")
+        if source.get("kind") not in ("skill-collection", "tool"):
+            errors.append(f"Invalid source kind: {repo}")
     seen_ids, seen_entries = set(), set()
     for entry in data.get("skills", []):
         ident = entry.get("id")
@@ -74,8 +76,15 @@ def validate_catalog(data):
                 errors.append(f"Missing {field}: {ident}")
         if entry.get("category") not in CATEGORIES:
             errors.append(f"Unknown category: {ident}")
-        if entry.get("read") is not True or entry.get("runtime_tested") is not False:
-            errors.append(f"Schema v1 only supports source-reviewed, untested entries: {ident}")
+        level = entry.get("review_level")
+        if level not in ("entry-reviewed", "entry-overview"):
+            errors.append(f"Invalid review level: {ident}")
+        if entry.get("read") is not (level == "entry-reviewed") or entry.get("runtime_tested") is not False:
+            errors.append(f"Schema v2 only supports source-reviewed, untested entries with matching scope: {ident}")
+        if not isinstance(entry.get("tags"), list) or not entry["tags"]:
+            errors.append(f"Missing tags: {ident}")
+        if source and source.get("kind") != "skill-collection":
+            errors.append(f"Skill points at a tool source: {ident}")
     if not sources or not seen_entries:
         errors.append("Catalog must contain sources and entries")
     for evidence in data.get("evidence", []):
@@ -87,13 +96,30 @@ def validate_catalog(data):
         expected = f"https://github.com/{repo}/blob/{source['commit']}/{evidence.get('path')}"
         if evidence.get("url") != expected:
             errors.append(f"Supporting evidence URL mismatch: {repo}")
+    seen_tools = set()
+    for tool in data.get("tools", []):
+        repo = tool.get("repo")
+        source = sources.get(repo)
+        if not source or source.get("kind") != "tool" or repo in seen_tools:
+            errors.append(f"Invalid or duplicate tool source: {repo}")
+        elif tool.get("url") != f"{source['url']}/tree/{source['commit']}":
+            errors.append(f"Tool revision mismatch: {repo}")
+        seen_tools.add(repo)
+        if tool.get("runtime_tested") is not False or tool.get("review_level") != "readme-overview":
+            errors.append(f"Unsupported tool execution claim: {repo}")
+        if any(not tool.get(k) for k in ("name", "group", "purpose", "requires", "note")):
+            errors.append(f"Incomplete tool: {repo}")
+    if seen_tools != {s["repo"] for s in data.get("sources", []) if s.get("kind") == "tool"}:
+        errors.append("Tool inventory does not match source register")
     return errors
 
 
-def search(data, query, category=None):
+def search(data, query, category=None, review=None, repo=None):
     needle = query.casefold()
     return [s for s in data["skills"]
             if (category is None or s["category"] == category)
+            and (review is None or s["review_level"] == review)
+            and (repo is None or s["repo"].casefold() == repo.casefold())
             and needle in " ".join(str(s[k]) for k in
                                     ("name", "repo", "purpose", "requires", "note")).casefold()]
 
@@ -105,14 +131,15 @@ def cell(value):
 def rendered_files(data):
     catalog = ["# Skill catalog", "", "[Home](README.md) · [ภาษาไทย](README.th.md) · [Sources](SOURCES.md)", "",
                f"Snapshot: **{data['as_of']}** · **{len(data['skills'])} selected entries**.", "",
-               "Descriptions are Thai editorial summaries. Every entry links to the reviewed commit. All entries are source-reviewed and **not runtime-tested**. Requirements and cautions are part of the selection.", "",
+               "Thai editorial summaries with pinned entry links. **Entry** means the entry was read in the initial focused review; **Overview** means frontmatter and an opening excerpt were inspected, not the complete bundle. Neither status means runtime-tested.", "",
                "Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.", ""]
     for category in CATEGORIES:
         entries = [s for s in data["skills"] if s["category"] == category]
-        catalog += [f"## {category}", "", "| Skill / source | ใช้ทำอะไร | ต้องมี | หมายเหตุ |",
+        catalog += [f"## {category}", "", "| Skill / source | ใช้ทำอะไร | Review | ต้องมี / หมายเหตุ |",
                     "| --- | --- | --- | --- |"]
         for s in entries:
-            catalog.append(f"| [{s['name']}]({s['url']}) · `{s['repo']}` | {cell(s['purpose'])} | {cell(s['requires'])} | {cell(s['note'])} |")
+            level = "Entry" if s["review_level"] == "entry-reviewed" else "Overview"
+            catalog.append(f"| **#{s['id']}** [{s['name']}]({s['url']}) · `{s['repo']}` | {cell(s['purpose'])} | {level} | {cell(s['requires'])}. {cell(s['note'])} |")
         catalog += [""]
     sources = ["# Source register", "", "[Home](README.md) · [Skill catalog](CATALOG.md) · [Reuse notes](docs/attribution.md)", "",
                f"Snapshot: **{data['as_of']}**. The {len(data['sources'])} sources include skill collections and evaluation tools. License descriptions apply to the inspected snapshot and scope; follow the linked texts before reuse.", "",
@@ -125,11 +152,43 @@ def rendered_files(data):
         if license_url:
             license_text = f"[{license_text}]({license_url})"
         sources.append(f"| [{s['repo']}]({s['url']}) · [{s['commit'][:8]}]({revision}) | {license_text} | {cell(s['note'])} |")
-    sources += ["", "## Supporting files read", "", "These 12 supporting files are additional evidence, not 12 extra skills.", ""]
+    sources += ["", "## Supporting files read in the initial focused review", "", "These supporting files are additional evidence, not extra skills.", ""]
     for e in data["evidence"]:
         sources.append(f"- [{e['repo']} / {e['path']}]({e['url']})")
+    tools = ["# Companion tools", "", "[Home](README.md) · [Skill catalog](CATALOG.md) · [Sources and licenses](SOURCES.md)", "",
+             "These are executable tools and frameworks, counted separately from agent skills. Their README/source overviews were inspected; this repository has not installed or run them. Links point to the recorded revision.", ""]
+    for group in dict.fromkeys(t["group"] for t in data["tools"]):
+        tools += [f"## {group}", "", "| Tool | ใช้ทำอะไร | ต้องมี / ข้อจำกัด |", "| --- | --- | --- |"]
+        for t in (t for t in data["tools"] if t["group"] == group):
+            tools.append(f"| [{t['name']}]({t['url']}) | {cell(t['purpose'])} | {cell(t['requires'])}. {cell(t['note'])} |")
+        tools += [""]
+    counts = stats(data)
+    review = ["# Review coverage", "", "[Home](../README.md) · [Methodology](methodology.md)", "",
+              f"Snapshot: **{data['as_of']}** · `{data['snapshot']}`", "",
+              "| Measure | Count |", "| --- | ---: |",
+              *[f"| {key} | {value} |" for key, value in counts.items() if isinstance(value, int)], "",
+              "## Meaning of the labels", "",
+              "- **Entry / entry-reviewed:** the entry file was read in the first research pass; selected supporting files are listed in the source register. This does not imply every bundled file was reviewed.",
+              "- **Overview / entry-overview:** the entry identity, frontmatter and opening excerpt were inspected. Supporting instructions, scripts and references still need a deeper review before adoption.",
+              "- **Tool / readme-overview:** introductory README and licensing evidence were inspected. No installation or execution claim is made.",
+              "- **Runtime-tested:** none. Local repository checks apply to the catalog and its CLI, not to upstream packages.", "",
+              "## Entries by track", "", "| Track | Entries |", "| --- | ---: |",
+              *[f"| {name} | {count} |" for name, count in counts["categories"].items()], ""]
     return {"CATALOG.md": "\n".join(catalog).rstrip() + "\n",
-            "SOURCES.md": "\n".join(sources).rstrip() + "\n"}
+            "SOURCES.md": "\n".join(sources).rstrip() + "\n",
+            "TOOLS.md": "\n".join(tools).rstrip() + "\n",
+            "docs/review-status.md": "\n".join(review).rstrip() + "\n"}
+
+
+def stats(data):
+    return {"Skill entries": len(data["skills"]),
+            "Skill collections": sum(s["kind"] == "skill-collection" for s in data["sources"]),
+            "Companion tools": len(data["tools"]),
+            "Source repositories": len(data["sources"]),
+            "Entry-reviewed": sum(s["review_level"] == "entry-reviewed" for s in data["skills"]),
+            "Entry-overview": sum(s["review_level"] == "entry-overview" for s in data["skills"]),
+            "Runtime-tested upstream skills": sum(s["runtime_tested"] for s in data["skills"]),
+            "categories": {c: sum(s["category"] == c for s in data["skills"]) for c in CATEGORIES}}
 
 
 def local_link_errors(root):
@@ -170,6 +229,12 @@ def main():
     find = commands.add_parser("search", help="Search names and Thai annotations offline")
     find.add_argument("query")
     find.add_argument("--category", choices=CATEGORIES)
+    find.add_argument("--review", choices=("entry-reviewed", "entry-overview"))
+    find.add_argument("--repo", help="Exact owner/repo filter")
+    find.add_argument("--json", action="store_true", help="Emit structured matching entries")
+    show = commands.add_parser("show", help="Show one entry by its stable numeric ID")
+    show.add_argument("id", type=int)
+    commands.add_parser("stats", help="Print catalog counts and review coverage as JSON")
     commands.add_parser("check", help="Validate metadata and local documentation offline")
     commands.add_parser("render", help="Regenerate catalog and source Markdown")
     args = parser.parse_args()
@@ -183,11 +248,22 @@ def main():
         print("\n".join(errors), file=sys.stderr)
         return 1
     if args.command == "search":
-        found = search(data, args.query, args.category)
+        found = search(data, args.query, args.category, args.review, args.repo)
+        if args.json:
+            print(json.dumps(found, ensure_ascii=False, indent=2))
+            return 0
         for entry in found:
             print(f"[{entry['id']:02d}] {entry['name']} ({entry['category']})")
             print(f"  {entry['purpose']}\n  {entry['url']}")
         print(f"{len(found)} match(es). Source review only; no runtime certification.")
+    elif args.command == "show":
+        found = next((s for s in data["skills"] if s["id"] == args.id), None)
+        if found is None:
+            print(f"No entry with ID {args.id}", file=sys.stderr)
+            return 1
+        print(json.dumps(found, ensure_ascii=False, indent=2))
+    elif args.command == "stats":
+        print(json.dumps(stats(data), ensure_ascii=False, indent=2))
     elif args.command == "render":
         for name, content in rendered_files(data).items():
             (ROOT / name).write_text(content, encoding="utf-8")

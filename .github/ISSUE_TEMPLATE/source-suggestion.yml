@@ -1,0 +1,24 @@
+name: Suggest a source
+description: Propose a useful skill or companion tool with traceable provenance.
+title: "[Source] "
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Canonical source URL
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: What task does it help with?
+      description: Include an entry path, pinned revision, and concrete output.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Inspection and reuse evidence
+      description: Files inspected, dependencies, permissions, license scope, and any unverified claims.
+    validations:
+      required: true

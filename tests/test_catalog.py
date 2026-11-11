@@ -2,6 +2,9 @@
 
 import copy
 import importlib.util
+import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -36,6 +39,26 @@ class CatalogTests(unittest.TestCase):
         results = arsenal.search(self.data, "สิทธิ์", "AI Security")
         self.assertTrue(results)
         self.assertTrue(all(e["category"] == "AI Security" for e in results))
+
+    def test_overview_cannot_claim_complete_entry_read(self):
+        entry = next(e for e in self.data["skills"] if e["review_level"] == "entry-overview")
+        entry["read"] = True
+        self.assertTrue(any("matching scope" in e for e in arsenal.validate_catalog(self.data)))
+
+    def test_tool_register_rejects_revision_drift(self):
+        self.data["tools"][0]["url"] = "https://github.com/example/tool/tree/main"
+        self.assertTrue(any("Tool revision mismatch" in e for e in arsenal.validate_catalog(self.data)))
+
+    def test_cli_emits_json_and_honors_repository_filter(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), "search", "", "--repo", "cloudflare/skills", "--json"], capture_output=True, text=True, check=True)
+        entries = json.loads(result.stdout)
+        self.assertTrue(entries)
+        self.assertTrue(all(e["repo"] == "cloudflare/skills" for e in entries))
+
+    def test_cli_unknown_id_is_an_error(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), "show", "-1"], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("No entry", result.stderr)
 
     def test_missing_and_escaping_local_links_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

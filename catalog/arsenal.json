@@ -1,7 +1,7 @@
 {
   "as_of": "2026-11-11",
   "timezone": "Asia/Bangkok",
-  "scope": "Read-only source review of 57 skill entry files from 19 skill collections, plus 3 evaluation tools. No third-party skill installation or runtime certification.",
+  "scope": "160 pinned skill entries: 57 entry-reviewed in the initial research and 103 entry-overview additions. 17 companion tools have source/README review only. No third-party runtime certification.",
   "sources": [
     {
       "repo": "trailofbits/skills",
@@ -18,7 +18,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "huggingface/skills",
@@ -35,7 +36,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "trilwu/secskills",
@@ -52,7 +54,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "elastic/agent-skills",
@@ -69,7 +72,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "Orchestra-Research/AI-Research-SKILLs",
@@ -86,7 +90,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
@@ -103,7 +108,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "langchain-ai/langchain-skills",
@@ -120,7 +126,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "UnitOneAI/SecuritySkills",
@@ -137,7 +144,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "OWASP/secure-agent-playbook",
@@ -154,7 +162,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "anthropics/skills",
@@ -170,7 +179,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "obra/superpowers",
@@ -187,7 +197,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "pbakaus/impeccable",
@@ -204,7 +215,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "qdrant/skills",
@@ -221,7 +233,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "supabase/agent-skills",
@@ -238,7 +251,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "NVIDIA/skills",
@@ -255,7 +269,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "microsoft/skills",
@@ -272,7 +287,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "alirezarezvani/claude-skills",
@@ -289,7 +305,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "haikow/claude-reverse-skills",
@@ -305,7 +322,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "Datacraft-Security/Cybersecurity-Skills",
@@ -322,7 +340,8 @@
       "archived": false,
       "fork": true,
       "parent": "mukul975/Anthropic-Cybersecurity-Skills",
-      "tree_truncated": false
+      "tree_truncated": false,
+      "kind": "skill-collection"
     },
     {
       "repo": "cisco-ai-defense/skill-scanner",
@@ -339,7 +358,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": null
+      "tree_truncated": null,
+      "kind": "tool"
     },
     {
       "repo": "NVIDIA/SkillEvaluator",
@@ -356,7 +376,8 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": null
+      "tree_truncated": null,
+      "kind": "tool"
     },
     {
       "repo": "snyk/agent-scan",
@@ -373,7 +394,402 @@
       "archived": false,
       "fork": false,
       "parent": null,
-      "tree_truncated": null
+      "tree_truncated": null,
+      "kind": "tool"
+    },
+    {
+      "repo": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/LICENSE",
+      "license_blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cloud / DevOps",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "readme_url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/README.md"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "license": "MIT ระบุในบาง entries; ไม่พบ root LICENSE",
+      "license_url": null,
+      "license_blob_sha": null,
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Web / Frontend",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "composition/react entries ระบุ MIT; web-design/vercel-optimize ต้องตรวจสิทธิ์เพิ่มเติม",
+      "readme_url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/README.md"
+    },
+    {
+      "repo": "semgrep/skills",
+      "url": "https://github.com/semgrep/skills",
+      "commit": "68177b8830f96cd9d10dacbb14dde2566360503d",
+      "license": "Semgrep Rules License v1.0",
+      "license_url": "https://github.com/semgrep/skills/blob/68177b8830f96cd9d10dacbb14dde2566360503d/LICENSE",
+      "license_blob_sha": "cd16fded1a1e713f65d43654bb64d0c47c997fbf",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cyber",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "README ระบุ Beta และมีส่วนแปลงจาก Semgrep rules; ใช้ Semgrep Rules License",
+      "readme_url": "https://github.com/semgrep/skills/blob/68177b8830f96cd9d10dacbb14dde2566360503d/README.md"
+    },
+    {
+      "repo": "getsentry/skills",
+      "url": "https://github.com/getsentry/skills",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "license": "Apache-2.0 root; security-review references CC-BY-SA-4.0",
+      "license_url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/LICENSE",
+      "license_blob_sha": "753a6c03c60a9232405d05170bd3ad3cab49a1ef",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cyber",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "แพ็กออกแบบสำหรับทีม Sentry; ต้องตรวจข้อกำหนดเฉพาะองค์กร",
+      "readme_url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/README.md"
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "url": "https://github.com/github/awesome-copilot",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "license": "MIT",
+      "license_url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/LICENSE",
+      "license_blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Agent / Context",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "Community-contributed; การอยู่ใน GitHub org ไม่ใช่การรับรองราย entry",
+      "readme_url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/README.md"
+    },
+    {
+      "repo": "google-gemini/gemini-skills",
+      "url": "https://github.com/google-gemini/gemini-skills",
+      "commit": "0f596dbdcbde186e3d418d1279f7f499fe9afbf5",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google-gemini/gemini-skills/blob/0f596dbdcbde186e3d418d1279f7f499fe9afbf5/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "AI Engineering",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "ตรวจ model IDs, SDK และ billing ปัจจุบันก่อนใช้",
+      "readme_url": "https://github.com/google-gemini/gemini-skills/blob/0f596dbdcbde186e3d418d1279f7f499fe9afbf5/README.md"
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "url": "https://github.com/hashicorp/agent-skills",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "license": "MPL-2.0",
+      "license_url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/LICENSE",
+      "license_blob_sha": "d0a1fa1482eea82e19510e7920cbe3a03e41f691",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cloud / DevOps",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "readme_url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/README.md"
+    },
+    {
+      "repo": "auth0/agent-skills",
+      "url": "https://github.com/auth0/agent-skills",
+      "commit": "6331cf05ef6bbc6999d7a7b98a583e7429ebe3f6",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/auth0/agent-skills/blob/6331cf05ef6bbc6999d7a7b98a583e7429ebe3f6/LICENSE",
+      "license_blob_sha": "d9a10c0d8e868ebf8da0b3dc95bb0be634c34bfe",
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cyber",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "เป็น router ไป references; การตั้งค่า tenant เปลี่ยน auth ของระบบจริง",
+      "readme_url": "https://github.com/auth0/agent-skills/blob/6331cf05ef6bbc6999d7a7b98a583e7429ebe3f6/README.md"
+    },
+    {
+      "repo": "better-auth/skills",
+      "url": "https://github.com/better-auth/skills",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "license": "ไม่พบ root LICENSE; ตรวจสิทธิ์เพิ่มก่อนคัดลอก",
+      "license_url": null,
+      "license_blob_sha": null,
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cyber",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "readme_url": null
+    },
+    {
+      "repo": "openai/plugins",
+      "url": "https://github.com/openai/plugins",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "license": "Per-plugin/per-file; build-chatgpt-app Apache-2.0",
+      "license_url": null,
+      "license_blob_sha": null,
+      "archived": false,
+      "fork": false,
+      "parent": null,
+      "tree_truncated": false,
+      "kind": "skill-collection",
+      "category": "Cyber",
+      "recommendation": "อ่านภาพรวมแล้ว",
+      "note": "ต้นทางปัจจุบันแทน openai/skills ที่ deprecated; plugin examples อาจต้องใช้ host/backend เฉพาะ",
+      "readme_url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/README.md"
+    },
+    {
+      "repo": "microsoft/PyRIT",
+      "url": "https://github.com/microsoft/PyRIT",
+      "commit": "3b70c3c98f2b07b2f0e435d926de3d44a8bd2ec6",
+      "license": "MIT",
+      "license_url": "https://github.com/microsoft/PyRIT/blob/3b70c3c98f2b07b2f0e435d926de3d44a8bd2ec6/LICENSE",
+      "license_blob_sha": "b2f52a2bad4e27e2d9c68a755abb74cb8943f2fa",
+      "readme_url": "https://github.com/microsoft/PyRIT/blob/3b70c3c98f2b07b2f0e435d926de3d44a8bd2ec6/README.md",
+      "readme_blob_sha": "3773e4a423879eceb01e4836256e7e7b8d3fbae2",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "AI evaluation",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "การทดสอบสร้างหลาย model calls; กำหนดงบและเก็บผลทั้งสำเร็จและล้มเหลว"
+    },
+    {
+      "repo": "NVIDIA/garak",
+      "url": "https://github.com/NVIDIA/garak",
+      "commit": "892779207cbc38f65a738ef9cbdfbc1e83aa0b55",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/NVIDIA/garak/blob/892779207cbc38f65a738ef9cbdfbc1e83aa0b55/LICENSE",
+      "license_blob_sha": "95a30a74add17ce9befd719761ef4837ded45b23",
+      "readme_url": "https://github.com/NVIDIA/garak/blob/892779207cbc38f65a738ef9cbdfbc1e83aa0b55/README.md",
+      "readme_blob_sha": "29d7e4f4c740f1252c64b1b15045abfc7bd71051",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "AI evaluation",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "ผลขึ้นกับ probes และ detector; ไม่ใช้สรุปว่าปลอดภัยครอบคลุมทุกกรณี"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "commit": "b3603fab85bb331da98a8b68ca442e1f4af7e368",
+      "license": "MIT",
+      "license_url": "https://github.com/promptfoo/promptfoo/blob/b3603fab85bb331da98a8b68ca442e1f4af7e368/LICENSE",
+      "license_blob_sha": "af3fa111d9303b3041d225fb851534e50a4bbec2",
+      "readme_url": "https://github.com/promptfoo/promptfoo/blob/b3603fab85bb331da98a8b68ca442e1f4af7e368/README.md",
+      "readme_blob_sha": "2a56017c2609e3a92d7d5539147c9c7e620a3420",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "AI evaluation",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "API calls มีต้นทุน; ตรวจ cloud/red-team mode และการส่งข้อมูลก่อนใช้"
+    },
+    {
+      "repo": "UKGovernmentBEIS/inspect_ai",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "commit": "67873ea965f2d5acd46b2327ea17aecff30026c1",
+      "license": "MIT",
+      "license_url": "https://github.com/UKGovernmentBEIS/inspect_ai/blob/67873ea965f2d5acd46b2327ea17aecff30026c1/LICENSE",
+      "license_blob_sha": "72fc87742ef8a944fab4f28fe6231696c62f2fa4",
+      "readme_url": "https://github.com/UKGovernmentBEIS/inspect_ai/blob/67873ea965f2d5acd46b2327ea17aecff30026c1/README.md",
+      "readme_blob_sha": "c701dd37ca508519c3fc603f95133a63041874bc",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "AI evaluation",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "แยก scorer quality, task revision และ tool permissions ในรายงาน"
+    },
+    {
+      "repo": "gitleaks/gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "commit": "5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c",
+      "license": "MIT",
+      "license_url": "https://github.com/gitleaks/gitleaks/blob/5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c/LICENSE",
+      "license_blob_sha": "3c270b36c539ca8fbc4cc1017d3cbb7be1e44bbc",
+      "readme_url": "https://github.com/gitleaks/gitleaks/blob/5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c/README.md",
+      "readme_blob_sha": "6bdd5d960fd9f81a5221819509c4e9f5cb7d251e",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Secrets",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "README ระบุ feature-complete และรับ security patches; ผู้ดูแลชี้ไป Betterleaks"
+    },
+    {
+      "repo": "aquasecurity/trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "commit": "0e40f8178a375c68aeca146e4dc4e89ff1009587",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/aquasecurity/trivy/blob/0e40f8178a375c68aeca146e4dc4e89ff1009587/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "readme_url": "https://github.com/aquasecurity/trivy/blob/0e40f8178a375c68aeca146e4dc4e89ff1009587/README.md",
+      "readme_blob_sha": "9ba2df0ea662b376ec36db33ed6a0120ae197b13",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Containers / IaC",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "ฐานข้อมูลและ coverage เปลี่ยนได้; finding ต้องทวน reachability และ false positives"
+    },
+    {
+      "repo": "anchore/syft",
+      "url": "https://github.com/anchore/syft",
+      "commit": "a0c0d3890a9d79421c403e8fcadec50a2e55bf21",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/anchore/syft/blob/a0c0d3890a9d79421c403e8fcadec50a2e55bf21/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "readme_url": "https://github.com/anchore/syft/blob/a0c0d3890a9d79421c403e8fcadec50a2e55bf21/README.md",
+      "readme_blob_sha": "9ffd2affa3b00031ea1fd01ee3fe228379978492",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Supply chain",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "เป็น inventory; ใช้ scanner เช่น Grype เพิ่มเพื่อตรวจ vulnerability"
+    },
+    {
+      "repo": "anchore/grype",
+      "url": "https://github.com/anchore/grype",
+      "commit": "cd1f23eb50dfb52647090158f453c7359172591f",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/anchore/grype/blob/cd1f23eb50dfb52647090158f453c7359172591f/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "readme_url": "https://github.com/anchore/grype/blob/cd1f23eb50dfb52647090158f453c7359172591f/README.md",
+      "readme_blob_sha": "7b547e59369ddedd9ea575a9eccd4720255cf074",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Supply chain",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "จับคู่ package/CVE ไม่เท่ากับยืนยัน exploitability"
+    },
+    {
+      "repo": "google/osv-scanner",
+      "url": "https://github.com/google/osv-scanner",
+      "commit": "7de3a036f48e34cdb3a1d396143b11dbba34be52",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/osv-scanner/blob/7de3a036f48e34cdb3a1d396143b11dbba34be52/LICENSE",
+      "license_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "readme_url": "https://github.com/google/osv-scanner/blob/7de3a036f48e34cdb3a1d396143b11dbba34be52/README.md",
+      "readme_blob_sha": "f3e9346be71885ee20e438c62e237dbdd1d21433",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Supply chain",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "ต้องระบุ artifact และ database revision เพื่ออธิบายผลที่เปลี่ยนตามเวลา"
+    },
+    {
+      "repo": "zizmorcore/zizmor",
+      "url": "https://github.com/zizmorcore/zizmor",
+      "commit": "33ece2d3d6c60f3d669b8a69e095f60d8a980c0b",
+      "license": "MIT",
+      "license_url": "https://github.com/zizmorcore/zizmor/blob/33ece2d3d6c60f3d669b8a69e095f60d8a980c0b/LICENSE",
+      "license_blob_sha": "491f2b2c09f25968b9554948aa7f9b33708aa23a",
+      "readme_url": "https://github.com/zizmorcore/zizmor/blob/33ece2d3d6c60f3d669b8a69e095f60d8a980c0b/README.md",
+      "readme_blob_sha": "c7552b10b5a31965a64aed123f009e4b04420418",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "CI security",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "Static analysis; ต้องทวน reusable actions และบริบท runner เพิ่ม"
+    },
+    {
+      "repo": "ossf/scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "commit": "5a951604a5ff7d99b7222139ba522237c58228af",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/ossf/scorecard/blob/5a951604a5ff7d99b7222139ba522237c58228af/LICENSE",
+      "license_blob_sha": "18f7f43fde86f7ef648559da1e3b2ba46c167f90",
+      "readme_url": "https://github.com/ossf/scorecard/blob/5a951604a5ff7d99b7222139ba522237c58228af/README.md",
+      "readme_blob_sha": "01f69a14b87ed2fbe4e68b09547ad4cc316e29a0",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Supply chain",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "Score เป็น hygiene indicators ไม่ใช่การรับรองว่าโค้ดไม่มีช่องโหว่"
+    },
+    {
+      "repo": "github/codeql",
+      "url": "https://github.com/github/codeql",
+      "commit": "ccc03491fc436578bfeecb7e75305d4d64e02118",
+      "license": "MIT",
+      "license_url": "https://github.com/github/codeql/blob/ccc03491fc436578bfeecb7e75305d4d64e02118/LICENSE",
+      "license_blob_sha": "d7e60ca2fa32f4463c43b49713cd3d2bc2ddf379",
+      "readme_url": "https://github.com/github/codeql/blob/ccc03491fc436578bfeecb7e75305d4d64e02118/README.md",
+      "readme_blob_sha": "99433b8ca49feeec60735de6eab15bd4c22bd50f",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Code analysis",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "MIT ใน repo นี้ครอบคลุม queries/libraries; CLI มีเงื่อนไขแยก"
+    },
+    {
+      "repo": "semgrep/semgrep",
+      "url": "https://github.com/semgrep/semgrep",
+      "commit": "06d9993409f6698f78f6956cd39d968e7f4d7b6a",
+      "license": "LGPL-2.1",
+      "license_url": "https://github.com/semgrep/semgrep/blob/06d9993409f6698f78f6956cd39d968e7f4d7b6a/LICENSE",
+      "license_blob_sha": "8000a6faacf471c537530805ab29523c7732e11a",
+      "readme_url": "https://github.com/semgrep/semgrep/blob/06d9993409f6698f78f6956cd39d968e7f4d7b6a/README.md",
+      "readme_blob_sha": "0502ca93ab369efcb0b337a7d7adba3277e3652c",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Code analysis",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "Engine, rules และ Pro features ใช้เงื่อนไขต่างกัน; ตรวจ license และ telemetry"
+    },
+    {
+      "repo": "bridgecrewio/checkov",
+      "url": "https://github.com/bridgecrewio/checkov",
+      "commit": "c7f1a45fac5712d4cbaef22946109e20a41a1cef",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/bridgecrewio/checkov/blob/c7f1a45fac5712d4cbaef22946109e20a41a1cef/LICENSE",
+      "license_blob_sha": "6dab8a318d54575f03cfa40688e9093e4398f979",
+      "readme_url": "https://github.com/bridgecrewio/checkov/blob/c7f1a45fac5712d4cbaef22946109e20a41a1cef/README.md",
+      "readme_blob_sha": "46bac705728757d1f569bf8f6a8853645658e08a",
+      "archived": false,
+      "fork": false,
+      "kind": "tool",
+      "category": "Containers / IaC",
+      "recommendation": "เครื่องมือประกอบ",
+      "note": "ตรวจการเรียก API, external modules และ cloud features ตามโหมด"
     }
   ],
   "skills": [
@@ -390,7 +806,12 @@
       "category": "Cyber",
       "purpose": "ตรวจความเสี่ยงที่เกิดจาก diff และผลกระทบต่อผู้เรียกใช้",
       "requires": "Git history และโค้ดในโครงการ",
-      "note": "เหมาะก่อนรวม branch ของเกม"
+      "note": "เหมาะก่อนรวม branch ของเกม",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 2,
@@ -405,7 +826,12 @@
       "category": "AI Security",
       "purpose": "ตรวจ GitHub Actions ที่เรียก AI และเส้นทางข้อมูลจาก PR/issue",
       "requires": "ไฟล์ workflow และการตั้งค่า runner",
-      "note": "เหมาะเมื่อให้ Agent ทำงานใน CI"
+      "note": "เหมาะเมื่อให้ Agent ทำงานใน CI",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 3,
@@ -420,7 +846,12 @@
       "category": "Cyber",
       "purpose": "ตรวจ dependency, advisory, ผู้ดูแลแพ็กเกจ และ install scripts",
       "requires": "Python 3.11+, lockfile และแหล่ง registry/advisory",
-      "note": "อ่าน collect.py เพิ่มแล้ว; ยังไม่รัน"
+      "note": "อ่าน collect.py เพิ่มแล้ว; ยังไม่รัน",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 4,
@@ -435,7 +866,12 @@
       "category": "Cyber",
       "purpose": "ตรวจซ้ำว่ารายงานช่องโหว่มีหลักฐานจริงหรือเป็น false positive",
       "requires": "โค้ดและ finding ที่ต้องการพิสูจน์",
-      "note": "ใช้หลังการตรวจพบข้อสงสัย"
+      "note": "ใช้หลังการตรวจพบข้อสงสัย",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 5,
@@ -450,7 +886,12 @@
       "category": "Engineering",
       "purpose": "ออกแบบ invariant และสุ่มอินพุตเพื่อหา counterexample",
       "requires": "เช่น fast-check สำหรับ TypeScript",
-      "note": "เหมาะทดสอบจำนวนไอเทม เงิน และ serialization"
+      "note": "เหมาะทดสอบจำนวนไอเทม เงิน และ serialization",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 6,
@@ -465,7 +906,12 @@
       "category": "Cyber",
       "purpose": "สร้างกฎ Semgrep เฉพาะโครงการ พร้อมตัวอย่างผิดและตัวอย่างปลอดภัย",
       "requires": "Semgrep CLI และ test fixtures",
-      "note": "เหมาะจับรูปแบบอันตรายซ้ำใน server"
+      "note": "เหมาะจับรูปแบบอันตรายซ้ำใน server",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 7,
@@ -480,7 +926,12 @@
       "category": "Cyber",
       "purpose": "เขียนและทบทวนกฎ YARA-X โดยสนใจ false positive และประสิทธิภาพ",
       "requires": "Python 3.11+, yara-x และ helper files",
-      "note": "อ่าน linter เพิ่มแล้ว; ยังไม่ compile กฎ"
+      "note": "อ่าน linter เพิ่มแล้ว; ยังไม่ compile กฎ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 8,
@@ -495,7 +946,12 @@
       "category": "Reverse / DFIR",
       "purpose": "วิเคราะห์ executable โดยเริ่ม triage ก่อนเลือกจุด decompile",
       "requires": "Ghidra/radare2 และเครื่องมือตามชนิดไฟล์",
-      "note": "เข้ากับงาน PE32 และการกู้โครงสร้างข้อมูล"
+      "note": "เข้ากับงาน PE32 และการกู้โครงสร้างข้อมูล",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "reverse-dfir"
+      ]
     },
     {
       "id": 9,
@@ -510,7 +966,12 @@
       "category": "Reverse / DFIR",
       "purpose": "เทียบ packet capture กับ client เพื่อกู้ framing และ field ของ protocol",
       "requires": "PCAP, client binary และ Wireshark/Kaitai/scapy ตามงาน",
-      "note": "เหมาะงาน preservation ของ protocol เกม"
+      "note": "เหมาะงาน preservation ของ protocol เกม",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "reverse-dfir"
+      ]
     },
     {
       "id": 10,
@@ -525,7 +986,12 @@
       "category": "AI Security",
       "purpose": "ตรวจข้อความ config, hooks และสิ่งที่เริ่มทำงานเมื่อใช้ skill/plugin/MCP",
       "requires": "อ่านไฟล์ทั้ง bundle และ dependencies",
-      "note": "ควรใช้เป็นแนวทางรับสกิลเข้าคลัง"
+      "note": "ควรใช้เป็นแนวทางรับสกิลเข้าคลัง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 11,
@@ -540,7 +1006,12 @@
       "category": "Cyber",
       "purpose": "ออกแบบ Sigma rules, ลด noise และแปลงกฎข้าม SIEM",
       "requires": "pySigma และ log fixtures ที่รู้ผล",
-      "note": "เหมาะสร้างแพ็ก Detection Engineering"
+      "note": "เหมาะสร้างแพ็ก Detection Engineering",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 12,
@@ -555,7 +1026,12 @@
       "category": "Reverse / DFIR",
       "purpose": "วิเคราะห์ RAM dump เพื่อเรียงหลักฐาน process, network และ injection",
       "requires": "Volatility 3 และ image/symbols ที่เหมาะสม",
-      "note": "เหมาะแพ็ก DFIR; ไม่ใช่ไฟล์ที่แชตอ่านแทนเครื่องมือได้"
+      "note": "เหมาะแพ็ก DFIR; ไม่ใช่ไฟล์ที่แชตอ่านแทนเครื่องมือได้",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "reverse-dfir"
+      ]
     },
     {
       "id": 13,
@@ -570,7 +1046,12 @@
       "category": "Cyber",
       "purpose": "จัดลำดับและจัดกลุ่มคิวแจ้งเตือน Elastic ตามปัจจัยความเสี่ยง",
       "requires": "Kibana/Elasticsearch และสิทธิ์อ่านข้อมูล",
-      "note": "ตัวนี้ประกาศ read-only; แยกจากตัวแก้ detection rules"
+      "note": "ตัวนี้ประกาศ read-only; แยกจากตัวแก้ detection rules",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 14,
@@ -585,7 +1066,12 @@
       "category": "Cyber",
       "purpose": "สร้างและปรับ detection rules ผ่าน Kibana API",
       "requires": "Node.js 22+, Kibana/Elasticsearch credentials",
-      "note": "มี writes ต่อระบบจริง; เหมาะแพ็ก Elastic แยก"
+      "note": "มี writes ต่อระบบจริง; เหมาะแพ็ก Elastic แยก",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 15,
@@ -600,7 +1086,12 @@
       "category": "AI Engineering",
       "purpose": "สืบเหตุ latency, errors, token spend และสายการเรียก tool จาก telemetry",
       "requires": "Elastic CLI และข้อมูล LLM ที่ ingest ไว้แล้ว",
-      "note": "ไม่มี telemetry ก็ใช้เป็นขั้นตอนวิเคราะห์แทนการอ้างผลจริง"
+      "note": "ไม่มี telemetry ก็ใช้เป็นขั้นตอนวิเคราะห์แทนการอ้างผลจริง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 16,
@@ -615,7 +1106,12 @@
       "category": "Cyber",
       "purpose": "ทบทวนโค้ดและสรุป finding พร้อม mapping กับ ASVS/CWE",
       "requires": "โค้ดของส่วนที่ตรวจ",
-      "note": "ไฟล์ที่อ่านระบุ ASVS 4.0.3; ตรวจรุ่นมาตรฐานก่อนใช้ mapping"
+      "note": "ไฟล์ที่อ่านระบุ ASVS 4.0.3; ตรวจรุ่นมาตรฐานก่อนใช้ mapping",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 17,
@@ -630,7 +1126,12 @@
       "category": "Cyber",
       "purpose": "ตรวจ API เรื่องสิทธิ์เข้าถึง object/function, auth และการใช้ทรัพยากร",
       "requires": "OpenAPI, REST/GraphQL handlers และ schema",
-      "note": "เข้ากับ Express API; ต้องเสริมกติกา Colyseus เอง"
+      "note": "เข้ากับ Express API; ต้องเสริมกติกา Colyseus เอง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber"
+      ]
     },
     {
       "id": 18,
@@ -645,7 +1146,12 @@
       "category": "AI Security",
       "purpose": "ประเมินทางเข้า direct/indirect injection และวางชุดทดสอบป้องกัน",
       "requires": "โค้ดและ architecture ของ LLM application",
-      "note": "allowed-tools ที่ระบุเป็น Read/Grep/Glob; ไม่ยืนยันว่ารันทดสอบ endpoint"
+      "note": "allowed-tools ที่ระบุเป็น Read/Grep/Glob; ไม่ยืนยันว่ารันทดสอบ endpoint",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 19,
@@ -660,7 +1166,12 @@
       "category": "AI Security",
       "purpose": "ทบทวนสิทธิ์ Agent, trust boundary, audit trail และ rollback",
       "requires": "แผนระบบ, tool schemas และ policy",
-      "note": "เหมาะก่อนต่อ Agent กับ Docker หรือระบบส่วนตัว"
+      "note": "เหมาะก่อนต่อ Agent กับ Docker หรือระบบส่วนตัว",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 20,
@@ -675,7 +1186,12 @@
       "category": "AI Security",
       "purpose": "ตรวจ provenance, model revision, integrity และเส้นทาง fine-tuning",
       "requires": "model loading code และแหล่ง artifact",
-      "note": "เหมาะเมื่อดาวน์โหลดโมเดลหรือเปิด remote model code"
+      "note": "เหมาะเมื่อดาวน์โหลดโมเดลหรือเปิด remote model code",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 21,
@@ -690,7 +1206,12 @@
       "category": "AI Security",
       "purpose": "ตรวจ transport/auth, tool permissions และข้อมูลที่ MCP เปิดเผย",
       "requires": "server source, client config และ plays ของ plugin",
-      "note": "อ่าน play เพิ่มแล้ว; ต้องเก็บไฟล์อ้างอิงพร้อม entry"
+      "note": "อ่าน play เพิ่มแล้ว; ต้องเก็บไฟล์อ้างอิงพร้อม entry",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 22,
@@ -705,7 +1226,12 @@
       "category": "AI Security",
       "purpose": "ประเมินระบบ AI ตามโครงตรวจ AISVS และบันทึกช่องว่าง",
       "requires": "architecture และหลักฐานการควบคุม",
-      "note": "การมี checklist ไม่ใช่การรับรองว่าระบบผ่านมาตรฐาน"
+      "note": "การมี checklist ไม่ใช่การรับรองว่าระบบผ่านมาตรฐาน",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 23,
@@ -720,7 +1246,12 @@
       "category": "AI Security",
       "purpose": "จัด test matrix ตามจุดรับข้อมูลและประเภทการโจมตี prompt",
       "requires": "LLM app ในขอบเขตทดสอบและ play ที่แนบมา",
-      "note": "อ่าน play เพิ่มแล้ว; เหมาะ benchmark การป้องกัน"
+      "note": "อ่าน play เพิ่มแล้ว; เหมาะ benchmark การป้องกัน",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 24,
@@ -735,7 +1266,12 @@
       "category": "AI Security",
       "purpose": "ทำ threat model ของระบบหลาย Agent ตามชั้นสถาปัตยกรรม",
       "requires": "data flow, trust boundaries และ inventory ของ Agent",
-      "note": "ใช้ตรวจเส้นทางข้อมูลและสิทธิ์ข้าม Agent"
+      "note": "ใช้ตรวจเส้นทางข้อมูลและสิทธิ์ข้าม Agent",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 25,
@@ -750,7 +1286,12 @@
       "category": "AI Engineering",
       "purpose": "ค้น GGUF, เลือก quant และตั้ง local serving ด้วย llama.cpp",
       "requires": "CPU/GPU ที่รองรับ, llama.cpp และ model files",
-      "note": "เข้ากับการวางแผนรันโมเดลบนเครื่องหรือ GPU เช่า"
+      "note": "เข้ากับการวางแผนรันโมเดลบนเครื่องหรือ GPU เช่า",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 26,
@@ -765,7 +1306,12 @@
       "category": "AI Engineering",
       "purpose": "วาง training/fine-tuning ด้วย TRL หรือ Unsloth บน HF Jobs",
       "requires": "dataset, HF token และบัญชีที่มีสิทธิ์ Jobs/GPU",
-      "note": "สามารถพาไปสู่งาน GPU ที่มีค่าใช้จ่าย; ยังไม่ได้เริ่ม job"
+      "note": "สามารถพาไปสู่งาน GPU ที่มีค่าใช้จ่าย; ยังไม่ได้เริ่ม job",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 27,
@@ -780,7 +1326,12 @@
       "category": "AI Engineering",
       "purpose": "ฝึก embedding และ reranker พร้อม loss/evaluator ตามชนิดโมเดล",
       "requires": "sentence-transformers, datasets, training hardware",
-      "note": "อ่าน training template เพิ่มแล้ว; เหมาะ RAG ภาษาไทย"
+      "note": "อ่าน training template เพิ่มแล้ว; เหมาะ RAG ภาษาไทย",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 28,
@@ -795,7 +1346,12 @@
       "category": "AI Engineering",
       "purpose": "วาง serving API, batching, quantization และ tensor parallelism",
       "requires": "vLLM, PyTorch, GPU/runtime ที่เข้ากัน",
-      "note": "คำสั่งและรุ่น dependency ต้องทดสอบใน image เป้าหมาย"
+      "note": "คำสั่งและรุ่น dependency ต้องทดสอบใน image เป้าหมาย",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 29,
@@ -810,7 +1366,12 @@
       "category": "AI Engineering",
       "purpose": "วาง serving สำหรับ structured output และการใช้ prefix cache",
       "requires": "SGLang, PyTorch และ hardware ที่รองรับ",
-      "note": "ไม่ใช้คำกล่าว 5× เป็นผล benchmark ของคลัง"
+      "note": "ไม่ใช้คำกล่าว 5× เป็นผล benchmark ของคลัง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 30,
@@ -825,7 +1386,12 @@
       "category": "AI Engineering",
       "purpose": "วางการแปลงและ quantize โมเดลสำหรับ llama.cpp",
       "requires": "model ต้นทาง, llama.cpp และพื้นที่เก็บไฟล์",
-      "note": "เหมาะเปรียบเทียบ VRAM/คุณภาพ; ต้องวัดกับโมเดลจริง"
+      "note": "เหมาะเปรียบเทียบ VRAM/คุณภาพ; ต้องวัดกับโมเดลจริง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 31,
@@ -840,7 +1406,12 @@
       "category": "AI Engineering",
       "purpose": "ออกแบบรัน benchmark โมเดลด้วย harness แทนตัดสินจากความรู้สึก",
       "requires": "lm-eval, backend/model และ dataset ที่อนุญาต",
-      "note": "ต้อง pin task revision และบันทึก config ของแต่ละรัน"
+      "note": "ต้อง pin task revision และบันทึก config ของแต่ละรัน",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 32,
@@ -855,7 +1426,12 @@
       "category": "AI Engineering",
       "purpose": "สร้าง pipeline ของ LM และปรับ prompt ด้วย metric/dataset",
       "requires": "DSPy, ชุดข้อมูล train/dev และ model provider",
-      "note": "เหมาะทดลอง model routing และ RAG อย่างวัดผลได้"
+      "note": "เหมาะทดลอง model routing และ RAG อย่างวัดผลได้",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 33,
@@ -870,7 +1446,12 @@
       "category": "AI Engineering",
       "purpose": "ใช้ LoRA/QLoRA และ workflow fine-tuning ของ Unsloth",
       "requires": "Unsloth, GPU ที่รองรับ และ training dependencies",
-      "note": "ตัวเลขความเร็ว/หน่วยความจำในต้นทางยังไม่ได้ทดสอบ"
+      "note": "ตัวเลขความเร็ว/หน่วยความจำในต้นทางยังไม่ได้ทดสอบ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 34,
@@ -885,7 +1466,12 @@
       "category": "Agent / Context",
       "purpose": "ออกแบบสรุปบริบทที่รักษา decision, files และงานค้าง",
       "requires": "session history และรูปแบบ handoff",
-      "note": "เหมาะงานรีเสิร์ช/โค้ดยาวที่ต้องทำต่อหลายรอบ"
+      "note": "เหมาะงานรีเสิร์ช/โค้ดยาวที่ต้องทำต่อหลายรอบ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 35,
@@ -900,7 +1486,12 @@
       "category": "Agent / Context",
       "purpose": "ออกแบบความจำข้าม session, entity/time validity และ retrieval",
       "requires": "memory store และกติกาการลบ/อัปเดต",
-      "note": "แยก persistent memory ออกจาก scratchpad และ summary"
+      "note": "แยก persistent memory ออกจาก scratchpad และ summary",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 36,
@@ -915,7 +1506,12 @@
       "category": "Agent / Context",
       "purpose": "ออกแบบชื่อ schema, result และ error ของ tool ให้ Agent ใช้ถูก",
       "requires": "API/tool interfaces ที่ต้องออกแบบ",
-      "note": "เหมาะทำ connector หรือ MCP ของ โครงการของคุณ"
+      "note": "เหมาะทำ connector หรือ MCP ของ โครงการของคุณ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 37,
@@ -930,7 +1526,12 @@
       "category": "AI Engineering",
       "purpose": "ต่อ pipeline load, split, embed, retrieve และ generate",
       "requires": "LangChain, embeddings provider และ vector store",
-      "note": "ต้นทางระบุ early development; pin เวอร์ชันที่ทดลอง"
+      "note": "ต้นทางระบุ early development; pin เวอร์ชันที่ทดลอง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 38,
@@ -945,7 +1546,12 @@
       "category": "Agent / Context",
       "purpose": "วาง interrupt/resume และ workflow ที่รับการตัดสินใจจากคน",
       "requires": "LangGraph และ persistence/checkpointer",
-      "note": "เหมาะจุดที่ Agent ต้องขอการตัดสินใจเฉพาะเรื่อง"
+      "note": "เหมาะจุดที่ Agent ต้องขอการตัดสินใจเฉพาะเรื่อง",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 39,
@@ -960,7 +1566,12 @@
       "category": "Agent / Context",
       "purpose": "เลือก backend ความจำชั่วคราว ถาวร และเส้นทางไฟล์แบบผสม",
       "requires": "Deep Agents และ backend/store ที่เลือก",
-      "note": "ต้องทดสอบความหมายของ thread/session และสิทธิ์ filesystem"
+      "note": "ต้องทดสอบความหมายของ thread/session และสิทธิ์ filesystem",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 40,
@@ -975,7 +1586,12 @@
       "category": "Engineering",
       "purpose": "หาต้นเหตุจากหลักฐานและทดลองสมมติฐานก่อนแก้โค้ด",
       "requires": "โค้ด, logs และ reproduction",
-      "note": "เหมาะปัญหา build และบั๊กหลายระบบของเกม"
+      "note": "เหมาะปัญหา build และบั๊กหลายระบบของเกม",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 41,
@@ -990,7 +1606,12 @@
       "category": "Engineering",
       "purpose": "กำหนดหลักฐานที่ต้องเห็นก่อนรายงานว่างานเสร็จหรือเทสต์ผ่าน",
       "requires": "คำสั่งตรวจและผลการรันของงานนั้น",
-      "note": "ขั้นตอนเพิ่มวินัย; ไม่ได้เพิ่มความสามารถโมเดลโดยอัตโนมัติ"
+      "note": "ขั้นตอนเพิ่มวินัย; ไม่ได้เพิ่มความสามารถโมเดลโดยอัตโนมัติ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 42,
@@ -1005,7 +1626,12 @@
       "category": "AI Engineering",
       "purpose": "เลือก payload partition, shard หรือ collection ต่อ tenant",
       "requires": "Qdrant และข้อกำหนด isolation/residency",
-      "note": "ต้องบังคับสิทธิ์ query ฝั่งแอปด้วย"
+      "note": "ต้องบังคับสิทธิ์ query ฝั่งแอปด้วย",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 43,
@@ -1020,7 +1646,12 @@
       "category": "AI Engineering",
       "purpose": "วินิจฉัย retrieval quality และเลือก hybrid search/reranking",
       "requires": "Qdrant, golden queries และ relevance judgments",
-      "note": "entry เป็น router; ต้องตาม reference เพิ่มตามโจทย์"
+      "note": "entry เป็น router; ต้องตาม reference เพิ่มตามโจทย์",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 44,
@@ -1035,7 +1666,12 @@
       "category": "Engineering",
       "purpose": "ทบทวน schema, query, indexes, RLS และ pgvector",
       "requires": "PostgreSQL และ references ของแพ็ก",
-      "note": "ใช้กับ Postgres ทั่วไปได้; ส่วน Supabase-specific ต้องแยก"
+      "note": "ใช้กับ Postgres ทั่วไปได้; ส่วน Supabase-specific ต้องแยก",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 45,
@@ -1050,7 +1686,12 @@
       "category": "Agent / Context",
       "purpose": "ออกแบบ MCP server และเครื่องมือที่ต่อกับ API ภายนอก",
       "requires": "Python FastMCP หรือ Node/TypeScript MCP SDK",
-      "note": "license ของโฟลเดอร์ที่อ่านเป็น Apache-2.0"
+      "note": "license ของโฟลเดอร์ที่อ่านเป็น Apache-2.0",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 46,
@@ -1065,7 +1706,12 @@
       "category": "Engineering",
       "purpose": "ทดสอบหน้าเว็บด้วย Playwright, screenshot และ browser logs",
       "requires": "Python Playwright, browsers และ local app",
-      "note": "อ่าน with_server.py เพิ่ม; helper เริ่ม process ตามคำสั่งที่ส่งให้"
+      "note": "อ่าน with_server.py เพิ่ม; helper เริ่ม process ตามคำสั่งที่ส่งให้",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 47,
@@ -1080,7 +1726,12 @@
       "category": "AI Engineering",
       "purpose": "วาง model routing, caching, token limit และการเก็บต้นทุนต่อ feature",
       "requires": "usage/cost logs และ eval ที่ยืนยันคุณภาพ",
-      "note": "เป็น workflow guidance; ยังไม่พบสคริปต์ใน bundle นี้ และไม่รับรอง % ประหยัด"
+      "note": "เป็น workflow guidance; ยังไม่พบสคริปต์ใน bundle นี้ และไม่รับรอง % ประหยัด",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 48,
@@ -1095,7 +1746,12 @@
       "category": "AI Security",
       "purpose": "สแกนเนื้อหา skill, scripts และ dependencies เพื่อจัด finding",
       "requires": "Python และทั้ง skill directory",
-      "note": "อ่าน auditor script เพิ่ม; PASS เป็นผล scanner ไม่ใช่การรับรองความปลอดภัย"
+      "note": "อ่าน auditor script เพิ่ม; PASS เป็นผล scanner ไม่ใช่การรับรองความปลอดภัย",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 49,
@@ -1110,7 +1766,12 @@
       "category": "Agent / Context",
       "purpose": "เทียบสิ่งที่ Agent อ้างกับ transcript, timeline และ typed claims",
       "requires": "session transcripts และ Python helper CLIs",
-      "note": "อ่าน claim_checker.py และ hook; ต้องตรวจ format ของ client รุ่นที่ใช้"
+      "note": "อ่าน claim_checker.py และ hook; ต้องตรวจ format ของ client รุ่นที่ใช้",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 50,
@@ -1125,7 +1786,12 @@
       "category": "Agent / Context",
       "purpose": "สร้าง hosted agents, thread, tools และ streaming บน Azure",
       "requires": "Azure resources, credentials และ Python SDK",
-      "note": "เหมาะถ้าเลือก Azure; ไม่จำเป็นสำหรับ Agent ที่เรียก API ทั่วไป"
+      "note": "เหมาะถ้าเลือก Azure; ไม่จำเป็นสำหรับ Agent ที่เรียก API ทั่วไป",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context"
+      ]
     },
     {
       "id": 51,
@@ -1140,7 +1806,12 @@
       "category": "Reverse / DFIR",
       "purpose": "รวบรวมแนวทางวิเคราะห์ binary, APK, WASM และ code ที่ obfuscate",
       "requires": "เครื่องมือ RE ตามชนิดงาน; IDA บางส่วนต้องมีสิทธิ์ใช้เอง",
-      "note": "frontmatter ระบุ MIT แต่ไม่มี root LICENSE และมีที่มาจาก forum; รอเคลียร์สิทธิ์ก่อนคัดลอก"
+      "note": "frontmatter ระบุ MIT แต่ไม่มี root LICENSE และมีที่มาจาก forum; รอเคลียร์สิทธิ์ก่อนคัดลอก",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "reverse-dfir"
+      ]
     },
     {
       "id": 52,
@@ -1155,7 +1826,12 @@
       "category": "Reverse / DFIR",
       "purpose": "วางลำดับตรวจ memory image ด้วย Volatility 3",
       "requires": "memory image และเครื่องมือ acquisition/analysis",
-      "note": "ตัวอย่างจากคลัง fork; เลือกต้นทางเดียวเพื่อลดซ้ำ"
+      "note": "ตัวอย่างจากคลัง fork; เลือกต้นทางเดียวเพื่อลดซ้ำ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "reverse-dfir"
+      ]
     },
     {
       "id": 53,
@@ -1170,7 +1846,12 @@
       "category": "AI Security",
       "purpose": "ตรวจ MCP tool metadata และความเสี่ยง poisoning/endpoint exposure",
       "requires": "MCP configs, scanner และสิทธิ์ติดต่อ endpoint",
-      "note": "metadata ใช้ชื่อ field ของ NIST/MITRE ปะปน; ต้องทวน mappings"
+      "note": "metadata ใช้ชื่อ field ของ NIST/MITRE ปะปน; ต้องทวน mappings",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security"
+      ]
     },
     {
       "id": 54,
@@ -1185,7 +1866,12 @@
       "category": "Engineering",
       "purpose": "ออกแบบ critique/audit และปรับ typography, layout, สี และ UI",
       "requires": "frontend context และ references/commands ของแพ็ก",
-      "note": "เหมาะทำหน้าเว็บคลังแสง; มีหลายสำเนาสำหรับ client ต่างกัน"
+      "note": "เหมาะทำหน้าเว็บคลังแสง; มีหลายสำเนาสำหรับ client ต่างกัน",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering"
+      ]
     },
     {
       "id": 55,
@@ -1200,7 +1886,12 @@
       "category": "AI Engineering",
       "purpose": "deploy/configure และแก้ปัญหา NVIDIA RAG Blueprint",
       "requires": "Blueprint checkout, Docker/Helm และ model endpoints",
-      "note": "ใช้กับ Blueprint โดยเฉพาะ; มีงานสร้าง/หยุด service"
+      "note": "ใช้กับ Blueprint โดยเฉพาะ; มีงานสร้าง/หยุด service",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 56,
@@ -1215,7 +1906,12 @@
       "category": "AI Engineering",
       "purpose": "วัดคุณภาพ RAG จาก corpus และชุดคำถามด้วย workflow RAGAS",
       "requires": "Blueprint-layout repo, uv/Python 3.11+, RAG endpoints และ judge",
-      "note": "คุณภาพคำตอบแยกจากความเร็ว; README กับ frontmatter ระบุ license ต่างระดับ"
+      "note": "คุณภาพคำตอบแยกจากความเร็ว; README กับ frontmatter ระบุ license ต่างระดับ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
     },
     {
       "id": 57,
@@ -1230,7 +1926,2175 @@
       "category": "AI Engineering",
       "purpose": "วัด latency/throughput ของ NVIDIA RAG Blueprint ที่ deploy แล้ว",
       "requires": "RAG server, load-test config และ aiperf workflow",
-      "note": "เกิด traffic/load ต่อปลายทาง; ไม่ใช่การวัดความแม่นยำ"
+      "note": "เกิด traffic/load ต่อปลายทาง; ไม่ใช่การวัดความแม่นยำ",
+      "review_level": "entry-reviewed",
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/agents-sdk/SKILL.md",
+      "blob_sha": "46dc611f3f7666461dbd14f5f809e82629b3bfa4",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 58,
+      "name": "agents-sdk",
+      "purpose": "สร้างและตรวจ Agent ที่มี state, scheduling, RPC และ WebSocket บน Workers",
+      "category": "Agent / Context",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/agents-sdk/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context",
+        "agents-sdk"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/cloudflare/SKILL.md",
+      "blob_sha": "bc4d3016b3ebc98eecc31eb1898ade5c6a59b30c",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 59,
+      "name": "cloudflare",
+      "purpose": "เลือกบริการ Cloudflare ให้ตรงกับ API, AI, storage, networking และ security",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/cloudflare/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "cloudflare"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/durable-objects/SKILL.md",
+      "blob_sha": "80fb75785e42c023cd3cdcbf5b9a9ac6909ecc25",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 60,
+      "name": "durable-objects",
+      "purpose": "ออกแบบ persistent state และ coordination ด้วย Durable Objects",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/durable-objects/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "durable-objects"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/gateway-workers/SKILL.md",
+      "blob_sha": "186698948bf711f3ca12c516e4fec6715ad14c77",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 61,
+      "name": "gateway-workers",
+      "purpose": "เขียน Worker ที่ประมวลผล HTTP traffic ผ่าน Gateway Forward policies",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/gateway-workers/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "gateway-workers"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/sandbox-stable/SKILL.md",
+      "blob_sha": "7433dbc6cd1737926964485b26f55a57cd5ec472",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 62,
+      "name": "sandbox-stable",
+      "purpose": "พัฒนา Linux sandbox ด้วย Cloudflare Sandbox SDK รุ่น stable",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ต้องจับคู่ stable SDK และ container image; ไม่ปะปน preview @next",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/sandbox-stable/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "sandbox-stable"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/web-perf/SKILL.md",
+      "blob_sha": "9c70b7079aef1fbac9af3669bd38d5dfb712f4b7",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 63,
+      "name": "web-perf",
+      "purpose": "วิเคราะห์โหลดหน้าเว็บ Core Web Vitals, network และ performance traces",
+      "category": "Web / Frontend",
+      "requires": "Browser/performance tooling และเว็บเป้าหมาย",
+      "note": "ไม่มี trace ก็ต้องแยก source inspection ออกจากค่าที่วัดจริง",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/web-perf/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "web-perf"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/workers-best-practices/SKILL.md",
+      "blob_sha": "d150906f403b130b68e7e47b958c4e46fbd053f3",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 64,
+      "name": "workers-best-practices",
+      "purpose": "ทบทวน runtime patterns, bindings, compatibility และ observability ของ Workers",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/workers-best-practices/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "workers-best-practices"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/workers-development/SKILL.md",
+      "blob_sha": "0c748f7dc1947caf6fde5e1b6db833854594136e",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 65,
+      "name": "workers-development",
+      "purpose": "รันและดีบัก Worker โดยดู local bindings, logs และ traces",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/workers-development/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "workers-development"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/workers-profiling/SKILL.md",
+      "blob_sha": "792be905e836a3a892200f2c9f5a3ecbdc710314",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 66,
+      "name": "workers-profiling",
+      "purpose": "วิเคราะห์ CPU และ heap profile ของ Worker หรือ Durable Object ที่ deploy แล้ว",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/workers-profiling/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "workers-profiling"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/wrangler/SKILL.md",
+      "blob_sha": "d5cef1c15fd2434202c33f071cf502b5d69b141d",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 67,
+      "name": "wrangler",
+      "purpose": "ใช้ Wrangler ตาม config และรุ่นที่ติดตั้งสำหรับพัฒนาและจัดการทรัพยากร",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "ตรวจบัญชี target และ local/remote resource ก่อนคำสั่งที่เปลี่ยนข้อมูล",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/wrangler/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "wrangler"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/composition-patterns/SKILL.md",
+      "blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 68,
+      "name": "vercel-composition-patterns",
+      "purpose": "ปรับ React component API ด้วย composition และ compound components",
+      "category": "Web / Frontend",
+      "requires": "React/Next.js หรือ frontend code และ rule/reference files",
+      "note": "ตรวจ dependency และข้อกำหนดของ entry; ไม่อนุมาน performance gain",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/composition-patterns/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "composition-patterns"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/react-best-practices/SKILL.md",
+      "blob_sha": "237988de4a66dd8a71d30a2c24ebe1a86b58d04e",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 69,
+      "name": "vercel-react-best-practices",
+      "purpose": "ลด waterfalls, bundle และการ render ที่ไม่จำเป็นใน React/Next.js",
+      "category": "Web / Frontend",
+      "requires": "React/Next.js หรือ frontend code และ rule/reference files",
+      "note": "ตรวจ dependency และข้อกำหนดของ entry; ไม่อนุมาน performance gain",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "react-best-practices"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/react-native-skills/SKILL.md",
+      "blob_sha": "73401865dd7440a43c5243b107a3763e0d2f4aae",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 70,
+      "name": "vercel-react-native-skills",
+      "purpose": "ทบทวน list, animation, navigation และ native modules ใน React Native/Expo",
+      "category": "Web / Frontend",
+      "requires": "React/Next.js หรือ frontend code และ rule/reference files",
+      "note": "ตรวจ dependency และข้อกำหนดของ entry; ไม่อนุมาน performance gain",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-native-skills/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "react-native-skills"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/web-design-guidelines/SKILL.md",
+      "blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 71,
+      "name": "web-design-guidelines",
+      "purpose": "รีวิว UI และ accessibility โดยดึง Web Interface Guidelines ปัจจุบัน",
+      "category": "Web / Frontend",
+      "requires": "React/Next.js หรือ frontend code และ rule/reference files",
+      "note": "ตรวจ dependency และข้อกำหนดของ entry; ไม่อนุมาน performance gain",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "web-design-guidelines"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/vercel-optimize/SKILL.md",
+      "blob_sha": "c8a6d6d7075b2cc3f7921da89de86e6926f78985",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 72,
+      "name": "vercel-optimize",
+      "purpose": "ใช้ production metrics ของ Vercel เพื่อหาจุดลดต้นทุนและปรับ performance",
+      "category": "Web / Frontend",
+      "requires": "Vercel CLI v53+, project linkage และ production metrics",
+      "note": "Workflow อาศัย metrics และ helper scripts; ไม่มี telemetry ไม่ควรสรุป savings",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-optimize/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "vercel-optimize"
+      ]
+    },
+    {
+      "repo": "semgrep/skills",
+      "path": "skills/code-security/SKILL.md",
+      "blob_sha": "c7ac0ad0eb4a0b386bf4f4c728611b377f5be59f",
+      "commit": "68177b8830f96cd9d10dacbb14dde2566360503d",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 73,
+      "name": "code-security",
+      "purpose": "เลือกกฎ secure coding ตามภาษาและงานที่รับ input หรือใช้ข้อมูลสำคัญ",
+      "category": "Cyber",
+      "requires": "Source code และ rule files; CLI/MCP ตามงาน",
+      "note": "README ระบุ Beta และมีส่วนแปลงจาก Semgrep rules; ใช้ Semgrep Rules License",
+      "url": "https://github.com/semgrep/skills/blob/68177b8830f96cd9d10dacbb14dde2566360503d/skills/code-security/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "code-security"
+      ]
+    },
+    {
+      "repo": "semgrep/skills",
+      "path": "skills/llm-security/SKILL.md",
+      "blob_sha": "f8a66e24fc9e6f6bc5c526f0be216e018e749ee2",
+      "commit": "68177b8830f96cd9d10dacbb14dde2566360503d",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 74,
+      "name": "llm-security",
+      "purpose": "เลือกแนวทางป้องกันความเสี่ยงตามรูปแบบ LLM app, Agent และ RAG",
+      "category": "Cyber",
+      "requires": "Source code และ rule files; CLI/MCP ตามงาน",
+      "note": "README ระบุ Beta และมีส่วนแปลงจาก Semgrep rules; ใช้ Semgrep Rules License",
+      "url": "https://github.com/semgrep/skills/blob/68177b8830f96cd9d10dacbb14dde2566360503d/skills/llm-security/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "llm-security"
+      ]
+    },
+    {
+      "repo": "semgrep/skills",
+      "path": "skills/semgrep/SKILL.md",
+      "blob_sha": "ecdf337de3d9edf7a85ed42c2dc3761712bc135b",
+      "commit": "68177b8830f96cd9d10dacbb14dde2566360503d",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 75,
+      "name": "semgrep",
+      "purpose": "ใช้ Semgrep CLI/MCP สแกนโค้ดและสร้างกฎตรวจจับเฉพาะงาน",
+      "category": "Cyber",
+      "requires": "Source code และ rule files; CLI/MCP ตามงาน",
+      "note": "README ระบุ Beta และมีส่วนแปลงจาก Semgrep rules; ใช้ Semgrep Rules License",
+      "url": "https://github.com/semgrep/skills/blob/68177b8830f96cd9d10dacbb14dde2566360503d/skills/semgrep/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "semgrep"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/claude-settings-audit/SKILL.md",
+      "blob_sha": "ae7d0b3539a98374cddd69b902d314d7501a9533",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 76,
+      "name": "claude-settings-audit",
+      "purpose": "สำรวจ stack เพื่อเสนอ read-only command permissions ใน Claude Code",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "แพ็กออกแบบสำหรับทีม Sentry; ต้องตรวจข้อกำหนดเฉพาะองค์กร",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/claude-settings-audit/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "claude-settings-audit"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/find-bugs/SKILL.md",
+      "blob_sha": "490a181b1a47537cd19eacbdd8f2c46740a268db",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 77,
+      "name": "find-bugs",
+      "purpose": "ตรวจ branch diff โดยไล่ input, auth, state, queries และ counterevidence",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "แพ็กออกแบบสำหรับทีม Sentry; ต้องตรวจข้อกำหนดเฉพาะองค์กร",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/find-bugs/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "find-bugs"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/gha-security-review/SKILL.md",
+      "blob_sha": "7ef6c6ed67a57539e62e6465acf5a8a45fab12d0",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 78,
+      "name": "gha-security-review",
+      "purpose": "ตรวจเส้นทางโจมตีจากผู้ไม่มีสิทธิ์เขียน repo ใน GitHub Actions",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "แพ็กออกแบบสำหรับทีม Sentry; ต้องตรวจข้อกำหนดเฉพาะองค์กร",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/gha-security-review/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "gha-security-review"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/secret-serialization/SKILL.md",
+      "blob_sha": "030e3c0a0c158e9d7d5acf5962d52f3a17e7f43b",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 79,
+      "name": "secret-serialization",
+      "purpose": "ตามเส้นทาง credential ที่อาจรั่วผ่าน repr, JSON, logs และ telemetry",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "เน้น credential holder คู่กับ serialization sink; แยกจาก hardcoded-secret scanning",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/secret-serialization/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "secret-serialization"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/security-model/SKILL.md",
+      "blob_sha": "a1cc5a33ac409ac48b90c128b83d3e831900add9",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 80,
+      "name": "security-model",
+      "purpose": "เขียน SECURITY_MODEL.md ที่ระบุ trust boundaries, invariants และขอบเขตรายงาน",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "แพ็กออกแบบสำหรับทีม Sentry; ต้องตรวจข้อกำหนดเฉพาะองค์กร",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/security-model/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "security-model"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/security-review/SKILL.md",
+      "blob_sha": "63d362f046e78729cd3ac563d20238b2da2e7392",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 81,
+      "name": "security-review",
+      "purpose": "ตรวจช่องโหว่โดยยืนยัน attacker input และเส้นทางที่เข้าถึงได้",
+      "category": "Cyber",
+      "requires": "Source/diff และ references ของแพ็ก",
+      "note": "โฟลเดอร์นี้มี CC BY-SA references แยกจาก root Apache-2.0; ตรวจ LICENSE รายโฟลเดอร์",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/security-review/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "security-review"
+      ]
+    },
+    {
+      "repo": "getsentry/skills",
+      "path": "skills/triage-frontend-issues/SKILL.md",
+      "blob_sha": "b4b8fbe9ecc2422b8aa0ee8521702491d15f7e6a",
+      "commit": "e94f22214528d69899d09c627b3315ddc3544816",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 82,
+      "name": "triage-frontend-issues",
+      "purpose": "ศึกษาวิธีคัด noise และ archive issues ในคิว frontend เฉพาะของ Sentry",
+      "category": "Engineering",
+      "requires": "Sentry MCP และคิว sentry/javascript ขององค์กรต้นทาง",
+      "note": "ตัวอย่างเฉพาะองค์กร ไม่ควรนำไปใช้กับ project อื่นโดยไม่ปรับขอบเขตและทดสอบ",
+      "url": "https://github.com/getsentry/skills/blob/e94f22214528d69899d09c627b3315ddc3544816/skills/triage-frontend-issues/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering",
+        "triage-frontend-issues"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/agent-architecture/SKILL.md",
+      "blob_sha": "dbe4798c8fb0dec57208491c26ef95d35cfd7eb2",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 83,
+      "name": "agent-architecture",
+      "purpose": "ออกแบบหรือวิเคราะห์ architecture ของ Agent จาก requirements และ failure cases",
+      "category": "Agent / Context",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "Community-contributed; การอยู่ใน GitHub org ไม่ใช่การรับรองราย entry",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/agent-architecture/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context",
+        "agent-architecture"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/agent-supply-chain/SKILL.md",
+      "blob_sha": "995c87835577fc396d31ff4447cea9d91ca61484",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 84,
+      "name": "agent-supply-chain",
+      "purpose": "สร้างและตรวจ integrity manifest ของ plugin และ dependency ที่ตรึงรุ่น",
+      "category": "Agent / Context",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "Community-contributed; การอยู่ใน GitHub org ไม่ใช่การรับรองราย entry",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/agent-supply-chain/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context",
+        "agent-supply-chain"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/agentic-eval/SKILL.md",
+      "blob_sha": "3cb14203efaf62af98065bd599600ba808f0ef31",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 85,
+      "name": "agentic-eval",
+      "purpose": "ออกแบบ evaluator, rubric และรอบปรับคำตอบของ Agent",
+      "category": "Agent / Context",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "Reflection/LLM judge ต้องมี independent acceptance criteria; loop ไม่รับรองความถูกต้อง",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/agentic-eval/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context",
+        "agentic-eval"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "blob_sha": "86d8622d384e77056c4065cd616cb9285131d946",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 86,
+      "name": "ai-prompt-engineering-safety-review",
+      "purpose": "ทบทวน prompt ด้าน safety, bias, security และประสิทธิผล",
+      "category": "AI Security",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "Community-contributed; การอยู่ใน GitHub org ไม่ใช่การรับรองราย entry",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "ai-prompt-engineering-safety-review"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/mcp-implementation-security-review/SKILL.md",
+      "blob_sha": "5bf9d01b7be7e2661c78ab75afac232caecb2c05",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 87,
+      "name": "mcp-implementation-security-review",
+      "purpose": "ตรวจ source ของ MCP server/client ด้าน auth, sessions, input และ sinks",
+      "category": "AI Security",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "ตรวจ protocol version และมาตรฐานที่อ้างอีกครั้งก่อนรายงาน compliance",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/mcp-implementation-security-review/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "mcp-implementation-security-review"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/mcp-security-audit/SKILL.md",
+      "blob_sha": "0b0bcdfba5879a72fda4cf418b86d297ad8a95f1",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 88,
+      "name": "mcp-security-audit",
+      "purpose": "ตรวจ MCP config เรื่อง credentials, shell command และ dependency selectors",
+      "category": "AI Security",
+      "requires": "Source/config และเครื่องมือที่ entry อ้างถึง",
+      "note": "Static configuration review ไม่ยืนยันพฤติกรรมของ server หลังเริ่มรัน",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/mcp-security-audit/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "mcp-security-audit"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/multi-stage-dockerfile/SKILL.md",
+      "blob_sha": "704382de43e25d889c671455cda076d0d28e71e5",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 89,
+      "name": "multi-stage-dockerfile",
+      "purpose": "ออกแบบ build/runtime stages และลดสิทธิ์ของ container image",
+      "category": "Cloud / DevOps",
+      "requires": "Dockerfile, build context และ runtime requirements",
+      "note": "ตัวอย่าง base-image versions ต้องปรับตามโครงการและ support lifecycle",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/multi-stage-dockerfile/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "multi-stage-dockerfile"
+      ]
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "path": "skills/postgresql-code-review/SKILL.md",
+      "blob_sha": "72d8eac69920b97d20bbcf012469808129ec129f",
+      "commit": "eaaffd5d020b756a2777a4b1b161d2bdc126d9a0",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 90,
+      "name": "postgresql-code-review",
+      "purpose": "รีวิว JSONB, arrays, schema, functions, indexes และ RLS ของ PostgreSQL",
+      "category": "Engineering",
+      "requires": "PostgreSQL schema, SQL และ query plans",
+      "note": "ตรวจ SQL ตัวอย่างกับ PostgreSQL รุ่นจริงก่อนนำไปใช้",
+      "url": "https://github.com/github/awesome-copilot/blob/eaaffd5d020b756a2777a4b1b161d2bdc126d9a0/skills/postgresql-code-review/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "engineering",
+        "postgresql-code-review"
+      ]
+    },
+    {
+      "repo": "google-gemini/gemini-skills",
+      "path": "skills/gemini-api-cli/SKILL.md",
+      "blob_sha": "90c993dce6c98f78f6cc5a895924363ed18df136",
+      "commit": "0f596dbdcbde186e3d418d1279f7f499fe9afbf5",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 91,
+      "name": "gemini-api-cli",
+      "purpose": "เรียก Gemini API จาก shell เพื่อทำ media, file analysis และงานแบบ script",
+      "category": "AI Engineering",
+      "requires": "Google GenAI SDK หรือ CLI, API access และ model ที่บัญชีรองรับ",
+      "note": "ตรวจ model IDs, SDK และ billing ปัจจุบันก่อนใช้",
+      "url": "https://github.com/google-gemini/gemini-skills/blob/0f596dbdcbde186e3d418d1279f7f499fe9afbf5/skills/gemini-api-cli/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "gemini-api-cli"
+      ]
+    },
+    {
+      "repo": "google-gemini/gemini-skills",
+      "path": "skills/gemini-api-dev/SKILL.md",
+      "blob_sha": "fb86aa09f23875a1e6e0905a4ea971171b91aeda",
+      "commit": "0f596dbdcbde186e3d418d1279f7f499fe9afbf5",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 92,
+      "name": "gemini-api-dev",
+      "purpose": "เขียนแอป Gemini API ด้วย Python/TypeScript พร้อม streaming และ tool calls",
+      "category": "AI Engineering",
+      "requires": "Google GenAI SDK หรือ CLI, API access และ model ที่บัญชีรองรับ",
+      "note": "ตรวจ model IDs, SDK และ billing ปัจจุบันก่อนใช้",
+      "url": "https://github.com/google-gemini/gemini-skills/blob/0f596dbdcbde186e3d418d1279f7f499fe9afbf5/skills/gemini-api-dev/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "gemini-api-dev"
+      ]
+    },
+    {
+      "repo": "google-gemini/gemini-skills",
+      "path": "skills/gemini-live-api-dev/SKILL.md",
+      "blob_sha": "2b2a16b82fab501f31746f0c71999b856117d84a",
+      "commit": "0f596dbdcbde186e3d418d1279f7f499fe9afbf5",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 93,
+      "name": "gemini-live-api-dev",
+      "purpose": "สร้าง session เสียงและวิดีโอแบบสองทิศทางผ่าน Gemini Live API",
+      "category": "AI Engineering",
+      "requires": "Google GenAI SDK หรือ CLI, API access และ model ที่บัญชีรองรับ",
+      "note": "ตรวจ model IDs, SDK และ billing ปัจจุบันก่อนใช้",
+      "url": "https://github.com/google-gemini/gemini-skills/blob/0f596dbdcbde186e3d418d1279f7f499fe9afbf5/skills/gemini-live-api-dev/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "gemini-live-api-dev"
+      ]
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "path": "plugins/terraform/skills/terraform-policy/SKILL.md",
+      "blob_sha": "d424e9ad4d7fa91839d1b809cd85074aae0698f8",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 94,
+      "name": "terraform-policy",
+      "purpose": "เขียนและทดสอบ Terraform Policy รวมถึงแปลง Sentinel ตามรุ่น tfpolicy",
+      "category": "Cloud / DevOps",
+      "requires": "Terraform/tfpolicy และ provider/toolchain ตามงาน",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/terraform-policy/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "terraform-policy"
+      ]
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "path": "plugins/terraform/skills/terraform-style-guide/SKILL.md",
+      "blob_sha": "77610a87f56ba79e6003dcec8d82fd36fc5c6d51",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 95,
+      "name": "terraform-style-guide",
+      "purpose": "จัด HCL, variables, providers และไฟล์ตามแนวทาง Terraform",
+      "category": "Cloud / DevOps",
+      "requires": "Terraform/tfpolicy และ provider/toolchain ตามงาน",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/terraform-style-guide/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "terraform-style-guide"
+      ]
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "path": "plugins/terraform/skills/terraform-test/SKILL.md",
+      "blob_sha": "2feebcc9f3c5b9e61a05119087f4fc328b9edf9f",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 96,
+      "name": "terraform-test",
+      "purpose": "เขียน tftest พร้อม assertions, mocks และเลือก plan/apply ให้ตรงงาน",
+      "category": "Cloud / DevOps",
+      "requires": "Terraform/tfpolicy และ provider/toolchain ตามงาน",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/terraform-test/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "terraform-test"
+      ]
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "path": "plugins/terraform/skills/refactor-module/SKILL.md",
+      "blob_sha": "d6339a30f9be58d58d4d4a1a98d6ef29e0e01753",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 97,
+      "name": "refactor-module",
+      "purpose": "แยก Terraform configuration เป็น modules พร้อมวางแผนรักษา state",
+      "category": "Cloud / DevOps",
+      "requires": "Terraform/tfpolicy และ provider/toolchain ตามงาน",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/refactor-module/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "refactor-module"
+      ]
+    },
+    {
+      "repo": "hashicorp/agent-skills",
+      "path": "plugins/terraform/skills/provider-test-patterns/SKILL.md",
+      "blob_sha": "6b0e6f5269ea5ddf5a02cc593044bf5252438589",
+      "commit": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 98,
+      "name": "provider-test-patterns",
+      "purpose": "ออกแบบ acceptance tests ของ Terraform Provider และตรวจ state ข้ามขั้น",
+      "category": "Cloud / DevOps",
+      "requires": "Terraform/tfpolicy และ provider/toolchain ตามงาน",
+      "note": "Tests แบบ apply หรือ acceptance อาจสร้าง resource และมีค่าใช้จ่าย",
+      "url": "https://github.com/hashicorp/agent-skills/blob/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/provider-test-patterns/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "provider-test-patterns"
+      ]
+    },
+    {
+      "repo": "auth0/agent-skills",
+      "path": "plugins/auth0/skills/auth0/SKILL.md",
+      "blob_sha": "c986995955ab9d5a09d2aaedd9489fbd5a395bf0",
+      "commit": "6331cf05ef6bbc6999d7a7b98a583e7429ebe3f6",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 99,
+      "name": "auth0",
+      "purpose": "ต่อ authentication, sessions, MFA, RBAC และ API protection ด้วย Auth0",
+      "category": "Cyber",
+      "requires": "Auth0 tenant และ SDK/CLI ตาม framework",
+      "note": "เป็น router ไป references; การตั้งค่า tenant เปลี่ยน auth ของระบบจริง",
+      "url": "https://github.com/auth0/agent-skills/blob/6331cf05ef6bbc6999d7a7b98a583e7429ebe3f6/plugins/auth0/skills/auth0/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "auth0"
+      ]
+    },
+    {
+      "repo": "better-auth/skills",
+      "path": "better-auth/best-practices/SKILL.md",
+      "blob_sha": "74195ce314348e2f2eb3fa992d51eaaf29a9281c",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 100,
+      "name": "better-auth-best-practices",
+      "purpose": "ตั้ง Better Auth server/client, database adapter, sessions และ plugins",
+      "category": "Cyber",
+      "requires": "แอป TypeScript, Better Auth และ database adapter",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "url": "https://github.com/better-auth/skills/blob/20c9e88a5c007461a703f1c213572b073196113e/better-auth/best-practices/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "best-practices"
+      ]
+    },
+    {
+      "repo": "better-auth/skills",
+      "path": "better-auth/create-auth/SKILL.md",
+      "blob_sha": "f57bf6b222501511476189b1c9242e6a1358d165",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 101,
+      "name": "create-auth",
+      "purpose": "เพิ่มระบบ login/signup ให้แอป TypeScript โดยสำรวจ framework และฐานข้อมูลก่อน",
+      "category": "Cyber",
+      "requires": "แอป TypeScript, Better Auth และ database adapter",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "url": "https://github.com/better-auth/skills/blob/20c9e88a5c007461a703f1c213572b073196113e/better-auth/create-auth/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "create-auth"
+      ]
+    },
+    {
+      "repo": "better-auth/skills",
+      "path": "better-auth/emailAndPassword/SKILL.md",
+      "blob_sha": "3b7b7f166b5fde6c38decd6ef663258eb30465b0",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 102,
+      "name": "email-and-password-best-practices",
+      "purpose": "ตั้ง email verification, password reset และ password policy ของ Better Auth",
+      "category": "Cyber",
+      "requires": "แอป TypeScript, Better Auth และ database adapter",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "url": "https://github.com/better-auth/skills/blob/20c9e88a5c007461a703f1c213572b073196113e/better-auth/emailAndPassword/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "emailandpassword"
+      ]
+    },
+    {
+      "repo": "better-auth/skills",
+      "path": "better-auth/twoFactor/SKILL.md",
+      "blob_sha": "ec1653b7cfc98b0e873192f73d5f0de472c7fbac",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 103,
+      "name": "two-factor-authentication-best-practices",
+      "purpose": "ต่อ TOTP, backup codes และขั้นตอนลงชื่อเข้าใช้แบบสองปัจจัย",
+      "category": "Cyber",
+      "requires": "แอป TypeScript, Better Auth และ database adapter",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "url": "https://github.com/better-auth/skills/blob/20c9e88a5c007461a703f1c213572b073196113e/better-auth/twoFactor/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "twofactor"
+      ]
+    },
+    {
+      "repo": "better-auth/skills",
+      "path": "security/SKILL.md",
+      "blob_sha": "5abc5a8c838a6e708d45f9f43b522bc7e7018c96",
+      "commit": "20c9e88a5c007461a703f1c213572b073196113e",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 104,
+      "name": "better-auth-security-best-practices",
+      "purpose": "ทบทวน secrets, rate limits, CSRF, trusted origins และ session cookies",
+      "category": "Cyber",
+      "requires": "แอป TypeScript, Better Auth และ database adapter",
+      "note": "อ่าน docs ให้ตรง lockfile; ไม่พบ root LICENSE ใน snapshot จึงเก็บเป็นลิงก์",
+      "url": "https://github.com/better-auth/skills/blob/20c9e88a5c007461a703f1c213572b073196113e/security/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "security"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "blob_sha": "5f25f70751c688685e22f40ddae125d9411d2b77",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 105,
+      "name": "audit-context-building",
+      "purpose": "ทำความเข้าใจ assumptions, guarantees และ dependencies ก่อนเริ่ม audit",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "audit-context-building"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/static-analysis/skills/codeql/SKILL.md",
+      "blob_sha": "79856ae812a9c6bedbbf0cb410aa474e1091f701",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 106,
+      "name": "codeql",
+      "purpose": "วาง CodeQL database และ dataflow/taint analysis พร้อมตรวจคุณภาพการ extract",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/codeql/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "codeql"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/static-analysis/skills/sarif-parsing/SKILL.md",
+      "blob_sha": "f61b06f9ad50bace183edb70eb378eb44dbb9756",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 107,
+      "name": "sarif-parsing",
+      "purpose": "อ่าน กรอง รวม และลดรายการซ้ำจากรายงาน SARIF ของเครื่องมือสแกน",
+      "category": "Cyber",
+      "requires": "รายงาน SARIF ที่มีอยู่แล้ว",
+      "note": "อ่านผลสแกน ไม่ใช่ตัวเริ่ม scanner",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/sarif-parsing/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "sarif-parsing"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/static-analysis/skills/semgrep/SKILL.md",
+      "blob_sha": "a0ddf79af047e843605121e8d5db17e65a42da01",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 108,
+      "name": "semgrep",
+      "purpose": "วางแผนสแกน Semgrep หลาย rulesets และรวมผลเป็น SARIF",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/semgrep/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "semgrep"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "blob_sha": "8f58f54b1883110f1a38a51c9360d4b9d1b195a8",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 109,
+      "name": "variant-analysis",
+      "purpose": "ตามหาบั๊กที่มี root cause เดียวกับปัญหาที่ทราบแล้วทั่ว codebase",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "variant-analysis"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "blob_sha": "44ea7876d7e5f3b5599c64684eb1a02c1500cb7a",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 110,
+      "name": "sharp-edges",
+      "purpose": "ตรวจ API และ config ที่ใช้งานพลาดง่ายจนเกิดปัญหาความปลอดภัย",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "sharp-edges"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/entry-point-analyzer/skills/entry-point-analyzer/SKILL.md",
+      "blob_sha": "a9807fe70afc4149acc8b0cd7474096341c129de",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 111,
+      "name": "entry-point-analyzer",
+      "purpose": "ทำแผนที่ state-changing entry points และสิทธิ์ของ smart contracts",
+      "category": "Cyber",
+      "requires": "Smart-contract source; Slither เป็น optional ตาม entry",
+      "note": "เฉพาะ smart contracts ไม่ใช่ entry-point mapper สำหรับ web API ทั่วไป",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/entry-point-analyzer/skills/entry-point-analyzer/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "entry-point-analyzer"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "blob_sha": "48c41b3b812b5924713c374031b7b328c81d9de0",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 112,
+      "name": "constant-time-analysis",
+      "purpose": "ตรวจ compiler output เพื่อหาคำสั่งที่อาจขึ้นกับ secret ใน crypto code",
+      "category": "Cyber",
+      "requires": "Crypto source, compiler และ assembly/bytecode",
+      "note": "เป็น static inspection ของ compiler output; ไม่ใช่ runtime timing measurement",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "constant-time-analysis"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "blob_sha": "d63e7624542dff969568452c2e4e072cf75e5b85",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 113,
+      "name": "address-sanitizer",
+      "purpose": "ตรวจ memory errors ด้วย AddressSanitizer ระหว่าง tests หรือ fuzzing",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "address-sanitizer"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "blob_sha": "cdd213aaead14deb5f86ee3712ea1ad08a3df1e6",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 114,
+      "name": "aflpp",
+      "purpose": "วาง AFL++ campaign หลาย core พร้อม corpus และ crash triage",
+      "category": "Cyber",
+      "requires": "C/C++ build, AFL++ instrumentation และ seed corpus",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "aflpp"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "blob_sha": "4127c8954893466acec88622c526590baef187eb",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 115,
+      "name": "atheris",
+      "purpose": "เขียน coverage-guided Python fuzzing ด้วย Atheris และ native extensions",
+      "category": "Cyber",
+      "requires": "Python/Atheris; compiler และ ASan สำหรับ native extensions",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "atheris"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "blob_sha": "79f9d57933fca6e4da7225488850263f9c29a4eb",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 116,
+      "name": "cargo-fuzz",
+      "purpose": "สร้าง Rust fuzz target และตรวจ crash artifacts ด้วย cargo-fuzz",
+      "category": "Cyber",
+      "requires": "Rust Cargo project, nightly toolchain และ cargo-fuzz",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "cargo-fuzz"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
+      "blob_sha": "7b497d2d41c17466c7d77350ddfe75fab686bff1",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 117,
+      "name": "harness-writing",
+      "purpose": "ออกแบบ fuzz harness ให้รับ structured input และทำซ้ำผลได้",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "harness-writing"
+      ]
+    },
+    {
+      "repo": "trailofbits/skills",
+      "path": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "blob_sha": "7e171db0ccb636a40c7ae3683f91fee1c6a91272",
+      "commit": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 118,
+      "name": "coverage-analysis",
+      "purpose": "วัด code coverage เพื่อหาส่วนที่ fuzz campaign ยังเข้าไม่ถึง",
+      "category": "Cyber",
+      "requires": "Source/build หรือ artifact และเครื่องมือเฉพาะตามชนิดงาน",
+      "note": "Entry overview เท่านั้น; ต้องตาม references และใช้ license CC BY-SA ของแพ็ก",
+      "url": "https://github.com/trailofbits/skills/blob/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "coverage-analysis"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/hf-cli/SKILL.md",
+      "blob_sha": "2a01cd0f144f19d283196b02f3d5726a37733293",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 119,
+      "name": "hf-cli",
+      "purpose": "จัดการ model, dataset, Spaces, cache และ Jobs ผ่าน hf CLI",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/hf-cli/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "hf-cli"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-datasets/SKILL.md",
+      "blob_sha": "abafddcbe62bd6e549c095ee9ce23b921081fe22",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 120,
+      "name": "huggingface-datasets",
+      "purpose": "สำรวจ splits, rows, filters และ parquet ผ่าน Dataset Viewer API",
+      "category": "AI Engineering",
+      "requires": "Dataset Viewer API; token สำหรับ gated/private data",
+      "note": "Workflow สำรวจข้อมูลแบบ read-only; ตรวจสิทธิ์ dataset แยกต่างหาก",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-datasets/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-datasets"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-gradio/SKILL.md",
+      "blob_sha": "81dfb05834ab34a13cb0171a2fb03e4557b1e148",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 121,
+      "name": "huggingface-gradio",
+      "purpose": "สร้าง ML demo และ chatbot UI ด้วย Gradio Interface/Blocks",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-gradio/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-gradio"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-spaces/SKILL.md",
+      "blob_sha": "bbae4511df2dac10581bf2ab5ef7eb4d8ecb9f22",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 122,
+      "name": "huggingface-spaces",
+      "purpose": "สร้าง deploy และแก้ build/runtime ของ Gradio, Docker หรือ Static Spaces",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-spaces/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-spaces"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-trackio/SKILL.md",
+      "blob_sha": "df231aa06d661bf031aaad00dfa286ca83df4940",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 123,
+      "name": "huggingface-trackio",
+      "purpose": "เก็บ metrics, alerts และ dashboard ของ training experiments ด้วย Trackio",
+      "category": "AI Engineering",
+      "requires": "Python Trackio และ local/Spaces dashboard",
+      "note": "Auto-created Spaces ใน entry เป็น public โดยปริยาย; ตรวจ privacy ก่อน sync metrics",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-trackio/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-trackio"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-vision-trainer/SKILL.md",
+      "blob_sha": "5a2c554b04218a9c411c184fd749ffb6eb0daabe",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 124,
+      "name": "huggingface-vision-trainer",
+      "purpose": "ฝึก image classification, object detection และ segmentation บน HF Jobs",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-vision-trainer/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-vision-trainer"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-zerogpu/SKILL.md",
+      "blob_sha": "7171d2b71c94eab597cbd8a4b38ba5ca489276af",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 125,
+      "name": "huggingface-zerogpu",
+      "purpose": "แก้ข้อจำกัด GPU scheduling และ process boundary ใน Gradio ZeroGPU",
+      "category": "AI Engineering",
+      "requires": "Gradio SDK Space และ ZeroGPU entitlement",
+      "note": "ไม่ใช้กับ Docker/Static Spaces; ตรวจ process isolation และ quota ล่าสุด",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-zerogpu/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-zerogpu"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/transformers-js/SKILL.md",
+      "blob_sha": "bc62aa1a63bc31ea9aea9456fed65b334e5010bd",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 126,
+      "name": "transformers-js",
+      "purpose": "รันโมเดลใน JavaScript/TypeScript ด้วย WASM หรือ WebGPU",
+      "category": "AI Engineering",
+      "requires": "JS/TS runtime และ WASM/WebGPU ที่โมเดลรองรับ",
+      "note": "รองรับ browser/Node ตาม runtime; ต้องดาวน์โหลดหรือเตรียม model artifacts",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/transformers-js/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "transformers-js"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/huggingface-community-evals/SKILL.md",
+      "blob_sha": "a68b2e79958930b3913cb8e7667e07000031e40b",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 127,
+      "name": "huggingface-community-evals",
+      "purpose": "รัน inspect-ai/lighteval กับ Hub models บน local hardware",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/huggingface-community-evals/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "huggingface-community-evals"
+      ]
+    },
+    {
+      "repo": "huggingface/skills",
+      "path": "skills/trl-training/SKILL.md",
+      "blob_sha": "9046f03f975bcc061234266e70cb56ab43892526",
+      "commit": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 128,
+      "name": "trl-training",
+      "purpose": "เขียนและดีบัก TRL trainers สำหรับ SFT, preference และ reward training",
+      "category": "AI Engineering",
+      "requires": "HF ecosystem และ dependency/สิทธิ์ตามงาน",
+      "note": "แยก local execution จาก Hub writes, remote jobs และ paid hardware",
+      "url": "https://github.com/huggingface/skills/blob/25910b3d0ba31a2ba102f901cdc9e008c278a69c/skills/trl-training/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "trl-training"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "03-fine-tuning/peft/SKILL.md",
+      "blob_sha": "fee4108b968e2b295fa3df5debf66eb5fee93222",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 129,
+      "name": "peft-fine-tuning",
+      "purpose": "ปรับโมเดลด้วย LoRA/QLoRA และเลือก adapter workflow ตามทรัพยากร",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/03-fine-tuning/peft/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "peft"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "03-fine-tuning/axolotl/SKILL.md",
+      "blob_sha": "216d07e8a0808b98fdc059098b70eb00445a2963",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 130,
+      "name": "axolotl",
+      "purpose": "กำหนด YAML และ workflow ฝึกโมเดลด้วย Axolotl",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/03-fine-tuning/axolotl/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "axolotl"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "08-distributed-training/deepspeed/SKILL.md",
+      "blob_sha": "cf35db7e735118e2bf26269600dba6bdaa0cf4fd",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 131,
+      "name": "deepspeed",
+      "purpose": "วาง distributed training และ ZeRO/mixed precision ด้วย DeepSpeed",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/08-distributed-training/deepspeed/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "deepspeed"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "10-optimization/flash-attention/SKILL.md",
+      "blob_sha": "b8a7245efc973e81e7d932e0aa848f95fdc80ec2",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 132,
+      "name": "optimizing-attention-flash",
+      "purpose": "เลือก PyTorch SDPA หรือ flash-attn ให้ตรงรุ่น GPU และ runtime",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/10-optimization/flash-attention/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "flash-attention"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "10-optimization/bitsandbytes/SKILL.md",
+      "blob_sha": "81e7e81d0f1ca68f3c9861166c1e6a9df1738979",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 133,
+      "name": "quantizing-models-bitsandbytes",
+      "purpose": "ใช้ 4/8-bit loading, QLoRA และ optimizer ของ bitsandbytes",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/10-optimization/bitsandbytes/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "bitsandbytes"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "10-optimization/awq/SKILL.md",
+      "blob_sha": "f3b5b8049aaa10cb8a68948e43e42c051ff6c85d",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 134,
+      "name": "awq-quantization",
+      "purpose": "ศึกษา activation-aware quantization และข้อกำหนด serving backend",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/10-optimization/awq/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "awq"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "10-optimization/gptq/SKILL.md",
+      "blob_sha": "3117bde3c59686c66ac606cd40f26deb2151434a",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 135,
+      "name": "gptq",
+      "purpose": "ศึกษา post-training quantization ด้วย GPTQ และ runtime ที่รองรับ",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/10-optimization/gptq/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "gptq"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "19-emerging-techniques/speculative-decoding/SKILL.md",
+      "blob_sha": "e556e4a979368f5e5bcd9ac9a4412a4bf83356d3",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 136,
+      "name": "speculative-decoding",
+      "purpose": "ทดลอง draft-model และ decoding strategies เพื่อลด inference latency",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/19-emerging-techniques/speculative-decoding/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "speculative-decoding"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "15-rag/sentence-transformers/SKILL.md",
+      "blob_sha": "e3d50bc4c46377c9e8b9d54b4b90f6c743c7ac89",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 137,
+      "name": "sentence-transformers",
+      "purpose": "สร้าง multilingual embeddings เพื่อ semantic search และ RAG",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/15-rag/sentence-transformers/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "sentence-transformers"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "15-rag/faiss/SKILL.md",
+      "blob_sha": "a9ead285182767a0faba34f7b937362d1cdb93e8",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 138,
+      "name": "faiss",
+      "purpose": "เลือก vector index และค้นหา similarity ด้วย FAISS บน CPU/GPU",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/15-rag/faiss/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "faiss"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "15-rag/chroma/SKILL.md",
+      "blob_sha": "ef842181883cfc2b2ce5532a75b1f1dcdb75ed7a",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 139,
+      "name": "chroma",
+      "purpose": "เก็บ embeddings, documents และ metadata เพื่อ retrieval ด้วย Chroma",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/15-rag/chroma/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "chroma"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "08-distributed-training/pytorch-fsdp2/SKILL.md",
+      "blob_sha": "30d159316c8845e8d2f0bdf617959324a97227b3",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 140,
+      "name": "pytorch-fsdp2",
+      "purpose": "เพิ่ม FSDP2 sharding, mixed precision และ distributed checkpoints",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/08-distributed-training/pytorch-fsdp2/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "pytorch-fsdp2"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "07-safety-alignment/llamaguard/SKILL.md",
+      "blob_sha": "69a6b24144268434db5f316a4231fbdf4be38a88",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 141,
+      "name": "llamaguard",
+      "purpose": "ศึกษา input/output moderation ด้วยโมเดล Llama Guard",
+      "category": "AI Security",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "ตรวจ model generation, taxonomy และ model license ใหม่; ตัวเลข accuracy ยังไม่ทดสอบ",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/07-safety-alignment/llamaguard/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "llamaguard"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "07-safety-alignment/nemo-guardrails/SKILL.md",
+      "blob_sha": "b85b1d5f4abe4bc7dc288dc33f100c4afcbc5822",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 142,
+      "name": "nemo-guardrails",
+      "purpose": "วาง runtime input/output controls ของ LLM ด้วย NeMo Guardrails",
+      "category": "AI Security",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "ตัวอย่าง Colang และ API อาจต่างตามรุ่น; guardrails ต้องประเมิน false positives",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/07-safety-alignment/nemo-guardrails/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "nemo-guardrails"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "07-safety-alignment/prompt-guard/SKILL.md",
+      "blob_sha": "909499b249b7b9b3c02dc1521b49980a61d2b559",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 143,
+      "name": "prompt-guard",
+      "purpose": "ศึกษา classifier สำหรับตรวจ prompt injection และ jailbreak inputs",
+      "category": "AI Security",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "Classifier ไม่ใช่ขอบเขตความปลอดภัยที่สมบูรณ์; ประเมินกับข้อมูลภาษาไทยจริง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/07-safety-alignment/prompt-guard/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-security",
+        "prompt-guard"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "16-prompt-engineering/outlines/SKILL.md",
+      "blob_sha": "e42792a14bcc37c521e4260e4b9078a6fbb7105d",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 144,
+      "name": "outlines",
+      "purpose": "สร้าง structured output โดยกำหนด grammar และ schema ด้วย Outlines",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "Schema-valid output ยังต้องตรวจความถูกต้องทางความหมาย",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/16-prompt-engineering/outlines/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "outlines"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "16-prompt-engineering/instructor/SKILL.md",
+      "blob_sha": "9db7c8070ca7155002aed50e0d1df408ae12d587",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 145,
+      "name": "instructor",
+      "purpose": "แปลงคำตอบเป็นข้อมูลตาม Pydantic schema พร้อม validation/retries",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "Validation/retries อาจเพิ่ม latency และค่า API; ต้องจำกัด retry budget",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/16-prompt-engineering/instructor/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "instructor"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "13-mlops/mlflow/SKILL.md",
+      "blob_sha": "8c3e445b6a1a1b35c0dab72f88000ed84d38b83e",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 146,
+      "name": "mlflow",
+      "purpose": "เก็บ experiment parameters, metrics, artifacts และ model versions",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/13-mlops/mlflow/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "mlflow"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "17-observability/phoenix/SKILL.md",
+      "blob_sha": "30f7d3de91339d42529a52bb309b982addca510a",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 147,
+      "name": "phoenix-observability",
+      "purpose": "ทำ LLM tracing, datasets และ evaluation ด้วย Phoenix",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/17-observability/phoenix/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "phoenix"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "17-observability/langsmith/SKILL.md",
+      "blob_sha": "68db9e4dbb4c1e23dd9abf002cceb0575d9d1254",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 148,
+      "name": "langsmith-observability",
+      "purpose": "ติดตาม traces, latency, token usage และ regression eval ด้วย LangSmith",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/17-observability/langsmith/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "langsmith"
+      ]
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "path": "08-distributed-training/accelerate/SKILL.md",
+      "blob_sha": "f44898099cb7628133d68ff6cd7fca380bcbab77",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 149,
+      "name": "huggingface-accelerate",
+      "purpose": "จัด device placement และ mixed/distributed training ด้วย Accelerate",
+      "category": "AI Engineering",
+      "requires": "Python, libraries และ hardware ตาม workflow",
+      "note": "เป็น community guidance; ไม่รับรองตัวเลข speed, accuracy หรือ VRAM ในต้นทาง",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/08-distributed-training/accelerate/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "accelerate"
+      ]
+    },
+    {
+      "repo": "cloudflare/skills",
+      "path": "skills/cf-cli/SKILL.md",
+      "blob_sha": "80eb0c47454f5bfde7b27ce158d9ff18b58124bd",
+      "commit": "cbf893b954222276bf1af57e5f23379231e0efb9",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 150,
+      "name": "cf-cli",
+      "purpose": "ค้นและตรวจ schema ของคำสั่ง Cloudflare CLI ก่อนจัดการ Workers และ resource",
+      "category": "Cloud / DevOps",
+      "requires": "Cloudflare project, runtime/config และสิทธิ์บริการตามงาน",
+      "note": "CLI ยังเป็น Beta; ตรวจ schema/help และใช้ dry-run ตามงาน",
+      "url": "https://github.com/cloudflare/skills/blob/cbf893b954222276bf1af57e5f23379231e0efb9/skills/cf-cli/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cloud-devops",
+        "cf-cli"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md",
+      "blob_sha": "ef1203a0f13dfac578bca75139c6ffdfafa730d3",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 151,
+      "name": "frontend-testing-debugging",
+      "purpose": "ทดสอบ rendered frontend, responsive flow และ browser errors",
+      "category": "Web / Frontend",
+      "requires": "Rendered app, dev server และ Browser/Playwright ตาม host",
+      "note": "ตรวจ routing ของ Browser plugin และเก็บหลักฐาน interaction จริง",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "web-frontend",
+        "frontend-testing-debugging"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/assess-patch-risk/SKILL.md",
+      "blob_sha": "14dbee6cee45a999c031382494a5972d75cecb6f",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 152,
+      "name": "assess-patch-risk",
+      "purpose": "ประเมินผลกระทบ regression และการย้อนคืนของ immutable patch",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "เป็น plugin example; บาง workflow ผูก host/backend ไม่ใช่ SKILL.md แบบ standalone",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/assess-patch-risk/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "assess-patch-risk"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/define-security-policy/SKILL.md",
+      "blob_sha": "a13fd4230e8b28b2cff9f1cb272f012421a6d25c",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 153,
+      "name": "define-security-policy",
+      "purpose": "กำหนดขอบเขต security review, trust model และ invariants ของ repository",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "ต้นทางใช้ SECURITY.md เป็น scanner context; ตรวจผลต่อ GitHub disclosure policy ก่อนนำมาปรับ",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/define-security-policy/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "define-security-policy"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/security-diff-scan/SKILL.md",
+      "blob_sha": "a1d1024bce3a4154d79e61a37cc924c1c4092643",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 154,
+      "name": "security-diff-scan",
+      "purpose": "ตรวจ security ของ PR/commit diff โดยตามพฤติกรรมที่เปลี่ยนไปยัง caller",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "เป็น plugin example; บาง workflow ผูก host/backend ไม่ใช่ SKILL.md แบบ standalone",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/security-diff-scan/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "security-diff-scan"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/threat-model/SKILL.md",
+      "blob_sha": "75a00180d5eed795cf928548d62ee7b1207b4a1d",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 155,
+      "name": "threat-model",
+      "purpose": "สร้าง threat model ของ repository และบันทึก trust boundaries ตาม source",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "เป็น plugin example; บาง workflow ผูก host/backend ไม่ใช่ SKILL.md แบบ standalone",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/threat-model/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "threat-model"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/triage-finding/SKILL.md",
+      "blob_sha": "a3487437f832cd818ebb295fb62f3d42e683bc82",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 156,
+      "name": "triage-finding",
+      "purpose": "ทวน finding ที่มีอยู่จาก static evidence แล้วจัดสถานะและ proof gaps",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "Static triage เท่านั้น; ไม่ discovery, ไม่ runtime validation และไม่แก้ source",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/triage-finding/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "triage-finding"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/verify-fix/SKILL.md",
+      "blob_sha": "fd65c5e2794933516a210b8fd111c55af920ef26",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 157,
+      "name": "verify-fix",
+      "purpose": "ตรวจว่าการแก้ไขปิดเส้นทางช่องโหว่เดิมและรักษาพฤติกรรมที่จำเป็นไว้หรือไม่",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "เป็น plugin example; บาง workflow ผูก host/backend ไม่ใช่ SKILL.md แบบ standalone",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/verify-fix/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "verify-fix"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/codex-security/skills/vulnerability-writeup/SKILL.md",
+      "blob_sha": "59c346e823ab5703318cdf0f2cded7a168c48fde",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 158,
+      "name": "vulnerability-writeup",
+      "purpose": "เขียนรายงานช่องโหว่จาก notes และหลักฐาน พร้อมจำกัดคำกล่าวตามผลพิสูจน์",
+      "category": "Cyber",
+      "requires": "Codex plugin bundle และ references/tools ที่ระบุใน entry",
+      "note": "เป็น plugin example; บาง workflow ผูก host/backend ไม่ใช่ SKILL.md แบบ standalone",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/codex-security/skills/vulnerability-writeup/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "cyber",
+        "vulnerability-writeup"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/data-analytics/skills/jupyter-notebooks/SKILL.md",
+      "blob_sha": "bd7d3b74f5acc85ef6c08e0fe12ebedc9e7470e0",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 159,
+      "name": "jupyter-notebooks",
+      "purpose": "สร้าง notebook SQL/Python ที่รันซ้ำและตรวจสอบผลได้",
+      "category": "AI Engineering",
+      "requires": "Python/Jupyter หรือ SQL notebook runtime",
+      "note": "ต้องรัน top-to-bottom หรือรายงาน execution gap ตามจริง",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/data-analytics/skills/jupyter-notebooks/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "ai-engineering",
+        "jupyter-notebooks"
+      ]
+    },
+    {
+      "repo": "openai/plugins",
+      "path": "plugins/openai-developers/skills/build-chatgpt-app/SKILL.md",
+      "blob_sha": "0ff80dbe7e8863b37d0ea38f70250ba6df97e8b9",
+      "commit": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "read": false,
+      "review_level": "entry-overview",
+      "id": 160,
+      "name": "build-chatgpt-app",
+      "purpose": "สร้าง ChatGPT Apps SDK app ที่มี MCP server และ widget UI",
+      "category": "Agent / Context",
+      "requires": "Apps SDK, MCP server/widget tools และ current docs",
+      "note": "ไฟล์นี้มี Apache-2.0 รายโฟลเดอร์; bundle อื่นต้องตรวจสิทธิ์แยก",
+      "url": "https://github.com/openai/plugins/blob/d420d13051bffe4543ed39e30fa46b87148e47dd/plugins/openai-developers/skills/build-chatgpt-app/SKILL.md",
+      "runtime_tested": false,
+      "reviewed_at": "2026-11-11",
+      "tags": [
+        "agent-context",
+        "build-chatgpt-app"
+      ]
     }
   ],
   "evidence": [
@@ -1307,5 +4171,195 @@
       "blob_sha": "f3116c11694b6680ed30ef3559855d20506a77c5"
     }
   ],
-  "schema_version": 1
+  "schema_version": 2,
+  "tools": [
+    {
+      "repo": "cisco-ai-defense/skill-scanner",
+      "name": "skill-scanner",
+      "group": "Skill review",
+      "purpose": "ตรวจ pattern, AST/dataflow และเนื้อหา skill",
+      "requires": "Skill directory และ scanner dependencies",
+      "note": "แยก static, optional LLM/cloud และ runtime evidence",
+      "url": "https://github.com/cisco-ai-defense/skill-scanner/tree/c558c421157c546ec417cf23778ce81a3a8f35fd",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "NVIDIA/SkillEvaluator",
+      "name": "SkillEvaluator",
+      "group": "AI evaluation",
+      "purpose": "ตรวจโครงสร้างและประเมินผลมี/ไม่มี skill",
+      "requires": "Skill package, eval tasks และ model/runtime",
+      "note": "Experimental; live evaluation อาจมีค่าใช้จ่าย",
+      "url": "https://github.com/NVIDIA/SkillEvaluator/tree/194f7f975e9dbcf5bc795a7de1147e960ea9a40a",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "snyk/agent-scan",
+      "name": "agent-scan",
+      "group": "Skill review",
+      "purpose": "ตรวจความเสี่ยง Agent/MCP configuration และ components",
+      "requires": "MCP config, scanner และ service access ตามโหมด",
+      "note": "บางโหมดเริ่ม server หรือส่ง content ไป API; ตรวจ data flow",
+      "url": "https://github.com/snyk/agent-scan/tree/59def8c624f9d7bef4d49992a4da5e68f83f4e75",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "microsoft/PyRIT",
+      "name": "PyRIT",
+      "group": "AI evaluation",
+      "purpose": "ประเมิน security/safety ของระบบ generative AI อย่างเป็นระบบ",
+      "requires": "Python และ model/application target ที่ได้รับอนุญาต",
+      "note": "การทดสอบสร้างหลาย model calls; กำหนดงบและเก็บผลทั้งสำเร็จและล้มเหลว",
+      "url": "https://github.com/microsoft/PyRIT/tree/3b70c3c98f2b07b2f0e435d926de3d44a8bd2ec6",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "NVIDIA/garak",
+      "name": "garak",
+      "group": "AI evaluation",
+      "purpose": "ใช้ probes สำรวจ failure modes ของ LLM application",
+      "requires": "Python, model connector และ probe configuration",
+      "note": "ผลขึ้นกับ probes และ detector; ไม่ใช้สรุปว่าปลอดภัยครอบคลุมทุกกรณี",
+      "url": "https://github.com/NVIDIA/garak/tree/892779207cbc38f65a738ef9cbdfbc1e83aa0b55",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "name": "promptfoo",
+      "group": "AI evaluation",
+      "purpose": "ทำ regression eval และเปรียบเทียบ prompts, Agents และ RAG",
+      "requires": "Node/CLI, provider access และ test cases",
+      "note": "API calls มีต้นทุน; ตรวจ cloud/red-team mode และการส่งข้อมูลก่อนใช้",
+      "url": "https://github.com/promptfoo/promptfoo/tree/b3603fab85bb331da98a8b68ca442e1f4af7e368",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "UKGovernmentBEIS/inspect_ai",
+      "name": "inspect_ai",
+      "group": "AI evaluation",
+      "purpose": "สร้างและรัน model evaluations ที่มี tasks, solvers และ scorers",
+      "requires": "Python/uv และ model provider หรือ local backend",
+      "note": "แยก scorer quality, task revision และ tool permissions ในรายงาน",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai/tree/67873ea965f2d5acd46b2327ea17aecff30026c1",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "gitleaks/gitleaks",
+      "name": "gitleaks",
+      "group": "Secrets",
+      "purpose": "ค้น credential patterns ใน repository และ files",
+      "requires": "CLI และ target files/history",
+      "note": "README ระบุ feature-complete และรับ security patches; ผู้ดูแลชี้ไป Betterleaks",
+      "url": "https://github.com/gitleaks/gitleaks/tree/5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "aquasecurity/trivy",
+      "name": "trivy",
+      "group": "Containers / IaC",
+      "purpose": "ตรวจ vulnerabilities, misconfiguration, secrets และ SBOM",
+      "requires": "CLI, image/files และ vulnerability database",
+      "note": "ฐานข้อมูลและ coverage เปลี่ยนได้; finding ต้องทวน reachability และ false positives",
+      "url": "https://github.com/aquasecurity/trivy/tree/0e40f8178a375c68aeca146e4dc4e89ff1009587",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "anchore/syft",
+      "name": "syft",
+      "group": "Supply chain",
+      "purpose": "สร้าง SBOM จาก container images และ filesystems",
+      "requires": "CLI และ image/filesystem",
+      "note": "เป็น inventory; ใช้ scanner เช่น Grype เพิ่มเพื่อตรวจ vulnerability",
+      "url": "https://github.com/anchore/syft/tree/a0c0d3890a9d79421c403e8fcadec50a2e55bf21",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "anchore/grype",
+      "name": "grype",
+      "group": "Supply chain",
+      "purpose": "ตรวจ known vulnerabilities จาก images, filesystems หรือ SBOM",
+      "requires": "CLI, artifact/SBOM และ vulnerability database",
+      "note": "จับคู่ package/CVE ไม่เท่ากับยืนยัน exploitability",
+      "url": "https://github.com/anchore/grype/tree/cd1f23eb50dfb52647090158f453c7359172591f",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "google/osv-scanner",
+      "name": "osv-scanner",
+      "group": "Supply chain",
+      "purpose": "จับคู่ dependencies กับข้อมูลช่องโหว่ OSV",
+      "requires": "CLI, lockfiles/source และ database access ตามโหมด",
+      "note": "ต้องระบุ artifact และ database revision เพื่ออธิบายผลที่เปลี่ยนตามเวลา",
+      "url": "https://github.com/google/osv-scanner/tree/7de3a036f48e34cdb3a1d396143b11dbba34be52",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "zizmorcore/zizmor",
+      "name": "zizmor",
+      "group": "CI security",
+      "purpose": "ตรวจ CI/CD config รวม GitHub Actions และ permission risks",
+      "requires": "Workflow/config files และ CLI",
+      "note": "Static analysis; ต้องทวน reusable actions และบริบท runner เพิ่ม",
+      "url": "https://github.com/zizmorcore/zizmor/tree/33ece2d3d6c60f3d669b8a69e095f60d8a980c0b",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "ossf/scorecard",
+      "name": "scorecard",
+      "group": "Supply chain",
+      "purpose": "ตรวจสัญญาณ security hygiene ของ open-source repository",
+      "requires": "Repository metadata และ API access ตาม checks",
+      "note": "Score เป็น hygiene indicators ไม่ใช่การรับรองว่าโค้ดไม่มีช่องโหว่",
+      "url": "https://github.com/ossf/scorecard/tree/5a951604a5ff7d99b7222139ba522237c58228af",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "github/codeql",
+      "name": "codeql",
+      "group": "Code analysis",
+      "purpose": "ใช้ query libraries และ checks สำหรับ semantic security analysis",
+      "requires": "CodeQL CLI/database และ toolchain ตามภาษา",
+      "note": "MIT ใน repo นี้ครอบคลุม queries/libraries; CLI มีเงื่อนไขแยก",
+      "url": "https://github.com/github/codeql/tree/ccc03491fc436578bfeecb7e75305d4d64e02118",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "semgrep/semgrep",
+      "name": "semgrep",
+      "group": "Code analysis",
+      "purpose": "ค้น pattern และ taint flows ด้วย static analysis",
+      "requires": "CLI และ rulesets ตาม engine/edition",
+      "note": "Engine, rules และ Pro features ใช้เงื่อนไขต่างกัน; ตรวจ license และ telemetry",
+      "url": "https://github.com/semgrep/semgrep/tree/06d9993409f6698f78f6956cd39d968e7f4d7b6a",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    },
+    {
+      "repo": "bridgecrewio/checkov",
+      "name": "checkov",
+      "group": "Containers / IaC",
+      "purpose": "ตรวจ IaC, container และ dependency configuration ก่อน deploy",
+      "requires": "Python/CLI และ Terraform/Kubernetes/Docker/config files",
+      "note": "ตรวจการเรียก API, external modules และ cloud features ตามโหมด",
+      "url": "https://github.com/bridgecrewio/checkov/tree/c7f1a45fac5712d4cbaef22946109e20a41a1cef",
+      "runtime_tested": false,
+      "review_level": "readme-overview"
+    }
+  ],
+  "snapshot": "2026-11-11-expansion-1"
 }

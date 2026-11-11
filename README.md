@@ -1,6 +1,8 @@
 <p align="center"><img src="assets/banner.svg" alt="Sandworm Arsenal — AI engineering, agent systems, and cybersecurity" width="100%"></p>
 
-<p align="center"><b>57 skill entries · 19 skill collections · 3 evaluation tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
+<p align="center"><b>160 skill entries · 29 skill collections · 17 companion tools</b><br>Curated by <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · Source review: 11 November 2026</p>
+
+<p align="center"><a href="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml"><img src="https://github.com/Sandworm-Lazarus/sandworm-arsenal/actions/workflows/validate.yml/badge.svg" alt="Catalog validation"></a></p>
 
 <p align="center"><a href="README.th.md">ภาษาไทย</a> · <a href="CATALOG.md">Browse the arsenal</a> · <a href="docs/starter-packs.md">Starter packs</a> · <a href="SOURCES.md">Sources &amp; licenses</a></p>
 
@@ -20,6 +22,8 @@ This repository contributes the curation, original summaries, three original pla
 | Cyber | Code review, dependency risk, detection rules, CI security | [AppSec pack](docs/starter-packs.md#appsec) |
 | Reverse / DFIR | Binary analysis, protocols, memory forensics | [Reverse & DFIR pack](docs/starter-packs.md#reverse-and-dfir) |
 | Engineering | Debugging, verification, Postgres, browser testing, UI design | [Full catalog](CATALOG.md#engineering) |
+| Cloud / DevOps | Workers, containers, Terraform, profiling | [Cloud pack](docs/starter-packs.md#cloud-and-containers) |
+| Web / Frontend | React composition, accessibility, performance | [UI guide](docs/decision-guide.md) |
 
 ## A few places to begin
 
@@ -48,7 +52,7 @@ Examples are illustrative. No live security certification or model benchmark is 
 
 ## Search locally
 
-The CLI uses the Python standard library and performs no network requests.
+The CLI uses Python 3.9+ and the standard library and performs no network requests.
 
 ```bash
 git clone https://github.com/Sandworm-Lazarus/sandworm-arsenal.git
@@ -60,13 +64,33 @@ python3 scripts/arsenal.py check
 
 On Windows, use `py -3` if `python3` is unavailable. Prefer browsing? Open [CATALOG.md](CATALOG.md). Want structured data? Use [catalog/arsenal.json](catalog/arsenal.json).
 
-## What “reviewed” means
+## Review coverage
 
-The initial research read **57 skill entry files and 12 supporting files**. The catalog records repository commits, entry paths, and blob identifiers so the review can be traced to a specific revision. The 22-source register includes 19 skill collections and 3 evaluation tools.
+| Scope | Entries | What was inspected |
+| --- | ---: | --- |
+| Entry-reviewed | 57 | Entry files and selected supporting files from the initial focused research |
+| Entry-overview | 103 | Pinned identity, frontmatter, and opening excerpts; full bundles remain to review |
+| Companion tools | 17 | README/source overviews and license evidence |
 
-**Source review is not runtime testing.** All upstream entries currently have `runtime_tested: false`. Dependencies, remote services, and compatibility must be checked for the environment where a skill will run. Some entries route to supporting files; copying only `SKILL.md` can lose required context.
+No upstream runtime tests are claimed. [Review coverage](docs/review-status.md) and [methodology](docs/methodology.md) explain the limits. Some packages need references, scripts, client-specific tools, or a complete plugin bundle.
 
-The local `check` command verifies catalog consistency, pinned-link structure, generated documentation, SVG syntax, and local file links. It does not contact upstream repositories or certify a skill's behavior. See [review methodology](docs/methodology.md).
+## Put it to work
+
+- Pick one of **[12 starter packs](docs/starter-packs.md)**, from an AI lab to game-server AppSec.
+- Use the **[decision guide](docs/decision-guide.md)** to choose a skill or executable tool for a task.
+- Explore **[17 companion tools](TOOLS.md)** for evaluation, SAST, SBOM, secrets, containers, and CI.
+- Start a report from the **[five original templates](templates/README.md)**.
+- Check **[watchlist notes](docs/watchlist.md)** for moved sources, license scopes, and platform-specific entries.
+- See **[changes](CHANGELOG.md)** for the current expansion.
+
+```bash
+python3 scripts/arsenal.py search "MCP" --review entry-reviewed
+python3 scripts/arsenal.py search "" --repo cloudflare/skills --json
+python3 scripts/arsenal.py show 1
+python3 scripts/arsenal.py stats
+```
+
+CI runs offline catalog checks and CLI regression tests on pushes and pull requests. It checks this repository's data and behavior; it does not execute linked packages.
 
 ## Contribute and reuse
 

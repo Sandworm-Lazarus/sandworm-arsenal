@@ -14,7 +14,7 @@ python3 scripts/arsenal.py check
 python3 -m unittest discover -s tests -v
 ```
 
-The current catalog schema represents read-only research. A future runtime-tested entry needs a schema extension and an evaluation report; do not simply flip `runtime_tested` to `true`.
+Schema v2 represents read-only research. Use `entry-reviewed` with `read: true` for an entry-file review, or `entry-overview` with `read: false` for frontmatter and an opening excerpt. Neither covers every bundled file automatically. Record the exact scope in notes. A future runtime-tested entry needs a schema extension and an evaluation report; do not simply flip `runtime_tested` to `true`.
 
 Keep third-party skill bodies and executable bundles out of this curated repository. Link to them at a reviewed revision. Original summaries and playbooks should be concise and useful in Thai or English.
 

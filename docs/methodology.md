@@ -8,6 +8,14 @@ Each selected entry records a canonical repository, full commit SHA, file path, 
 
 ## How entries are selected
 
+## Expansion snapshot
+
+The expansion adds 103 entry-overview inspections to the initial 57 entry-reviewed selections: 160 entries across 29 skill collections. Fourteen additional tools bring the companion-tool register to 17, for 46 source repositories in total. New entry overviews cover the recorded file identity, frontmatter, and opening excerpt; they do not claim a complete read of the entry, supporting files, or executable bundle. Source README/license overviews informed lifecycle and scope notes.
+
+The initial `read: true` field is retained only for the original entry-reviewed selections. New overviews use `read: false` plus an explicit `review_level`. All upstream runtime statuses remain false.
+
+## Selection criteria
+
 - A recognizable task: the entry should help produce a concrete output.
 - Inspectable procedure: steps, tools, references, or output expectations can be examined.
 - Traceable origin: identify upstream owners, forks, and exact revisions.

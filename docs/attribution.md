@@ -21,5 +21,10 @@ Selected cases from the reviewed snapshot:
 | NVIDIA skills | README and selected RAG entry frontmatter describe licensing at different scopes; resolve scope before redistribution |
 | haikow/claude-reverse-skills | No root LICENSE was found in the reviewed tree; a partial MIT declaration does not resolve the whole bundle |
 | Datacraft Cybersecurity Skills | A community fork, not an official Anthropic project; retain upstream provenance |
+| Semgrep skills | Semgrep Rules License v1.0; do not substitute the engine's LGPL or assume MIT |
+| Sentry security-review | References have a separate CC BY-SA notice; root Apache 2.0 is not the entire licensing picture |
+| HashiCorp skills | MPL 2.0; inspect the applicable source and notices before redistributing modifications |
+| Vercel / Better Auth collections | Some per-entry declarations exist, but no root LICENSE was found in the inspected trees; keep rights questions explicit |
+| OpenAI plugins | Per-plugin/file scope; an Apache 2.0 license was inspected for build-chatgpt-app, not inferred for every plugin |
 
 For a portfolio adaptation, explain the specific improvement: a new fixture, a useful workflow, better evaluation, Thai documentation, or platform support. Keep that contribution distinct from the original author's work.

@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/banner.svg" alt="Sandworm Arsenal — คลังสกิล AI และ Cyber" width="100%"></p>
 
-<p align="center"><b>57 สกิล · 19 คลังต้นทาง · 3 เครื่องมือประเมิน</b><br>คัดและเรียบเรียงโดย <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · ตรวจต้นทาง 11 พฤศจิกายน 2026</p>
+<p align="center"><b>160 สกิล · 29 คลังต้นทาง · 17 เครื่องมือประกอบ</b><br>คัดและเรียบเรียงโดย <a href="https://github.com/Sandworm-Lazarus">Sandworm-Lazarus</a> · ตรวจต้นทาง 11 พฤศจิกายน 2026</p>
 
 <p align="center"><a href="README.md">English</a> · <a href="CATALOG.md">ดูสกิลทั้งหมด</a> · <a href="docs/starter-packs.md">ชุดเริ่มต้น</a> · <a href="SOURCES.md">ต้นทางและสิทธิ์ใช้งาน</a></p>
 
@@ -45,13 +45,32 @@ python3 scripts/arsenal.py check
 
 Windows ใช้ `py -3` แทน `python3` ได้ หรือเปิด [CATALOG.md](CATALOG.md) เพื่ออ่านบน GitHub โดยตรง
 
+## ใช้งานให้ตรงโจทย์
+
+- [12 ชุดเริ่มต้น](docs/starter-packs.md): AI lab, RAG, MLOps, Agent, AppSec, Cloud, auth, CI, fuzzing และเกมเซิร์ฟเวอร์
+- [ตารางเลือกตามงาน](docs/decision-guide.md): เริ่มตรงไหน ใช้ skill หรือเครื่องมืออะไร และควรได้หลักฐานแบบใด
+- [เครื่องมือประกอบ 17 ตัว](TOOLS.md): ประเมิน AI, ตรวจโค้ด, secrets, SBOM, container และ CI
+- [แม่แบบรายงาน 5 แบบ](templates/README.md): finding, threat model, model evaluation, extension review และ detection rule
+- [ข้อควรรู้ของต้นทาง](docs/watchlist.md): การย้าย repo, license และเงื่อนไขเฉพาะแพลตฟอร์ม
+
 ## ตรวจถึงระดับไหน
 
-รอบแรกอ่านไฟล์สกิล **57 entries และไฟล์ประกอบ 12 ไฟล์** พร้อมบันทึก commit, path และ blob SHA ไว้ รายการต้นทาง 22 แห่งนับรวม 19 คลังสกิลและ 3 เครื่องมือประเมิน
+| ระดับ | จำนวน | ขอบเขต |
+| --- | ---: | --- |
+| Entry-reviewed | 57 | อ่าน entry และไฟล์ประกอบบางส่วนในรอบรีเสิร์ชแรก |
+| Entry-overview | 103 | ตรวจตัวตนไฟล์ frontmatter และเนื้อหาช่วงต้น ยังไม่ได้อ่านครบทั้ง bundle |
+| Companion tools | 17 | ตรวจภาพรวม README/source และหลักฐาน license |
 
-**ยังไม่ได้รันสกิลต้นทางจริง** จึงระบุ `runtime_tested: false` ทุก entry การอ่านแล้วน่าสนใจไม่ได้แปลว่าปลอดภัยหรือใช้ได้กับทุก client ต้องตรวจ dependency, สิทธิ์ และรุ่นเครื่องมือในสภาพแวดล้อมที่จะใช้ สกิลบางตัวต้องอ่านไฟล์ประกอบตามไปด้วย
+ยังไม่ได้รันสกิลหรือเครื่องมือต้นทางจริง ดู [รายงาน coverage](docs/review-status.md) และ [วิธีคัดและตรวจ](docs/methodology.md) ได้ ทุก entry มีลิงก์ที่ตรึง commit และบันทึกระดับที่ตรวจไว้
 
-คำสั่ง `check` ตรวจโครงสร้างข้อมูล ลิงก์ที่ตรึง commit เอกสารที่สร้างจาก catalog และไฟล์ภายใน repository เท่านั้น ไม่ได้ทดสอบบริการภายนอก อ่านรายละเอียดได้ที่ [วิธีคัดและตรวจ](docs/methodology.md)
+CI ตรวจ catalog และทดสอบ CLI ทุกครั้งที่ push หรือเปิด pull request ส่วนคำสั่ง `check` รันบนเครื่องแบบออฟไลน์ได้
+
+```bash
+python3 scripts/arsenal.py search "MCP" --review entry-reviewed
+python3 scripts/arsenal.py search "" --repo cloudflare/skills --json
+python3 scripts/arsenal.py show 1
+python3 scripts/arsenal.py stats
+```
 
 ## เครดิตและการต่อยอด
 
