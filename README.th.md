@@ -6,6 +6,18 @@
 
 # Sandworm Arsenal
 
+## คลังที่แยกเป็น repo เฉพาะด้าน
+
+| Repository | Focus | Skills | Tools |
+| --- | --- | ---: | ---: |
+| [AI Toolbox](https://github.com/Sandworm-Lazarus/sandworm-ai-toolbox) | A directory of practical AI tools and frameworks, from personal agents and local inference to voice, documents, coding, and observability. | 0 | 44 |
+| [Agent Skills](https://github.com/Sandworm-Lazarus/sandworm-agent-skills) | Focused agent workflows for context, memory, tool design, orchestration, browser use, and voice interfaces. | 13 | 15 |
+| [Cyber Arsenal](https://github.com/Sandworm-Lazarus/sandworm-cyber-arsenal) | A focused security collection covering AppSec, agent and MCP security, reverse engineering, DFIR, detection, and supply-chain review. | 68 | 17 |
+| [LLM Lab](https://github.com/Sandworm-Lazarus/sandworm-llm-lab) | A practical LLM engineering lab: model serving, quantization, RAG, evaluation, training, and experiment observability. | 49 | 14 |
+| [Dev Playbooks](https://github.com/Sandworm-Lazarus/sandworm-dev-playbooks) | Developer workflows for debugging, cloud, frontend, coding agents, and evidence-backed reviews, with original playbooks and report templates. | 30 | 15 |
+
+Repo นี้เป็นหน้ารวม คลังสกิลแบ่งตามงาน ส่วน AI Toolbox เป็นสารบัญเครื่องมือ เครื่องมือบางตัวอยู่ได้หลายคลัง จึงไม่ควรนำจำนวนจากทุก repo มาบวกเป็นจำนวนไม่ซ้ำ
+
 คลังสกิล **AI และ Cybersecurity** ที่คัดไว้ใช้เรียนรู้และต่อยอด มีคำอธิบายภาษาไทย ลิงก์ระบุ commit และหมายเหตุเรื่องเครื่องมือที่ต้องใช้ เพื่อให้เลือกได้ว่าสกิลไหนตรงกับงานของเรา
 
 ผลงานของคลังนี้คือการคัดสรร สรุปข้อมูล จัดชุดเริ่มต้น เขียน playbook 3 ชุด และทำเครื่องมือค้นหารายการแบบออฟไลน์ สกิลที่ลิงก์ออกไปยังเป็นผลงานของผู้เขียนต้นทาง และไม่ได้คัดลอกโค้ดทั้งแพ็กมารวมไว้ที่นี่
@@ -67,7 +79,7 @@ Windows ใช้ `py -3` แทน `python3` ได้ หรือเปิด
 
 ยังไม่ได้รันสกิลหรือเครื่องมือต้นทางจริง ดู [รายงาน coverage](docs/review-status.md) และ [วิธีคัดและตรวจ](docs/methodology.md) ได้ ทุก entry มีลิงก์ที่ตรึง commit และบันทึกระดับที่ตรวจไว้
 
-ตั้ง workflow ให้ตรวจ catalog และ CLI เมื่อ push หรือเปิด pull request แล้ว ดูสถานะการรันจริงได้ใน Actions รอบนี้ตรวจในสภาพแวดล้อม local ผ่าน catalog checks และ 11 tests ส่วนคำสั่ง `check` รันแบบออฟไลน์ได้
+ตั้ง workflow ให้ตรวจ catalog และ CLI เมื่อ push หรือเปิด pull request แล้ว ดูสถานะการรันจริงได้ใน Actions รอบนี้ตรวจในสภาพแวดล้อม local ผ่าน catalog checks และ 12 tests ส่วนคำสั่ง `check` รันแบบออฟไลน์ได้
 
 ```bash
 python3 scripts/arsenal.py search "MCP" --review entry-reviewed

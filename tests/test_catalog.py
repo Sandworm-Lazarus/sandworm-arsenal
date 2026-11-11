@@ -19,6 +19,12 @@ class CatalogTests(unittest.TestCase):
     def setUp(self):
         self.data = copy.deepcopy(arsenal.read_catalog())
 
+    def test_tool_only_collection_is_supported(self):
+        self.data["skills"] = []
+        self.data["evidence"] = []
+        self.data["sources"] = [s for s in self.data["sources"] if s["kind"] == "tool"]
+        self.assertEqual(arsenal.validate_catalog(self.data), [])
+
     def test_moving_link_is_rejected(self):
         entry = self.data["skills"][0]
         entry["url"] = entry["url"].replace(entry["commit"], "main")

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-11 — Focused repositories
+
+- Created five subject repositories: AI Toolbox, Agent Skills, Cyber Arsenal, LLM Lab and Dev Playbooks.
+- Retained this repository as the hub and added direct links to each collection.
+- Assigned all 160 skill entries to exactly one focused subject collection; related tools can overlap.
+- Validated each focused catalog and its offline search/lookup paths.
+
 ## 2026-11-11 — AI toolbox
 
 - Added 44 tools/frameworks, bringing the tool register to 61 and total source repositories to 90.

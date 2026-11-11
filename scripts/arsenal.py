@@ -85,7 +85,7 @@ def validate_catalog(data):
             errors.append(f"Missing tags: {ident}")
         if source and source.get("kind") != "skill-collection":
             errors.append(f"Skill points at a tool source: {ident}")
-    if not sources or not seen_entries:
+    if not sources or not (seen_entries or data.get("tools")):
         errors.append("Catalog must contain sources and entries")
     for evidence in data.get("evidence", []):
         repo = evidence.get("repo")
@@ -143,6 +143,8 @@ def rendered_files(data):
                "Generated from `catalog/arsenal.json` with `python3 scripts/arsenal.py render`.", ""]
     for category in CATEGORIES:
         entries = [s for s in data["skills"] if s["category"] == category]
+        if not entries:
+            continue
         catalog += [f"## {category}", "", "| Skill / source | ใช้ทำอะไร | Review | ต้องมี / หมายเหตุ |",
                     "| --- | --- | --- | --- |"]
         for s in entries:

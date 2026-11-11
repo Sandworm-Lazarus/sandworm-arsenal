@@ -8,6 +8,18 @@
 
 # Sandworm Arsenal
 
+## Focused repositories
+
+| Repository | Focus | Skills | Tools |
+| --- | --- | ---: | ---: |
+| [AI Toolbox](https://github.com/Sandworm-Lazarus/sandworm-ai-toolbox) | A directory of practical AI tools and frameworks, from personal agents and local inference to voice, documents, coding, and observability. | 0 | 44 |
+| [Agent Skills](https://github.com/Sandworm-Lazarus/sandworm-agent-skills) | Focused agent workflows for context, memory, tool design, orchestration, browser use, and voice interfaces. | 13 | 15 |
+| [Cyber Arsenal](https://github.com/Sandworm-Lazarus/sandworm-cyber-arsenal) | A focused security collection covering AppSec, agent and MCP security, reverse engineering, DFIR, detection, and supply-chain review. | 68 | 17 |
+| [LLM Lab](https://github.com/Sandworm-Lazarus/sandworm-llm-lab) | A practical LLM engineering lab: model serving, quantization, RAG, evaluation, training, and experiment observability. | 49 | 14 |
+| [Dev Playbooks](https://github.com/Sandworm-Lazarus/sandworm-dev-playbooks) | Developer workflows for debugging, cloud, frontend, coding agents, and evidence-backed reviews, with original playbooks and report templates. | 30 | 15 |
+
+This repository is the collection hub. Skills have focused homes in the four subject collections; AI Toolbox is a cross-cutting directory. Tools can appear in multiple collections, so collection counts should not be added together.
+
 A personal collection of useful **AI and cybersecurity agent skills**, with Thai annotations, pinned source links, and practical workflows. Built for people who want to understand what a skill does before adding it to their tools.
 
 This repository contributes the curation, original summaries, three original playbooks, and a small offline catalog CLI. Linked skills belong to their respective authors. Upstream skill code is not bundled here.
@@ -94,7 +106,7 @@ python3 scripts/arsenal.py show 1
 python3 scripts/arsenal.py stats
 ```
 
-The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 11 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
+The validation workflow is configured for pushes and pull requests; see Actions for runner/execution status. Local validation passed the catalog checks and 12 regression tests for this snapshot. These checks cover this repository's data and CLI, not linked packages.
 
 ## Contribute and reuse
 
